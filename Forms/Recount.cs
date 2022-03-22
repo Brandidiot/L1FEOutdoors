@@ -282,7 +282,7 @@ namespace L1FEOutdoors
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "CSV (*.csv)|*.csv";
-                var folderName = AppDomain.CurrentDomain.BaseDirectory + DateTime.Now.ToString("M/d/yyyy");
+                var folderName = @"C:\Users\" + Environment.UserName + @"\Desktop\" + DateTime.Now.ToString("M/d/yyyy");
 
                 if (File.Exists(folderName))
                 {
