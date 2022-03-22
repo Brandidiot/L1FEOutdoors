@@ -13,7 +13,7 @@ namespace L1FEOutdoors
         public Recount()
         {
             InitializeComponent();
-            GenerateDataTable(@"C:\Users\" + Environment.UserName + @"\Documents\Recount.csv", dgItems);          
+            GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Recount.csv", dgItems);
         }
 
         public static void GenerateDataTable(String SourceURL, DataGridView dgv)

@@ -59,7 +59,7 @@ namespace L1FEOutdoors
         private void PopulateSquareInfo()
         {
             //Populate DataTable With Square Data
-            Recount.GenerateDataTable(@"C:\Users\" + Environment.UserName + @"\Documents\Square.csv", dgSquare);
+            Recount.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Square.csv", dgSquare);
 
             //Hide Useless Columns
             dgSquare.Columns["Token"].Visible = false;
@@ -91,7 +91,7 @@ namespace L1FEOutdoors
         {
             //Get Data From InvQtys
             DataTable dtNew;
-            dtNew = Recount.GetDataTabletFromCsvFile(@"C:\Users\" + Environment.UserName + @"\Documents\InvQtys.csv");
+            dtNew = Recount.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvQtys.csv");
 
             foreach (DataGridViewRow rows in dgSquare.Rows)
             {

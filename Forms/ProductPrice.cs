@@ -13,14 +13,14 @@ namespace L1FEOutdoors.Forms
         public ProductPrice()
         {
             InitializeComponent();
-            GenerateDT.GenerateDataTable(@"C:\Users\" + Environment.UserName + @"\Documents\InvAvail.csv", dgProduct);
+            GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvAvail.csv", dgProduct);
         }
 
         private void PopulatePrice()
         {
             //Get Data From InvQtys
             DataTable dtNew;
-            dtNew = GenerateDT.GetDataTabletFromCsvFile(@"C:\Users\" + Environment.UserName + @"\Documents\ProductPricing.csv");
+            dtNew = GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\ProductPricing.csv");
 
             foreach (DataGridViewRow rows in dgProduct.Rows)
             {
