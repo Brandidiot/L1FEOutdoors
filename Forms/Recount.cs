@@ -436,7 +436,7 @@ namespace L1FEOutdoors
             dgItems.EnableHeadersVisualStyles = false;
             dgItems.BorderStyle = BorderStyle.None;
             //dgItems.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-            foreach (DataGridViewRow dgvr in dgItems.Rows)//dgv is datagridview
+            /*foreach (DataGridViewRow dgvr in dgItems.Rows)//dgv is datagridview
             {
                 if (dgvr.Index % 2 == 0)
                 {
@@ -454,7 +454,8 @@ namespace L1FEOutdoors
                     dgvr.Cells["Location"].Style.BackColor = Color.White;
                     dgvr.Cells["Count"].Style.BackColor = Color.White;
                 }
-            }
+            }*/
+            dgItems.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgItems.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgItems.DefaultCellStyle.SelectionBackColor = ThemeColor.SecondaryColor;
 
@@ -471,8 +472,6 @@ namespace L1FEOutdoors
 
         private void Recount_Load(object sender, EventArgs e)
         {
-            LoadTheme();
-            FormatDataGridView();
         }
 
         private void loTextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -495,6 +494,12 @@ namespace L1FEOutdoors
             e.Handled = true;
 
             Save_Click(sender,e);
+        }
+
+        private void Recount_Shown(object sender, EventArgs e)
+        {
+            LoadTheme();
+            FormatDataGridView();
         }
     }
 }

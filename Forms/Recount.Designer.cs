@@ -71,7 +71,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgItems.BackgroundColor = System.Drawing.Color.White;
             this.dgItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -306,6 +305,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recount";
             this.Load += new System.EventHandler(this.Recount_Load);
+            this.Shown += new System.EventHandler(this.Recount_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
             this.ResumeLayout(false);
 

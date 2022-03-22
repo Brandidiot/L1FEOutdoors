@@ -123,11 +123,11 @@
     <Compile Include="LOControls\LOTextBox.Designer.cs">
       <DependentUpon>LOTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="LOMessageBox.cs" />
-    <Compile Include="ModernMenu.cs">
+    <Compile Include="LOControls\LOMessageBox.cs" />
+    <Compile Include="Forms\ModernMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModernMenu.Designer.cs">
+    <Compile Include="Forms\ModernMenu.Designer.cs">
       <DependentUpon>ModernMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Recount.cs">
@@ -163,7 +163,7 @@
     <EmbeddedResource Include="LOControls\LOTextBox.resx">
       <DependentUpon>LOTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModernMenu.resx">
+    <EmbeddedResource Include="Forms\ModernMenu.resx">
       <DependentUpon>ModernMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Recount.resx">
