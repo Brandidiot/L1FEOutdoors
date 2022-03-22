@@ -199,9 +199,18 @@
   <ItemGroup>
     <Content Include="L1Logo.ico" />
     <Content Include="Logo.ico" />
+    <Content Include="Resources\InvQtys.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\InvAvail.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Money2.png" />
     <None Include="Resources\Money.png" />
     <None Include="Resources\Offroad - transparent_edited_edited_edit.png" />
+    <Content Include="Resources\ProductPricing.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\questionwhite.png" />
     <None Include="Resources\question.png" />
     <None Include="Resources\information.png" />
@@ -212,6 +221,12 @@
     <None Include="Resources\LogoMainTrans.png" />
     <None Include="Resources\checkmark.png" />
     <None Include="Resources\Form.png" />
+    <Content Include="Resources\Recount.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Square.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Square_logo.png" />
     <None Include="Resources\crossout1.png" />
     <None Include="Resources\crossout.png" />
