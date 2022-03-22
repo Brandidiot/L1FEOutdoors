@@ -155,12 +155,12 @@ namespace L1FEOutdoors
         {
             DeactivateButton();
             lblTitle.Text = "HOME";
-            panelTitleBar.BackColor = Color.FromArgb(0,150,136);
+            panelTitleBar.BackColor = Color.FromArgb(36, 53, 73);
             _currentButton = null;
             btnCloseChildForm.Visible = false;
             this.Size = new Size(800, 500);
-            btnMinimize.BackColor = Color.FromArgb(0, 150, 136);
-            btnClose.BackColor = Color.FromArgb(0, 150, 136);
+            btnMinimize.BackColor = Color.FromArgb(36, 53, 73);
+            btnClose.BackColor = Color.FromArgb(36, 53, 73);
         }
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
