@@ -74,6 +74,7 @@
             this.dgSquareCount.ReadOnly = true;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSquareCount.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgSquareCount.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSquareCount.Size = new System.Drawing.Size(776, 370);
             this.dgSquareCount.TabIndex = 1;
             // 

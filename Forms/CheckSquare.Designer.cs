@@ -69,7 +69,7 @@
             this.dgSquare.Location = new System.Drawing.Point(12, 12);
             this.dgSquare.Name = "dgSquare";
             this.dgSquare.ReadOnly = true;
-            this.dgSquare.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgSquare.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSquare.Size = new System.Drawing.Size(776, 426);
             this.dgSquare.TabIndex = 0;
             // 

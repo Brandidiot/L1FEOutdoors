@@ -73,6 +73,7 @@
             this.dgProduct.Location = new System.Drawing.Point(12, 12);
             this.dgProduct.Name = "dgProduct";
             this.dgProduct.ReadOnly = true;
+            this.dgProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgProduct.Size = new System.Drawing.Size(776, 372);
             this.dgProduct.TabIndex = 0;
             this.dgProduct.TabStop = false;

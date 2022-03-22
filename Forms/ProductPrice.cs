@@ -72,8 +72,8 @@ namespace L1FEOutdoors.Forms
                 if (txtSearch.Texts == "")
                     dr.Visible = true;
 
-                if (dr.Cells["Product"].Value.ToString().Contains(txtSearch.Texts) ||
-                    dr.Cells["Description"].Value.ToString().Contains(txtSearch.Texts))
+                if (ContainsCaseInsensitive(dr.Cells["Product"].Value.ToString(), txtSearch.Texts) ||
+                    ContainsCaseInsensitive(dr.Cells["Description"].Value.ToString(), txtSearch.Texts))
                 {
                     dr.Visible = true;
                 }
@@ -232,6 +232,11 @@ namespace L1FEOutdoors.Forms
             {
                 LOMessageBox.Show("No Record To Export!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private static bool ContainsCaseInsensitive(string source, string substring)
+        {
+            return source?.IndexOf(substring, StringComparison.OrdinalIgnoreCase) > -1;
         }
     }
 }
