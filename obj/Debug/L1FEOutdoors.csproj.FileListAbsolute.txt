@@ -17,6 +17,11 @@ C:\Users\HP\Desktop\L1FE Outdoors\L1FEOutdoors\obj\Debug\L1.exe
 C:\Users\HP\Desktop\L1FE Outdoors\L1FEOutdoors\obj\Debug\L1.pdb
 C:\Users\HP\Desktop\L1FE Outdoors\L1FEOutdoors\obj\Debug\L1FEOutdoors.Forms.Login.resources
 C:\Users\HP\Desktop\L1FE Outdoors\L1FEOutdoors\obj\Debug\L1FEOutdoors.Forms.ProductPrice.resources
+C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\InvQtys.csv
+C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\InvAvail.csv
+C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\ProductPricing.csv
+C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\Recount.csv
+C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\Square.csv
 C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\L1.exe.config
 C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\L1.exe.manifest
 C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\L1.application
@@ -40,8 +45,3 @@ C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1.exe.manifest
 C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1.application
 C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1.exe
 C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1.pdb
-C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\InvQtys.csv
-C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\InvAvail.csv
-C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\ProductPricing.csv
-C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\Recount.csv
-C:\Users\HP\Desktop\L1\L1FEOutdoors\bin\Debug\Resources\Square.csv

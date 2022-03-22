@@ -22,11 +22,7 @@ namespace L1FEOutdoors
 
     public class FormProvider
     {
-        public static MainMenu MainMenu => _mainMenu ?? (_mainMenu = new MainMenu());
-        public static Recount Recount => _recount ?? (_recount = new Recount());
         public static ModernMenu ModernMenu => _modernmenu ?? (_modernmenu = new ModernMenu());
-        private static MainMenu _mainMenu;
-        private static Recount _recount;
         private static ModernMenu _modernmenu;
     }
 }

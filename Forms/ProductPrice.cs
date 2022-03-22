@@ -52,7 +52,7 @@ namespace L1FEOutdoors.Forms
         {
             LoadTheme();
             FormatDataGridView();
-            dgProduct.Columns.Remove("On Hand");
+            //dgProduct.Columns.Remove("On Hand");
             dgProduct.Columns.Remove("Allocated");
             dgProduct.Columns.Remove("Not Available");
             dgProduct.Columns.Remove("Drop Ship");

@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="L1.exe" size="787872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="L1.exe" size="787360">
       <assemblyIdentity name="L1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nn+55WYan/VO0X3OJc7avM+k0zJDysz4qCoaD+65g/4=</dsig:DigestValue>
+        <dsig:DigestValue>UVLLpgVrScSoFnjxr0XYsJF5ubr6iXLMWUSxk08iNrw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
