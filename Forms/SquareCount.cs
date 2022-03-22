@@ -5,6 +5,8 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using L1FEOutdoors.LOControls;
+using Button = System.Windows.Forms.Button;
+using DataTable = System.Data.DataTable;
 
 namespace L1FEOutdoors
 {
