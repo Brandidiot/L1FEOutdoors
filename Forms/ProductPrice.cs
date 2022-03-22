@@ -182,17 +182,17 @@ namespace L1FEOutdoors.Forms
                         {
                             for (var j = 0; j < columnCount; j++)
                             {
-                                if (dgProduct.Rows[i - 1].Cells[0].Value.ToString().Contains(","))
+                                if (dgProduct.Rows[i - 1].Cells[1].Value.ToString().Contains(","))
                                 {
                                     if (j == columnCount - 1)
                                     {
                                         outputCsv[i] += dgProduct.Rows[i - 1].Cells[j].Value;
                                     }
-                                    else if (j == 0)
+                                    else if (j == 1) //change number based on column number starting at 0
                                     {
-                                        if (dgProduct.Rows[i - 1].Cells[0].Value.ToString().Contains("\""))
+                                        if (dgProduct.Rows[i - 1].Cells[1].Value.ToString().Contains("\"")) //change number based on column number starting at 0
                                         {
-                                            var index = dgProduct.Rows[i - 1].Cells[0].Value.ToString().IndexOf("\"", StringComparison.Ordinal);
+                                            var index = dgProduct.Rows[i - 1].Cells[1].Value.ToString().IndexOf("\"", StringComparison.Ordinal);
                                             outputCsv[i] += "\"" + dgProduct.Rows[i - 1].Cells[j].Value.ToString().Insert(index, "\"") + "\"" + ",";
                                         }
                                         else
