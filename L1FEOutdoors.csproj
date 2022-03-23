@@ -29,7 +29,7 @@
     <UpdateUrl>https://raw.githubusercontent.com/Brandidiot/L1FEOutdoors/master/published/</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -73,9 +73,6 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
-      <HintPath>packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -307,8 +304,8 @@
     <Error Condition="!Exists('packages\Brutal.Dev.StrongNameSigner.3.1.0\build\Brutal.Dev.StrongNameSigner.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Brutal.Dev.StrongNameSigner.3.1.0\build\Brutal.Dev.StrongNameSigner.targets'))" />
   </Target>
   <ItemGroup>
-    <PackageReference Include="Brutal.Dev.StrongNameSigner" Version="2.7.1" GeneratePathProperty="true" IncludeAssets="none" />
-    <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" GeneratePathProperty="true" />
+    <PackageReference Include="Brutal.Dev.StrongNameSigner" Version="3.1.0" GeneratePathProperty="true" IncludeAssets="none" />
+    <PackageReference Include="FontAwesome.Sharp" Version="5.15.4" GeneratePathProperty="true" />
   </ItemGroup>
   <Target Name="StrongName" BeforeTargets="PrepareForBuild">
     <Exec Command="&quot;$(PkgBrutal_Dev_StrongNameSigner)\build\StrongNameSigner.Console.exe&quot; -InputDirectory &quot;$(PkgFontAwesome_Sharp)\lib&quot;" />

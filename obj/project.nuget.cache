@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "T8LZjy2KOO+RuEWAP7z/02UY3NaLPmFTzotNdUP3oA/wsMQTPKUnTHvmL5mbA6b7BM9i8UAg8ePbCRXDFYDkEQ==",
+  "dgSpecHash": "iDIjSedFICDYSDm1cnctcs3X0USKAoFmDLAFnRorXYVG0eXP9gp8hLQT1eIEW+II7FOEXnFcQyHSEelCcrzH7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\L1\\L1FEOutdoors\\L1FEOutdoors.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\L1 Updated\\L1FEOutdoors.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HP\\.nuget\\packages\\brutal.dev.strongnamesigner\\2.7.1\\brutal.dev.strongnamesigner.2.7.1.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\fontawesome.sharp\\5.15.3\\fontawesome.sharp.5.15.3.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\brutal.dev.strongnamesigner\\3.1.0\\brutal.dev.strongnamesigner.3.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512"
   ],
   "logs": []
 }

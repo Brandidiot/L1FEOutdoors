@@ -2,14 +2,21 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "Brutal.Dev.StrongNameSigner/2.7.1": {
+      "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.3": {
+      "FontAwesome.Sharp/5.15.4": {
         "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Windows.Forms",
+          "System.Xaml",
+          "WindowsBase"
+        ],
         "compile": {
           "lib/net472/FontAwesome.Sharp.dll": {}
         },
@@ -19,14 +26,21 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "Brutal.Dev.StrongNameSigner/2.7.1": {
+      "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.3": {
+      "FontAwesome.Sharp/5.15.4": {
         "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Windows.Forms",
+          "System.Xaml",
+          "WindowsBase"
+        ],
         "compile": {
           "lib/net472/FontAwesome.Sharp.dll": {}
         },
@@ -36,14 +50,21 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "Brutal.Dev.StrongNameSigner/2.7.1": {
+      "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.3": {
+      "FontAwesome.Sharp/5.15.4": {
         "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Windows.Forms",
+          "System.Xaml",
+          "WindowsBase"
+        ],
         "compile": {
           "lib/net472/FontAwesome.Sharp.dll": {}
         },
@@ -53,14 +74,21 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "Brutal.Dev.StrongNameSigner/2.7.1": {
+      "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.3": {
+      "FontAwesome.Sharp/5.15.4": {
         "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System.Windows.Forms",
+          "System.Xaml",
+          "WindowsBase"
+        ],
         "compile": {
           "lib/net472/FontAwesome.Sharp.dll": {}
         },
@@ -71,14 +99,14 @@
     }
   },
   "libraries": {
-    "Brutal.Dev.StrongNameSigner/2.7.1": {
-      "sha512": "cfbP+kL3AQejWBDZgJ1fSejv+bvJwFE9eVOkZExWjbtWk2Dd+Sy9xRDTRFalapXmHJGcXG247xIP4ounktYy8Q==",
+    "Brutal.Dev.StrongNameSigner/3.1.0": {
+      "sha512": "mhkUZwouO1lj2SOz36OrHCIcMMgbEXqoCv9UYcGMdFXSmHIie0HMyHhf+3PxpuQk0lj8vX1kP+SV3G02sS6J6w==",
       "type": "package",
-      "path": "brutal.dev.strongnamesigner/2.7.1",
+      "path": "brutal.dev.strongnamesigner/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "brutal.dev.strongnamesigner.2.7.1.nupkg.sha512",
+        "brutal.dev.strongnamesigner.3.1.0.nupkg.sha512",
         "brutal.dev.strongnamesigner.nuspec",
         "build/Brutal.Dev.StrongNameSigner.dll",
         "build/Brutal.Dev.StrongNameSigner.targets",
@@ -87,30 +115,38 @@
         "build/Mono.Cecil.Rocks.dll",
         "build/Mono.Cecil.dll",
         "build/PowerArgs.dll",
-        "build/StrongNameSigner.Console.exe"
+        "build/StrongNameSigner.Console.exe",
+        "build/StrongNameSigner.Console.exe.config"
       ]
     },
-    "FontAwesome.Sharp/5.15.3": {
-      "sha512": "b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
+    "FontAwesome.Sharp/5.15.4": {
+      "sha512": "IqJe1IQas6tSVXMNHTWA/NJeP7azyxDTk6DCB+NMXOOED2F07IYI9nvfB1HP83r4yh5cntZoTdwSpIraA5XoXw==",
       "type": "package",
-      "path": "fontawesome.sharp/5.15.3",
+      "path": "fontawesome.sharp/5.15.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "fontawesome.sharp.5.15.3.nupkg.sha512",
+        "fontawesome.sharp.5.15.4.nupkg.sha512",
         "fontawesome.sharp.nuspec",
         "lib/net40/FontAwesome.Sharp.dll",
+        "lib/net40/FontAwesome.Sharp.dll.unsigned",
         "lib/net45/FontAwesome.Sharp.dll",
+        "lib/net45/FontAwesome.Sharp.dll.unsigned",
         "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net472/FontAwesome.Sharp.dll.unsigned",
         "lib/net48/FontAwesome.Sharp.dll",
-        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
+        "lib/net48/FontAwesome.Sharp.dll.unsigned",
+        "lib/net5.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/net5.0-windows7.0/FontAwesome.Sharp.dll.unsigned",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll.unsigned"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Brutal.Dev.StrongNameSigner >= 2.7.1",
-      "FontAwesome.Sharp >= 5.15.3"
+      "Brutal.Dev.StrongNameSigner >= 3.1.0",
+      "FontAwesome.Sharp >= 5.15.4"
     ]
   },
   "packageFolders": {
@@ -120,11 +156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\L1\\L1FEOutdoors\\L1FEOutdoors.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\L1 Updated\\L1FEOutdoors.csproj",
       "projectName": "L1",
-      "projectPath": "C:\\Users\\HP\\Desktop\\L1\\L1FEOutdoors\\L1FEOutdoors.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\L1 Updated\\L1FEOutdoors.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\L1\\L1FEOutdoors\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\L1 Updated\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -154,12 +190,12 @@
           "Brutal.Dev.StrongNameSigner": {
             "include": "None",
             "target": "Package",
-            "version": "[2.7.1, )",
+            "version": "[3.1.0, )",
             "generatePathProperty": true
           },
           "FontAwesome.Sharp": {
             "target": "Package",
-            "version": "[5.15.3, )",
+            "version": "[5.15.4, )",
             "generatePathProperty": true
           }
         }

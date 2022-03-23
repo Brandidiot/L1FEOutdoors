@@ -14,7 +14,7 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgFontAwesome_Sharp Condition=" '$(PkgFontAwesome_Sharp)' == '' ">C:\Users\HP\.nuget\packages\fontawesome.sharp\5.15.3</PkgFontAwesome_Sharp>
-    <PkgBrutal_Dev_StrongNameSigner Condition=" '$(PkgBrutal_Dev_StrongNameSigner)' == '' ">C:\Users\HP\.nuget\packages\brutal.dev.strongnamesigner\2.7.1</PkgBrutal_Dev_StrongNameSigner>
+    <PkgFontAwesome_Sharp Condition=" '$(PkgFontAwesome_Sharp)' == '' ">C:\Users\HP\.nuget\packages\fontawesome.sharp\5.15.4</PkgFontAwesome_Sharp>
+    <PkgBrutal_Dev_StrongNameSigner Condition=" '$(PkgBrutal_Dev_StrongNameSigner)' == '' ">C:\Users\HP\.nuget\packages\brutal.dev.strongnamesigner\3.1.0</PkgBrutal_Dev_StrongNameSigner>
   </PropertyGroup>
 </Project>
