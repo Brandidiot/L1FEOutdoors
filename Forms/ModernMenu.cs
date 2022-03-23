@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using L1FEOutdoors.Forms;
+using L1FEOutdoors.LOControls;
 using L1FEOutdoors.Properties;
 
 namespace L1FEOutdoors
@@ -14,6 +15,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
+        private string _update = "Created And Changed Update Box Info.";
 
         public ModernMenu()
         {
@@ -23,15 +25,6 @@ namespace L1FEOutdoors
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
-            //LOMessageBox.Show(VersionLabel);
-            lblVersion.Text = VersionLabel;
-            if (Settings.Default.Version == VersionLabel) return;
-            //lblGreetings.Text = "Welcome New User";
-            //Change the value since the program has run once now
-            Settings.Default.Version = VersionLabel;
-            Settings.Default.Save();
-            LOMessageBox.Show("Updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public string VersionLabel
@@ -219,6 +212,18 @@ namespace L1FEOutdoors
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ProductPrice(), sender);
+        }
+
+        private void ModernMenu_Shown(object sender, EventArgs e)
+        {
+            //LOMessageBox.Show(VersionLabel);
+            lblVersion.Text = VersionLabel;
+            if (Settings.Default.Version == VersionLabel) return;
+            //lblGreetings.Text = "Welcome New User";
+            //Change the value since the program has run once now
+            Settings.Default.Version = VersionLabel;
+            Settings.Default.Save();
+            LOUpdateBox.Show(_update, "Updated To " + VersionLabel, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

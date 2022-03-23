@@ -47,3 +47,4 @@ C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1.exe
 C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1.pdb
 C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\Interop.VSTOEE100.dll
 C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1FEOutdoors.csproj.ResolveComReference.cache
+C:\Users\HP\Desktop\L1\L1FEOutdoors\obj\Debug\L1FEOutdoors.Forms.FormUpdateBox.resources

@@ -1,11 +1,10 @@
 ﻿using System.Drawing;
-using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace L1FEOutdoors
+namespace L1FEOutdoors.Forms
 {
-    public partial class FormMessageBox : Form
+    public partial class FormUpdateBox : Form
     {
         private Color _primaryColor = Color.CornflowerBlue;
         private int _borderSize = 2;
@@ -22,7 +21,7 @@ namespace L1FEOutdoors
             }
         }
 
-        public FormMessageBox(string text)
+        public FormUpdateBox(string text)
         {
             InitializeComponent();
             InitializeItems();
@@ -33,7 +32,7 @@ namespace L1FEOutdoors
             SetButtons(MessageBoxButtons.OK, MessageBoxDefaultButton.Button1);
         }
 
-        public FormMessageBox(string text, string caption)
+        public FormUpdateBox(string text, string caption)
         {
             InitializeComponent();
             InitializeItems();
@@ -44,7 +43,7 @@ namespace L1FEOutdoors
             SetButtons(MessageBoxButtons.OK, MessageBoxDefaultButton.Button1);
         }
 
-        public FormMessageBox(string text, string caption, MessageBoxButtons buttons)
+        public FormUpdateBox(string text, string caption, MessageBoxButtons buttons)
         {
             InitializeComponent();
             InitializeItems();
@@ -55,7 +54,7 @@ namespace L1FEOutdoors
             SetButtons(buttons, MessageBoxDefaultButton.Button1);
         }
 
-        public FormMessageBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
+        public FormUpdateBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
             InitializeComponent();
             InitializeItems();
@@ -67,7 +66,7 @@ namespace L1FEOutdoors
             SetIcon(icon);
         }
 
-        public FormMessageBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton)
+        public FormUpdateBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton)
         {
             InitializeComponent();
             InitializeItems();
@@ -152,7 +151,7 @@ namespace L1FEOutdoors
                 case MessageBoxButtons.YesNo:
                     //Yes Button
                     button1.Visible = true;
-                    button1.Location = new Point(xCenter - (button1.Width / 2) - 5,yCenter);
+                    button1.Location = new Point(xCenter - (button1.Width / 2) - 5, yCenter);
                     button1.Text = @"Yes";
                     button1.DialogResult = DialogResult.Yes;
 
@@ -274,13 +273,11 @@ namespace L1FEOutdoors
         private static extern void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
-        private void panelTitleBar_MouseDown_1(object sender, MouseEventArgs e)
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         #endregion
-
-
     }
 }

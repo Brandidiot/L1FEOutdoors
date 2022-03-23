@@ -1,41 +1,42 @@
 ﻿using System.Windows.Forms;
+using L1FEOutdoors.Forms;
 
-namespace L1FEOutdoors
+namespace L1FEOutdoors.LOControls
 {
-    public abstract class LOMessageBox
+    public abstract class LOUpdateBox
     {
         public static DialogResult Show(string text)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text))
+            using (var msgForm = new FormUpdateBox(text))
                 result = msgForm.ShowDialog();
             return result;
         }
         public static DialogResult Show(string text, string caption)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption))
+            using (var msgForm = new FormUpdateBox(text, caption))
                 result = msgForm.ShowDialog();
             return result;
         }
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption, buttons))
+            using (var msgForm = new FormUpdateBox(text, caption, buttons))
                 result = msgForm.ShowDialog();
             return result;
         }
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption, buttons, icon))
+            using (var msgForm = new FormUpdateBox(text, caption, buttons, icon))
                 result = msgForm.ShowDialog();
             return result;
         }
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption, buttons, icon, defaultButton))
+            using (var msgForm = new FormUpdateBox(text, caption, buttons, icon, defaultButton))
                 result = msgForm.ShowDialog();
             return result;
         }
@@ -45,35 +46,35 @@ namespace L1FEOutdoors
         public static DialogResult Show(IWin32Window owner, string text)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text))
+            using (var msgForm = new FormUpdateBox(text))
                 result = msgForm.ShowDialog(owner);
             return result;
         }
         public static DialogResult Show(IWin32Window owner, string text, string caption)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption))
+            using (var msgForm = new FormUpdateBox(text, caption))
                 result = msgForm.ShowDialog(owner);
             return result;
         }
         public static DialogResult Show(IWin32Window owner, string text, string caption, MessageBoxButtons buttons)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption, buttons))
+            using (var msgForm = new FormUpdateBox(text, caption, buttons))
                 result = msgForm.ShowDialog(owner);
             return result;
         }
         public static DialogResult Show(IWin32Window owner, string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption, buttons, icon))
+            using (var msgForm = new FormUpdateBox(text, caption, buttons, icon))
                 result = msgForm.ShowDialog(owner);
             return result;
         }
         public static DialogResult Show(IWin32Window owner, string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton)
         {
             DialogResult result;
-            using (var msgForm = new FormMessageBox(text, caption, buttons, icon, defaultButton))
+            using (var msgForm = new FormUpdateBox(text, caption, buttons, icon, defaultButton))
                 result = msgForm.ShowDialog(owner);
             return result;
         }
