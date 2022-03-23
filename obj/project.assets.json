@@ -1,0 +1,180 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "Brutal.Dev.StrongNameSigner/2.7.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "FontAwesome.Sharp/5.15.3": {
+        "type": "package",
+        "compile": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "Brutal.Dev.StrongNameSigner/2.7.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "FontAwesome.Sharp/5.15.3": {
+        "type": "package",
+        "compile": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "Brutal.Dev.StrongNameSigner/2.7.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "FontAwesome.Sharp/5.15.3": {
+        "type": "package",
+        "compile": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "Brutal.Dev.StrongNameSigner/2.7.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "FontAwesome.Sharp/5.15.3": {
+        "type": "package",
+        "compile": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net472/FontAwesome.Sharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Brutal.Dev.StrongNameSigner/2.7.1": {
+      "sha512": "cfbP+kL3AQejWBDZgJ1fSejv+bvJwFE9eVOkZExWjbtWk2Dd+Sy9xRDTRFalapXmHJGcXG247xIP4ounktYy8Q==",
+      "type": "package",
+      "path": "brutal.dev.strongnamesigner/2.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "brutal.dev.strongnamesigner.2.7.1.nupkg.sha512",
+        "brutal.dev.strongnamesigner.nuspec",
+        "build/Brutal.Dev.StrongNameSigner.dll",
+        "build/Brutal.Dev.StrongNameSigner.targets",
+        "build/Mono.Cecil.Mdb.dll",
+        "build/Mono.Cecil.Pdb.dll",
+        "build/Mono.Cecil.Rocks.dll",
+        "build/Mono.Cecil.dll",
+        "build/PowerArgs.dll",
+        "build/StrongNameSigner.Console.exe"
+      ]
+    },
+    "FontAwesome.Sharp/5.15.3": {
+      "sha512": "b72giuP5i2aR2W+u1gdYfYnTRkMIvI78idSDgrgcSV0aSE/nwJcMoh3sItxugMqOcNeIHxveGxAxcrcTYmwlHA==",
+      "type": "package",
+      "path": "fontawesome.sharp/5.15.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.5.15.3.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net40/FontAwesome.Sharp.dll",
+        "lib/net45/FontAwesome.Sharp.dll",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "Brutal.Dev.StrongNameSigner >= 2.7.1",
+      "FontAwesome.Sharp >= 5.15.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\L1\\L1FEOutdoors\\L1FEOutdoors.csproj",
+      "projectName": "L1",
+      "projectPath": "C:\\Users\\HP\\Desktop\\L1\\L1FEOutdoors\\L1FEOutdoors.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\L1\\L1FEOutdoors\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "Brutal.Dev.StrongNameSigner": {
+            "include": "None",
+            "target": "Package",
+            "version": "[2.7.1, )",
+            "generatePathProperty": true
+          },
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[5.15.3, )",
+            "generatePathProperty": true
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

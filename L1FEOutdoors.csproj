@@ -29,7 +29,7 @@
     <UpdateUrl>https://raw.githubusercontent.com/Brandidiot/L1FEOutdoors/master/published/</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>28</ApplicationRevision>
+    <ApplicationRevision>29</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -305,5 +305,12 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Brutal.Dev.StrongNameSigner.3.1.0\build\Brutal.Dev.StrongNameSigner.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Brutal.Dev.StrongNameSigner.3.1.0\build\Brutal.Dev.StrongNameSigner.targets'))" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="Brutal.Dev.StrongNameSigner" Version="2.7.1" GeneratePathProperty="true" IncludeAssets="none" />
+    <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" GeneratePathProperty="true" />
+  </ItemGroup>
+  <Target Name="StrongName" BeforeTargets="PrepareForBuild">
+    <Exec Command="&quot;$(PkgBrutal_Dev_StrongNameSigner)\build\StrongNameSigner.Console.exe&quot; -InputDirectory &quot;$(PkgFontAwesome_Sharp)\lib&quot;" />
   </Target>
 </Project>
