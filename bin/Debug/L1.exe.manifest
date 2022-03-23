@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jUrcWIE/wkAjWNUL6/q6mr023+SkxsNeU7Owt3VV2aM=</dsig:DigestValue>
+        <dsig:DigestValue>zS+rUo2SQfG6zHhcEP+cqR7Brt849R5NqlvEXOAQqt8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -81,13 +81,13 @@
       <dsig:DigestValue>YB+KOYuzP57qVKzzBZezR7PrzyCv0mvP4QDoU6pGCho=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\InvAvail.csv" size="175119">
+  <file name="Resources\InvAvail.csv" size="175294">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Uf/ButUdBaBw1ZtpH/RyUoxVhaUICFYs4RNRzS8qjkQ=</dsig:DigestValue>
+      <dsig:DigestValue>XhZphr6Y7CGEAABDT4G264Kpk+vNBsFHmBvMfanpPuA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\InvQtys.csv" size="48043">
@@ -99,13 +99,13 @@
       <dsig:DigestValue>UxATulJKMlPAeEHzBLM3AIzRSWL/01of1IILsHFUV7s=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\ProductPricing.csv" size="64847">
+  <file name="Resources\ProductPricing.csv" size="64908">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+UjllVUHZ4VmmJqlGGRI6aLVp7s+SH1X0Z7ew50pHEc=</dsig:DigestValue>
+      <dsig:DigestValue>GWSQGjxQN102myDmiXVngcm+DUV9pFonrWVJHW95L94=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Recount.csv" size="193793">
