@@ -31,7 +31,7 @@ namespace L1FEOutdoors
             //Change the value since the program has run once now
             Settings.Default.Version = VersionLabel;
             Settings.Default.Save();
-            LOMessageBox.Show("Testing Version Update", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LOMessageBox.Show("Updated", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public string VersionLabel
