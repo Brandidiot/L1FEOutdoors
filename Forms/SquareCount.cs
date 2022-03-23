@@ -268,6 +268,7 @@ namespace L1FEOutdoors
             FormatDataGridView();
 
             //Remove Useless Columns
+            dgSquareCount.Columns.Remove("Reference Handle");
             dgSquareCount.Columns.Remove("Token");
             dgSquareCount.Columns.Remove("Description");
             dgSquareCount.Columns.Remove("Price");

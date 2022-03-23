@@ -134,6 +134,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check Square";
             this.Load += new System.EventHandler(this.CheckSquare_Load);
+            this.Shown += new System.EventHandler(this.CheckSquare_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgSquare)).EndInit();
             this.ResumeLayout(false);
 
