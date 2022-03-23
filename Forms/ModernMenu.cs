@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using L1FEOutdoors.Forms;
+using L1FEOutdoors.Properties;
 
 namespace L1FEOutdoors
 {
@@ -21,6 +22,15 @@ namespace L1FEOutdoors
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            if (Settings.Default.FirstRun == true)
+            {
+                //lblGreetings.Text = "Welcome New User";
+                //Change the value since the program has run once now
+                Settings.Default.FirstRun = false;
+                Settings.Default.Save();
+                LOMessageBox.Show("Updated Daily Product Pricing And Inventory Availability");
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
