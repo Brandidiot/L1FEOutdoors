@@ -26,12 +26,12 @@ namespace L1FEOutdoors
 
             //LOMessageBox.Show(VersionLabel);
             lblVersion.Text = VersionLabel;
-            if (Settings.Default.FirstRun != true) return;
+            if (Settings.Default.Version == VersionLabel) return;
             //lblGreetings.Text = "Welcome New User";
             //Change the value since the program has run once now
-            Settings.Default.FirstRun = false;
+            Settings.Default.Version = VersionLabel;
             Settings.Default.Save();
-            LOMessageBox.Show("Updated All Files And Settings", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LOMessageBox.Show("Testing Version Update", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public string VersionLabel
