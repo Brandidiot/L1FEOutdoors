@@ -23,14 +23,12 @@ namespace L1FEOutdoors
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
-            if (Settings.Default.FirstRun == true)
-            {
-                //lblGreetings.Text = "Welcome New User";
-                //Change the value since the program has run once now
-                Settings.Default.FirstRun = false;
-                Settings.Default.Save();
-                LOMessageBox.Show("Updated Daily Product Pricing And Inventory Availability");
-            }
+            if (Settings.Default.FirstRun != true) return;
+            //lblGreetings.Text = "Welcome New User";
+            //Change the value since the program has run once now
+            Settings.Default.FirstRun = false;
+            Settings.Default.Save();
+            LOMessageBox.Show("Updated All Files And Settings", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

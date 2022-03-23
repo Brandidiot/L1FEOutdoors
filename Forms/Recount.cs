@@ -76,8 +76,7 @@ namespace L1FEOutdoors
                     if (dgv.Rows.Count != 0) return;
 
                     //Save.Enabled = false;
-                    LOMessageBox.Show("There is no data in this file", "No Data", MessageBoxButtons.OK,
-                        MessageBoxIcon.Exclamation);
+                    LOMessageBox.Show("There is no data in this file", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
