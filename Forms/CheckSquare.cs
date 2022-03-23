@@ -144,5 +144,10 @@ namespace L1FEOutdoors
 
             RemoveRows();
         }
+
+        private void dgSquare_Sorted(object sender, EventArgs e)
+        {
+
+        }
     }
 }
