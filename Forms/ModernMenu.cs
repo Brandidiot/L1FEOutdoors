@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using L1FEOutdoors.Forms;
@@ -23,6 +24,8 @@ namespace L1FEOutdoors
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
+            //LOMessageBox.Show(VersionLabel);
+            lblVersion.Text = VersionLabel;
             if (Settings.Default.FirstRun != true) return;
             //lblGreetings.Text = "Welcome New User";
             //Change the value since the program has run once now
@@ -30,6 +33,23 @@ namespace L1FEOutdoors
             Settings.Default.Save();
             LOMessageBox.Show("Updated All Files And Settings", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public string VersionLabel
+{
+    get
+    {
+        if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+        {
+            Version ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
+            return string.Format("{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision);
+        }
+        else
+        {
+            var ver = Assembly.GetExecutingAssembly().GetName().Version;
+            return string.Format("{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision);
+        }
+    }
+}
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();

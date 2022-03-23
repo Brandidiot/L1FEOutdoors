@@ -25,4 +25,5 @@ namespace L1FEOutdoors
         public static ModernMenu ModernMenu => _modernmenu ?? (_modernmenu = new ModernMenu());
         private static ModernMenu _modernmenu;
     }
+
 }
