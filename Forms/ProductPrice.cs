@@ -13,14 +13,13 @@ namespace L1FEOutdoors.Forms
         public ProductPrice()
         {
             InitializeComponent();
-            GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvAvail.csv", dgProduct);
         }
 
-        private void PopulatePrice()
+        private async void PopulatePrice()
         {
             //Get Data From InvQtys
             DataTable dtNew;
-            dtNew = GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\ProductPricing.csv");
+            dtNew = await GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\ProductPricing.csv");
 
             foreach (DataGridViewRow rows in dgProduct.Rows)
             {
@@ -48,8 +47,10 @@ namespace L1FEOutdoors.Forms
             }
         }
 
-        private void ProductPrice_Shown(object sender, EventArgs e)
+        private async void ProductPrice_Shown(object sender, EventArgs e)
         {
+            await GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvAvail.csv", dgProduct);
+
             LoadTheme();
             FormatDataGridView();
             //dgProduct.Columns.Remove("On Hand");

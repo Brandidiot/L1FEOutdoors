@@ -10,39 +10,23 @@ namespace L1FEOutdoors
 {
     public partial class SquareCount : Form
     {
-        public DataGridView DgSquareCount
-        {
-            get => dgSquareCount;
-            set => dgSquareCount = value;
-        }
         public SquareCount()
         {
             InitializeComponent();
-
-            PopulateSquareInfo();
-            PopulateInvQty();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            if (Recount.Save_Data())
-            {
-                btnExport_Click(sender, e);
-                this.Close();
-                //FormProvider.MainMenu.Show();
-            }
-            else
-            {
-                this.Close();
-                FormProvider.ModernMenu.Show();
-            }
-        }
-
-        private void PopulateSquareInfo()
+        private async void PopulateSquareInfo()
         {
             //Populate DataTable With Square Data
-            Recount.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Square.csv", dgSquareCount);
-
+            try
+            {
+                await GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Square.csv", dgSquareCount);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
             //Hide Useless Columns
             //dgSquareCount.Columns.Remove("Token");
             //dgSquareCount.Columns.Remove("Description");
@@ -54,34 +38,41 @@ namespace L1FEOutdoors
             //Hide More Useless Columns
         }
 
-        private void PopulateInvQty()
+        private async void PopulateInvQty()
         {
-            //Get Data From InvQtys
-            DataTable dtNew;
-            dtNew = Recount.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvQtys.csv");
-
-            foreach (DataGridViewRow rows in dgSquareCount.Rows)
+            try
             {
-                String SKU = rows.Cells["SKU"].Value.ToString();
-                /*var contains = dtNew.AsEnumerable().Any(row => SKU == row.Field<String>("PartNumber"));
+                //Get Data From InvQtys
+                var dtNew = await GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvQtys.csv");
 
-                if (contains)
-                    MessageBox.Show("Found SKU " + SKU + " in Row " + dtNew. );*/
-                if (dtNew.Select("PartNumber = '" + SKU + "'").Length > 0)
+                foreach (DataGridViewRow rows in dgSquareCount.Rows)
                 {
-                    DataRow[] dr = dtNew.Select("PartNumber = '" + SKU + "'");
+                    var sku = rows.Cells["SKU"].Value.ToString();
+                    /*var contains = dtNew.AsEnumerable().Any(row => SKU == row.Field<String>("PartNumber"));
 
-                    var part = dr[0]["PartNumber"].ToString();
-                    var qty = dr[0]["Qty"].ToString();
+                    if (contains)
+                        MessageBox.Show("Found SKU " + SKU + " in Row " + dtNew. );*/
+                    if (dtNew.Select("PartNumber = '" + sku + "'").Length > 0)
+                    {
+                        var dr = dtNew.Select("PartNumber = '" + sku + "'");
 
-                    //rows.Cells["FishbowlQty"].Value = "0";
-                    rows.Cells["QTY"].Value = qty;
-                    //MessageBox.Show(rows.Cells[0].Value.ToString());
+                        var part = dr[0]["PartNumber"].ToString();
+                        var qty = dr[0]["Qty"].ToString();
+
+                        //rows.Cells["FishbowlQty"].Value = "0";
+                        rows.Cells["QTY"].Value = qty;
+                        //MessageBox.Show(rows.Cells[0].Value.ToString());
+                    }
+                    else
+                    {
+                        rows.Cells["QTY"].Value = "0";
+                    }
                 }
-                else
-                {
-                    rows.Cells["QTY"].Value = "0";
-                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
         }
 
@@ -93,7 +84,7 @@ namespace L1FEOutdoors
             if (dgSquareCount.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "CSV (*.csv)|*.csv";
+                sfd.Filter = @"CSV (*.csv)|*.csv";
 
                 var folderName = @"C:\Users\" + Environment.UserName + @"\Desktop\" + DateTime.Now.ToString("M/d/yyyy");
 
@@ -224,11 +215,6 @@ namespace L1FEOutdoors
             return dt;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void LoadTheme()
         {
             foreach (Control ctrl in this.Controls)
@@ -264,6 +250,8 @@ namespace L1FEOutdoors
 
         private void SquareCount_Shown(object sender, EventArgs e)
         {
+            PopulateSquareInfo();
+            PopulateInvQty();
             LoadTheme();
             FormatDataGridView();
 

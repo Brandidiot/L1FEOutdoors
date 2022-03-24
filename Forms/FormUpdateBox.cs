@@ -212,7 +212,6 @@ namespace L1FEOutdoors.Forms
                     //Set Default Button
                     SetDefaultButton(defaultButton);
                     break;
-                    break;
             }
         }
         private void SetDefaultButton(MessageBoxDefaultButton defaultButton)

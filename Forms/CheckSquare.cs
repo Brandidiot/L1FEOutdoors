@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace L1FEOutdoors
@@ -51,19 +52,19 @@ namespace L1FEOutdoors
             }
         }
 
-        private void PopulateSquareInfo()
+        private async Task PopulateSquareInfo()
         {
             //Populate DataTable With Square Data
-            Recount.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Square.csv", dgSquare);
+            await GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Square.csv", dgSquare);
 
             //Hide Useless Columns
             dgSquare.Columns.Remove("Reference Handle");
-            dgSquare.Columns["Token"].Visible = false;
-            dgSquare.Columns["Description"].Visible = false;
-            dgSquare.Columns["Price"].Visible = false;
+            dgSquare.Columns["Token"]!.Visible = false;
+            dgSquare.Columns["Description"]!.Visible = false;
+            dgSquare.Columns["Price"]!.Visible = false;
             //dgSquare.Columns["Option Name 1"].Visible = false;
-            dgSquare.Columns["Option Value 1"].Visible = false;
-            dgSquare.Columns["Enabled L1FE Outdoors"].Visible = false;
+            dgSquare.Columns["Option Value 1"]!.Visible = false;
+            dgSquare.Columns["Enabled L1FE Outdoors"]!.Visible = false;
 
             //Hide More Useless Columns
             foreach (DataGridViewColumn column in dgSquare.Columns)
@@ -83,43 +84,44 @@ namespace L1FEOutdoors
             }
         }
 
-        private void PopulateInvQty()
+        private async Task PopulateInvQty()
         {
             //Get Data From InvQtys
-            DataTable dtNew;
-            dtNew = Recount.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvQtys.csv");
-
-            foreach (DataGridViewRow rows in dgSquare.Rows)
+            try
             {
-                String SKU = rows.Cells["SKU"].Value.ToString();
-                /*var contains = dtNew.AsEnumerable().Any(row => SKU == row.Field<String>("PartNumber"));
+                var dtNew = await GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvQtys.csv");
 
-                if (contains)
-                    MessageBox.Show("Found SKU " + SKU + " in Row " + dtNew. );*/
-                if (dtNew.Select("PartNumber = '" + SKU + "'").Length > 0)
+                foreach (DataGridViewRow rows in dgSquare.Rows)
                 {
-                    DataRow[] dr = dtNew.Select("PartNumber = '" + SKU + "'");
+                    var sku = rows.Cells["SKU"].Value.ToString();
+                    /*var contains = dtNew.AsEnumerable().Any(row => SKU == row.Field<String>("PartNumber"));
 
-                    var part = dr[0]["PartNumber"].ToString();
-                    var qty = dr[0]["Qty"].ToString();
+                    if (contains)
+                        MessageBox.Show("Found SKU " + SKU + " in Row " + dtNew. );*/
+                    if (dtNew.Select("PartNumber = '" + sku + "'").Length > 0)
+                    {
+                        DataRow[] dr = dtNew.Select("PartNumber = '" + sku + "'");
 
-                    //rows.Cells["FishbowlQty"].Value = "0";
-                    rows.Cells[7].Value = qty;
-                    //MessageBox.Show(rows.Cells[0].Value.ToString());
-                }
-                else
-                {
-                    rows.Cells[7].Value = "0";
+                        var part = dr[0]["PartNumber"].ToString();
+                        var qty = dr[0]["Qty"].ToString();
+
+                        //rows.Cells["FishbowlQty"].Value = "0";
+                        rows.Cells[7].Value = qty;
+                        //MessageBox.Show(rows.Cells[0].Value.ToString());
+                    }
+                    else
+                    {
+                        rows.Cells[7].Value = "0";
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FormProvider.ModernMenu.Show();
-        }
-
+        
         private void CheckSquare_Load(object sender, EventArgs e)
         {
             
@@ -136,10 +138,10 @@ namespace L1FEOutdoors
             dgSquare.DefaultCellStyle.SelectionBackColor = ThemeColor.SecondaryColor;
         }
 
-        private void CheckSquare_Shown(object sender, EventArgs e)
+        private async void CheckSquare_Shown(object sender, EventArgs e)
         {
-            PopulateSquareInfo();
-            PopulateInvQty();
+            await PopulateSquareInfo();
+            await PopulateInvQty();
             RemoveRows();
             LoadTheme();
             FormatDataGridView();

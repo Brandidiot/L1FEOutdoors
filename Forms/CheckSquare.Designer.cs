@@ -47,9 +47,7 @@
             this.dgSquare.AllowUserToAddRows = false;
             this.dgSquare.AllowUserToDeleteRows = false;
             this.dgSquare.AllowUserToResizeRows = false;
-            this.dgSquare.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgSquare.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgSquare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -60,13 +58,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgSquare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgSquare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSquare.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Product,
-            this.Variation,
-            this.SKU,
-            this.Category,
-            this.SquareQty,
-            this.FishbowlQty});
+            this.dgSquare.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Product, this.Variation, this.SKU, this.Category, this.SquareQty, this.FishbowlQty });
             this.dgSquare.Location = new System.Drawing.Point(12, 12);
             this.dgSquare.Name = "dgSquare";
             this.dgSquare.ReadOnly = true;
@@ -142,7 +134,6 @@
             this.Shown += new System.EventHandler(this.CheckSquare_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgSquare)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion

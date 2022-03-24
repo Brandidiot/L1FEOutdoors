@@ -17,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Removed Row Resize In Square Count.";
+        private string _update = "-Load Data In Safer Manner.";
         private Size _formSize;
 
         public ModernMenu()

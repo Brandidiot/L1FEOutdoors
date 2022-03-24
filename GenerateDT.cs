@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Data;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace L1FEOutdoors
 {
     public class GenerateDT
     {
-        public static void GenerateDataTable(String SourceURL, DataGridView dgv)
+        public static async Task GenerateDataTable(String SourceURL, DataGridView dgv)
         {
             var dialog = new OpenFileDialog();
             //var SourceURL = @"C:\Users\" + Environment.UserName + @"\Documents\Recounted.csv";
@@ -27,7 +28,7 @@ namespace L1FEOutdoors
 
                 if (File.Exists(SourceURL) && SourceURL.EndsWith(".csv"))
                 {
-                    dtNew = GetDataTabletFromCsvFile(SourceURL);
+                    dtNew = await GetDataTabletFromCsvFile(SourceURL);
 
                     /*if (Convert.ToString(dtNew.Columns[0]).ToLower() != "part")
                     {
@@ -82,7 +83,7 @@ namespace L1FEOutdoors
             }
         }
 
-        public static DataTable GetDataTabletFromCsvFile(string csvFilePath)
+        public static Task<DataTable> GetDataTabletFromCsvFile(string csvFilePath)
         {
             var csvData = new DataTable();
             try
@@ -120,7 +121,7 @@ namespace L1FEOutdoors
             {
                 LOMessageBox.Show("Exce " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return csvData;
+            return Task.FromResult(csvData);
         }
     }
 }
