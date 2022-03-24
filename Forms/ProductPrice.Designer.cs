@@ -36,13 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductPrice));
             this.dgProduct = new System.Windows.Forms.DataGridView();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.txtSearch = new L1FEOutdoors.LOControls.LOTextBox();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UOM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.txtSearch = new L1FEOutdoors.LOControls.LOTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,47 +74,11 @@
             this.dgProduct.Location = new System.Drawing.Point(12, 12);
             this.dgProduct.Name = "dgProduct";
             this.dgProduct.ReadOnly = true;
+            this.dgProduct.RowHeadersVisible = false;
             this.dgProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgProduct.Size = new System.Drawing.Size(776, 372);
             this.dgProduct.TabIndex = 0;
             this.dgProduct.TabStop = false;
-            // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(660, 391);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(128, 47);
-            this.btnExport.TabIndex = 2;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSearch.BorderColor = System.Drawing.Color.Empty;
-            this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSearch.BorderRadius = 6;
-            this.txtSearch.BorderSize = 2;
-            this.txtSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSearch.Location = new System.Drawing.Point(270, 397);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.MultiLine = false;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSearch.PasswordChar = false;
-            this.txtSearch.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.PlaceHolderText = "Search";
-            this.txtSearch.Size = new System.Drawing.Size(250, 31);
-            this.txtSearch.TabIndex = 1;
-            this.txtSearch.Texts = "";
-            this.txtSearch.UnderlinedStyle = false;
-            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // Product
             // 
@@ -163,6 +127,43 @@
             this.UOM.HeaderText = "UOM";
             this.UOM.Name = "UOM";
             this.UOM.ReadOnly = true;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(660, 391);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(128, 47);
+            this.btnExport.TabIndex = 2;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearch.BorderColor = System.Drawing.Color.Empty;
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSearch.BorderRadius = 6;
+            this.txtSearch.BorderSize = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSearch.Location = new System.Drawing.Point(270, 397);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.MultiLine = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceHolderText = "Search";
+            this.txtSearch.Size = new System.Drawing.Size(250, 31);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = false;
+            this.txtSearch._TextChanged += new System.EventHandler(this.txtSearch__TextChanged);
             // 
             // ProductPrice
             // 

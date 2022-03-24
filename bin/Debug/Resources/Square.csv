@@ -79,7 +79,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #boombottle-magic-mount-speaker-black-camo,ABX6BTN5CXJUPA6SBHUPQUOM,BoomBottle Magic Mount Speaker,Black Camo,BTMSC5-BB2,,Accessories,169.99,,,Y,8,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bracket-for-led-light-bar-22-26mm-,IJO4674GR34IG7FGR72CP6KY,Bracket for LED Light Bar 22-26MM,,0069933,,Accessories,5.50,,,Y,6,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #breakline-camp-boots-w-8-leopard,BE2YJ465JY53N2UV3CWM75W3,Breakline Camp Boots,W 8 Leopard,810049597412,,Gator Waders,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#bronco-clamp-kit-d-style-,63HVFYCNJ6YNAJJAFDRKBLWR,Bronco Clamp Kit - D Style,,28-07499,,Parts,2.95,,,Y,11,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#bronco-clamp-kit-d-style-,63HVFYCNJ6YNAJJAFDRKBLWR,Bronco Clamp Kit - D Style,,28-07499,,Parts,2.95,,,Y,10,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-fuel-packs-3l,JCSVVFDX6CGUL7KFYTY7AFE6,Bronco Fuel Packs,3L,680-1400-1,,Accessories,65.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-fuel-packs-5l,ZJHEGJP3QJRFP5FEZDJGWQOH,Bronco Fuel Packs,5L,680-1405-1,,Accessories,75.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-fuel-packs-20l,ACR5TOEIBW6OND7CXQOKIQ4E,Bronco Fuel Packs,20L,680-1410-1,,Accessories,215.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -132,7 +132,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #dalton-primary-clutch-spring-greenyellow,ROT3KP6JAJQBCZ4DLU4W4EKE,Dalton Primary Clutch Spring,Green/Yellow,DPPS-G/Y,,Dalton,39.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-primary-clutch-spring-yellowblue,J2F6IC4UR2JKETHX7CV7UTWA,Dalton Primary Clutch Spring,Yellow/Blue,DPPS-Y/BL,,Dalton,39.00,,,Y,6,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-primary-clutch-spring-yellowred,ELBQGT5WC3NL2TUY6Q5SPBZY,Dalton Primary Clutch Spring,Yellow/Red,DPPS-Y/R,,Dalton,39.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#dalton-secondary-clutch-spring-blackviolet,SGT7MSYHFQNWVPZD2CJTGVJA,Dalton Secondary Clutch Spring,Black/Violet,DPSS-B/V,,Dalton,39.00,,,Y,5,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#dalton-secondary-clutch-spring-blackviolet,SGT7MSYHFQNWVPZD2CJTGVJA,Dalton Secondary Clutch Spring,Black/Violet,DPSS-B/V,,Dalton,39.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-secondary-clutch-spring-yellowblack,AS26WF25VNUXJQUVFWF7NNCC,Dalton Secondary Clutch Spring,Yellow/Black,DPSS-Y/B,,Dalton,39.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #deluxe-atv-pack-,WX2BJX2QIYLXM2UYOJPPK3IZ,Deluxe ATV Pack,,737826016914,,Storage,120.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dragon-mdx2-goggles-ionized-lenses-yellow,EEAEKNI2QS5WK26YZYOV4WTG,Dragon MDX2 Goggles,Ionized Lenses Yellow,722-1228,,Goggles,62.95,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -224,7 +224,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #fly-racing-9mm-beanie-helmet-xl-flat-black,MCSECBWDCTAJRPXXTOUVPJ4F,Fly Racing 9MM Beanie Helmet,XL Flat Black,49-20007,,Helmet,70.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #fly-racing-grips-pilot-ii-redblack,224PDQG4BW5IOXIS4X45PJQT,Fly Racing Grips,Pilot II Red/Black,24-1163,,Accessories,15.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #fly-racing-grips-pilot-ii-greyblack,2TGJWUDMOEOE5OV3WS7HJZKO,Fly Racing Grips,Pilot II Grey/Black,24-1161,,Accessories,15.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#fly-racing-grips-pilot-ii-redblack-1,7KFTEJLLPSRM7OIHKECYKRUN,Fly Racing Grips,Pilot II Red/Black,24-1127,,Accessories,15.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#fly-racing-grips-pilot-ii-redblack-1,7KFTEJLLPSRM7OIHKECYKRUN,Fly Racing Grips,Pilot II Red/Black,24-1127,,Accessories,15.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #fly-racing-grips-pilot-ii-blueblack,VGMLEJG5E64UXS2UQIIQPFSY,Fly Racing Grips,Pilot II Blue/Black,24-1162,,Accessories,15.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #fly-racing-grips-pilot-ii-yellowblack,H42AJCPZNE353FUMTF7KR6XX,Fly Racing Grips,Pilot II Yellow/Black,24-1164,,Accessories,15.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #fly-racing-grips-pilot-ii-yellowblack-1,7CXT3I5AZYVGMOXPVHFDPZVD,Fly Racing Grips,Pilot II Yellow/Black,24-1128,,Accessories,15.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -451,7 +451,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #k100s-fuel-treatment-8oz,VFRNZOGWSRQM4AHJENOEJSAU,K100S+ Fuel Treatment,8oz,757288002010,,Chemical,11.50,,,Y,10,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-2-rear-receiver-can-am,6VRVRQQLWIDHW6GVLTLHWG25,"KFI 2"" Rear Receiver",Can-Am,100945,,KFI,63.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-2-rear-receiver-honda,DTQONNSRYS4OZJBPY6BFXERP,"KFI 2"" Rear Receiver",Honda,101465,,KFI,64.99,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#kfi-split-cable-hook-stopper-,CKLWD4443UQ5TR2NQERSGDKU,KFI Split Cable Hook Stopper,,33-08638,,KFI,14.00,,,Y,10,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#kfi-split-cable-hook-stopper-,CKLWD4443UQ5TR2NQERSGDKU,KFI Split Cable Hook Stopper,,33-08638,,KFI,14.00,,,Y,9,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-tiger-tail-mount-1-14,63ZBUCLZT76LPNHRTDSMUVYW,KFI Tiger Tail Mount,"1-1/4""",101115,,KFI,100.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-tiger-tail-mount-2,HZ4ROOGP2JGA6MG24GLEI4E3,KFI Tiger Tail Mount,"2""",101110,,KFI,105.00,,,Y,5,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-tigertail-hook-bracket-kit-,7XHZVRR64SOIVROTPNQLJQT5,KFI Tigertail Hook Bracket Kit,,101132-R,,KFI,25.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -461,7 +461,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #kimpex-outback-seattrunk-base,JKCSEFKSMXY7NSMVLAEFJ5F5,Kimpex Outback Seat/Trunk,Base,358482,,Accessories,270.00,,,Y,6,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kimpex-outback-seattrunk-20,N5D4ZJ6U4PIQJG4MMBD7XPHM,Kimpex Outback Seat/Trunk,2.0,358484,,Accessories,280.00,,,Y,6,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #klotz-fog-on-16oz,WSGDK2MNN6H43HOKN75GHEVT,Klotz Fog On,16oz,KL-610,,Lubricants,11.75,,,Y,10,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#l1-canam-outlander-cupholder-for-linq-racks-,C65GVYYDO35Q4ARATE2PKXJD,L1 CanAm Outlander Cupholder for Linq Racks,,L1CANAMCUP,,Accessories,100.00,,,Y,81,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#l1-canam-outlander-cupholder-for-linq-racks-,C65GVYYDO35Q4ARATE2PKXJD,L1 CanAm Outlander Cupholder for Linq Racks,,L1CANAMCUP,,Accessories,100.00,,,Y,79,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #l1-cowboy-hat-,PBW2O533A77OPGSN2RMILM7X,L1 Cowboy Hat,,L1-COWBOYHAT,,Apparel,30.00,,,Y,300,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #l1-goggles-regular,QIFACLKE3NMKGF5EE4MOQ7NA,L1 Goggles,Regular,TNZUDKV0,,Goggles,29.00,,,Y,102,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #l1-goggles-green-tint,TJDJKMQQ5MXZZAY4BTK3KEVP,L1 Goggles,Green Tint,TNVYNQC0,,Goggles,39.00,,,Y,79,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -700,7 +700,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #red-line-10w40-motorcycle-946ml,COVZLWSW33AVP5WE46WS5C4I,Red Line 10W40 Motorcycle,946ml,42404,,Lubricants,21.00,,,Y,97,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #red-line-75w90-946ml,JO6GJH537PR3TWOLFHLBHERO,Red Line 75W90,946mL,57904,,Lubricants,23.00,,,Y,36,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #regular-lug-nuts-,WDAA6KE4KYPQMKE7OZGFS4R4,Regular Lug Nuts,,LUGS,,Parts,28.00,,,Y,,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#replacement-contactor-,4HBC7IYCXTAKGOIRTWTXMJCW,Replacement Contactor,,179ATVCONT,,Parts,45.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#replacement-contactor-,4HBC7IYCXTAKGOIRTWTXMJCW,Replacement Contactor,,179ATVCONT,,Parts,50.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #retro-series-waders-8-w-xl-max-5-pink,HLPY6POPHVH7XU7JEQBVG5TY,Retro Series Waders,8 W XL Max-5 Pink,682670659391,,Gator Waders,250.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #retro-series-waders-8-w-2xl-purple,YQDCEVDAJWXDYC37M4NCJMCU,Retro Series Waders,8 W 2XL Purple,300262131246,,Gator Waders,250.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #retro-series-waders-8-w-xl-aqua,QUCPFPL6GBKLJKF4HLZX2AET,Retro Series Waders,8 W XL Aqua,TNXA62MF,,Gator Waders,250.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -710,16 +710,16 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #retro-series-waders-10-w-large-purple,6KN6VX53E264GNFE7AER3E7M,Retro Series Waders,10 W Large Purple,300262131222,,Gator Waders,250.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #retro-series-waders-14-m-long-swat,YS6CUHMUJVUH5OCDSPAEFTLT,Retro Series Waders,14 M Long Swat,TNOBC84U,,Gator Waders,250.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #retro-series-waders-14-m-long-limeblack,AYWAJ2FWVTQGHSFZI7WFSXAU,Retro Series Waders,14 M Long Lime/Black,600151000050,,Gator Waders,250.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#rjwc-12-x-40-tow-rope-dark-grey-,N3L4FXLDP4G4CQRFYIQCKVZC,"RJWC 1/2"" x 40"" Tow Rope Dark Grey",,165020,,Accessories,99.00,,,Y,10,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#rjwc-12-x-40-tow-rope-dark-grey-,N3L4FXLDP4G4CQRFYIQCKVZC,"RJWC 1/2"" x 40"" Tow Rope Dark Grey",,165020,,Accessories,99.00,,,Y,8,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-billet-gas-cap-polaris-can-am,G3AS7PFYNZXIPCK6BK7ESVFZ,RJWC Billet Gas Cap,Polaris & Can-Am,1056,,RJWC,96.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-billet-gas-cap-20-polaris-can-am-black,LGZZKNOG25XXQWC6IE77T7ZG,RJWC Billet Gas Cap 2.0 - Polaris & Can-Am,Black,1501,,RJWC,95.00,,,Y,9,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-billet-gas-cap-20-polaris-can-am-red,7IXF3XVNUXUB2LYX4DNFDW5P,RJWC Billet Gas Cap 2.0 - Polaris & Can-Am,Red,1501RD,,RJWC,95.00,,,Y,14,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-billet-gas-cap-20-polaris-can-am-blue,EAMGD5ETOZRA6GXKRDRBNLOQ,RJWC Billet Gas Cap 2.0 - Polaris & Can-Am,Blue,1501BL,,RJWC,95.00,,,Y,18,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#rjwc-billet-shifter-20-for-can-am-black,6SJFMBJYNWISNWUWK7MSRW4N,RJWC Billet Shifter 2.0 For Can-Am,Black,1505BK,,RJWC,85.00,,,Y,13,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#rjwc-billet-shifter-20-for-can-am-black,6SJFMBJYNWISNWUWK7MSRW4N,RJWC Billet Shifter 2.0 For Can-Am,Black,1505BK,,RJWC,85.00,,,Y,12,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-billet-shifter-20-for-polaris-black,WRVSN4XG3BIPNXBBUVENST25,RJWC Billet Shifter 2.0 for Polaris,Black,1506BK,,RJWC,85.00,,,Y,8,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-can-am-metal-skeleton-shifter-,PRQQPDL6Y2FPJ6REAHZUAAZP,RJWC Can-Am Metal Skeleton Shifter,,1507,,RJWC,90.00,,,Y,22,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-can-am-outlander-g2-steel-bumpercaps-,BOMTUY5VP2ACFOFLH4KT2JMQ,RJWC Can-Am Outlander G2 Steel Bumpercaps,,1121,,RJWC,125.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#rjwc-can-am-polymer-skeleton-shifter-,ATENKLVW7I3G5DLG5TEMJZPI,RJWC Can-Am Polymer Skeleton Shifter,,1508,,RJWC,55.00,,,Y,19,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#rjwc-can-am-polymer-skeleton-shifter-,ATENKLVW7I3G5DLG5TEMJZPI,RJWC Can-Am Polymer Skeleton Shifter,,1508,,RJWC,55.00,,,Y,18,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-efi-tuner-kawasaki-brute-force-750-15-16,W4TEHL3UVZKAFWCQYHFCST2U,RJWC EFI Tuner,Kawasaki Brute Force 750 15-16,1289,,RJWC,330.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-efi-tuner-cf-moto-z8-utvatv-8008501000,2EBUAC6K2I6Q6JLVCM4UCUCP,RJWC EFI Tuner,CF Moto Z8 UTV/ATV 800/850/1000,1230,,RJWC,330.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-efi-tuner-outrene-500650-06-09-800-06-12,6Y4P6YH33RQHL3KTEO6NPAE4,RJWC EFI Tuner,Out/Rene 500/650 (06-09) & 800 (06-12),1225,,RJWC,330.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -810,17 +810,17 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #spike-lug-nut-set-of-16-m10-x-125-black,V6S5P7HHDDJCZBEF2MUV4Q4H,Spike Lug Nut Set Of 16,M10 x 12.5 Black,LUG-SPIKE-M10-BLK,,Parts,80.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #spike-lug-nut-set-of-16-superatv-m10-x-125-black,ANKUH3NGMJWGZDDET2BAM22S,Spike Lug Nut Set Of 16,SuperATV M10 x 1.25 Black,STLUG-40-27-4-M10-K,,Parts,90.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #star-brite-star-tron-30ml,V4U4XQQK5DSD6TV45WOTJHIM,Star Brite Star Tron,30ml,071247143164,,Lubricants,3.75,,,Y,17,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#star-brite-star-tron-250ml,RWH2YP3B5V27GM2KJEGRSZ4K,Star Brite Star Tron,250ml,14308C,,Lubricants,11.25,,,Y,8,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#star-brite-star-tron-250ml,RWH2YP3B5V27GM2KJEGRSZ4K,Star Brite Star Tron,250ml,14308C,,Lubricants,11.25,,,Y,7,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #superatv-polaris-sportsman-latch-go-tie-downs-,CDU5RQ4TVEIRB7WSGEMSF74I,SuperATV Polaris Sportsman Latch & Go Tie Downs,,TD-P-003#SPM,,Accessories,53.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #superatv-winch-black-ops-with-remote-2500lbs,4CWHIHWPVB7KPUO5FEQK55UI,SuperATV Winch Black Ops (with remote),2500lbs,WN-2500,,Winches,305.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#superatv-winch-black-ops-with-remote-3500lbs,KLBGEBXX4FVAAJS4OTX6W6SU,SuperATV Winch Black Ops (with remote),3500lbs,WN-3500,,Winches,400.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#superatv-winch-black-ops-with-remote-4500lbs,4D3JP3S7EDO2ZH2SQZO4QD4M,SuperATV Winch Black Ops (with remote),4500lbs,WN-4500,,Winches,400.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#superatv-winch-black-ops-with-remote-3500lbs,KLBGEBXX4FVAAJS4OTX6W6SU,SuperATV Winch Black Ops (with remote),3500lbs,WN-3500,,Winches,400.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#superatv-winch-black-ops-with-remote-4500lbs,4D3JP3S7EDO2ZH2SQZO4QD4M,SuperATV Winch Black Ops (with remote),4500lbs,WN-4500,,Winches,400.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #superatv-winch-black-ops-with-remote-6000lbs,VXHOLMKIFQUFYH2CM5NTYTJN,SuperATV Winch Black Ops (with remote),6000lbs,WN-6000,,Winches,475.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #swamp-series-jacket-small-black,CIIEN6J67A2HXKFGDFDCG7MU,Swamp Series Jacket,Small Black,TNNDKZL4,,Gator Waders,200.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #swamp-series-jacket-medium-black,E4JWGIJQ7OJLQ5TMBMYAD6B3,Swamp Series Jacket,Medium Black,TNDNX468,,Gator Waders,200.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #swamp-series-jacket-large-black,NXCUKYNBVVF36237QDCWFHGQ,Swamp Series Jacket,Large Black,TN2AW5JX,,Gator Waders,200.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #swamp-series-jacket-large-coral,EATOLIE7M7OJALLMY2FNCALS,Swamp Series Jacket,Large Coral,TN6SCB6S,,Gator Waders,200.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#swamp-series-jacket-xl-black,LCN5AOIGSOEE25INUBX2WJIL,Swamp Series Jacket,XL Black,TNANRHBA,,Gator Waders,200.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#swamp-series-jacket-xl-black,LCN5AOIGSOEE25INUBX2WJIL,Swamp Series Jacket,XL Black,TNANRHBA,,Gator Waders,200.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #swamp-series-jacket-2xl-black,TJR7DCM4ONLHQ5RJEMISAGOX,Swamp Series Jacket,2XL Black,TNQQQV3Z,,Gator Waders,200.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #swamp-series-jacket-3xl-black,NRWLXA35RO6ZPAE6GRZV6EV5,Swamp Series Jacket,3XL Black,TNY3EV3Q,,Gator Waders,200.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #terra4-jacket-m-small-moss-green,3EETKZWFAMZLHEELAH2AT7L7,Terra4 Jacket,M Small Moss Green,TNISQMC3,,Gator Waders,230.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -886,7 +886,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #uninsulated-swamp-wader-12-m-stout-equator,DUABM7SLMQJLZQN3C53AUOKT,Uninsulated Swamp Wader,12 M Stout Equator,810064790195,,Gator Waders,300.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-12-m-stout-lime,6YPBOSDZ7MLVNPUIMPJGX4GY,Uninsulated Swamp Wader,12 M Stout Lime,810064790294,,Gator Waders,300.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-12-m-regular-gale,GUAYN7UFVYP7AMP5OG552ZT7,Uninsulated Swamp Wader,12 M Regular Gale,810064790072,,Gator Waders,300.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#uninsulated-swamp-wader-12-m-regular-equator,7O2RS363Y2EWKAYLMIZTQO26,Uninsulated Swamp Wader,12 M Regular Equator,810064790171,,Gator Waders,300.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#uninsulated-swamp-wader-12-m-regular-equator,7O2RS363Y2EWKAYLMIZTQO26,Uninsulated Swamp Wader,12 M Regular Equator,810064790171,,Gator Waders,300.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-12-m-long-equator,ZNKVSKUR44I642PYCNQORXVX,Uninsulated Swamp Wader,12 M Long Equator,810064790218,,Gator Waders,300.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-12-m-long-gale,F46HN5IYOOBKFRRY4ZWGUQBY,Uninsulated Swamp Wader,12 M Long Gale,810064790119,,Gator Waders,300.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-12-m-long-lime,UTP36T3JGYENROGHXLXVXRGQ,Uninsulated Swamp Wader,12 M Long Lime,810064790317,,Gator Waders,300.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -948,7 +948,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #zoan-blade-sv-2xl-blackwhiteorange,BFXXJWXCPKAGMVDOKJFEVQEL,Zoan Blade SV,2XL Black/White/Orange,470-5578,,Helmet,135.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #zoan-mx-synchrony-endurance-2xl-whiteblackred,SOD7B7JZ4AKFGUMY6KRPKXNB,Zoan Mx Synchrony Endurance,2XL White/Black/Red,47-03318,,Helmet,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #zoan-mx-synchrony-endurance-2xl-gloss-anthracitesilverblack,62NX7FADWA2VYZIXXDYSEVMF,Zoan Mx Synchrony Endurance,2XL Gloss Anthracite/Silver/Black,47-03398,,Helmet,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#zoan-mx-synchrony-endurance-2xl-whiteblackblue,W4LPVRCR5WX2RF7LIVVX3TW2,Zoan Mx Synchrony Endurance,2XL White/Black/Blue,47-03328,,Helmet,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#zoan-mx-synchrony-endurance-2xl-whiteblackblue,W4LPVRCR5WX2RF7LIVVX3TW2,Zoan Mx Synchrony Endurance,2XL White/Black/Blue,47-03328,,Helmet,110.00,,,Y,-1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #zoan-mx-synchrony-endurance-3xl-whiteblackblue,A2S3CSBPAXCABMLQHNNGRNYR,Zoan Mx Synchrony Endurance,3XL White/Black/Blue,47-03329,,Helmet,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #zoan-runner-3xl-white,H67JVE554UR2ZXTVQCTCF3WU,Zoan Runner,3XL White,470-2089,,Helmet,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #zoan-stinger-xl-blacksilverwhite,2GCRXAYXZPD7UWX6WIP7TTMZ,Zoan Stinger,XL Black/Silver/White,471-7257,,Helmet,125.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N

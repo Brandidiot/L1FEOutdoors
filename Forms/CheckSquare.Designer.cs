@@ -46,6 +46,7 @@
             // 
             this.dgSquare.AllowUserToAddRows = false;
             this.dgSquare.AllowUserToDeleteRows = false;
+            this.dgSquare.AllowUserToResizeRows = false;
             this.dgSquare.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -69,6 +70,8 @@
             this.dgSquare.Location = new System.Drawing.Point(12, 12);
             this.dgSquare.Name = "dgSquare";
             this.dgSquare.ReadOnly = true;
+            this.dgSquare.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgSquare.RowHeadersVisible = false;
             this.dgSquare.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSquare.Size = new System.Drawing.Size(776, 426);
             this.dgSquare.TabIndex = 0;

@@ -89,6 +89,7 @@
             this.Location});
             this.dgItems.Location = new System.Drawing.Point(12, 46);
             this.dgItems.Name = "dgItems";
+            this.dgItems.RowHeadersVisible = false;
             this.dgItems.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgItems.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgItems.Size = new System.Drawing.Size(987, 385);

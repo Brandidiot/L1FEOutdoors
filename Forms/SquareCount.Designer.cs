@@ -72,6 +72,7 @@
             this.dgSquareCount.Location = new System.Drawing.Point(12, 12);
             this.dgSquareCount.Name = "dgSquareCount";
             this.dgSquareCount.ReadOnly = true;
+            this.dgSquareCount.RowHeadersVisible = false;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSquareCount.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgSquareCount.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

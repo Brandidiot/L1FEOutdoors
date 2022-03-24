@@ -17,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Updated Button Look. \n-Application Now Opens Maximized.";
+        private string _update = "-Updated Data. \n-Changed Data Table Look.";
         private Size _formSize;
 
         public ModernMenu()
