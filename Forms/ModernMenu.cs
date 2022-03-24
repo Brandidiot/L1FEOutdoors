@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 using L1FEOutdoors.Forms;
 using L1FEOutdoors.LOControls;
 using L1FEOutdoors.Properties;
@@ -16,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Daily Data Update. \n-Updated Button Layout.";
+        private string _update = "-Updated Button Look. \n-Application Now Opens Maximized.";
         private Size _formSize;
 
         public ModernMenu()
@@ -27,6 +28,7 @@ namespace L1FEOutdoors
             this.Text = string.Empty;
             //this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public string VersionLabel
@@ -81,13 +83,14 @@ namespace L1FEOutdoors
             _currentButton.ForeColor = Color.White;
             _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             panelTitleBar.BackColor = color;
+            //iconButton1.BackColor = color;
             //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
 
             ThemeColor.PrimaryColor = color;
             ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
 
             btnCloseChildForm.Visible = true;
-            btnCloseChildForm.BackColor = ThemeColor.PrimaryColor;
+            btnCloseChildForm.BackColor = color;
             //btnMin.BackColor = ThemeColor.PrimaryColor;
             //btnClose.BackColor = ThemeColor.PrimaryColor;
         }
@@ -223,6 +226,7 @@ namespace L1FEOutdoors
             LOUpdateBox.Show(_update, "Updated To " + VersionLabel, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        #region Windows Stuff
         //Overridden methods
         protected override void WndProc(ref Message m)
         {
@@ -324,6 +328,7 @@ namespace L1FEOutdoors
                     break;
             }
         }
+        #endregion
 
         private void btnMax_Click(object sender, EventArgs e)
         {
@@ -372,23 +377,29 @@ namespace L1FEOutdoors
             }
         }
 
+        #region Button Stuff
         private void btnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void btn_MouseEnter(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                _formSize = this.ClientSize;
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = _formSize;
-            }
+            var btn = sender as IconButton;
+            btn.IconColor = Color.Gainsboro;
         }
+
+        private void btn_MouseLeave(object sender, EventArgs e)
+        {
+            var btn = sender as IconButton;
+            btn.IconColor = Color.White;
+        }
+
+        private void btn_MouseDown(object sender, MouseEventArgs e)
+        {
+            var btn = sender as IconButton;
+            btn.IconColor = Color.DarkGray;
+        }
+#endregion
     }
 }

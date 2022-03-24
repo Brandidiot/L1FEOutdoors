@@ -212,6 +212,8 @@
             // 
             this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
             this.iconButton1.IconColor = System.Drawing.Color.White;
@@ -223,6 +225,9 @@
             this.iconButton1.TabIndex = 2;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.btnClose_Click);
+            this.iconButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.iconButton1.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.iconButton1.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btnCloseChildForm
             // 
@@ -289,6 +294,8 @@
             // 
             this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.iconButton2.IconColor = System.Drawing.Color.White;
@@ -300,11 +307,16 @@
             this.iconButton2.TabIndex = 3;
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.btnMax_Click);
+            this.iconButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.iconButton2.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.iconButton2.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // iconButton3
             // 
             this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.iconButton3.IconColor = System.Drawing.Color.White;
@@ -316,6 +328,9 @@
             this.iconButton3.TabIndex = 4;
             this.iconButton3.UseVisualStyleBackColor = true;
             this.iconButton3.Click += new System.EventHandler(this.btnMin_Click);
+            this.iconButton3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.iconButton3.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.iconButton3.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // ModernMenu
             // 

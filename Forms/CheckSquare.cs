@@ -122,8 +122,7 @@ namespace L1FEOutdoors
 
         private void CheckSquare_Load(object sender, EventArgs e)
         {
-            LoadTheme();
-            FormatDataGridView();
+            
         }
         private void FormatDataGridView()
         {
@@ -141,8 +140,9 @@ namespace L1FEOutdoors
         {
             PopulateSquareInfo();
             PopulateInvQty();
-
             RemoveRows();
+            LoadTheme();
+            FormatDataGridView();
         }
 
         private void dgSquare_Sorted(object sender, EventArgs e)
