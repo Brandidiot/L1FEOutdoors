@@ -16,7 +16,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "Created And Changed Update Box Info.";
+        private string _update = "-Daily Data Update. \n-Updated Button Layout.";
         private Size _formSize;
 
         public ModernMenu()
