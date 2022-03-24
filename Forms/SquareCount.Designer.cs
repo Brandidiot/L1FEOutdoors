@@ -70,6 +70,7 @@
             this.QTY,
             this.Count});
             this.dgSquareCount.Location = new System.Drawing.Point(12, 12);
+            this.dgSquareCount.MultiSelect = false;
             this.dgSquareCount.Name = "dgSquareCount";
             this.dgSquareCount.ReadOnly = true;
             this.dgSquareCount.RowHeadersVisible = false;

@@ -17,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Updated Data. \n-Changed Data Table Look.";
+        private string _update = "-Updated Data. \n-Changed Data Table Look. \n-Removed Multi-Select In Square Count.";
         private Size _formSize;
 
         public ModernMenu()
