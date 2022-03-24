@@ -17,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Updated Data. \n-Changed Data Table Look. \n-Removed Multi-Select In Square Count.";
+        private string _update = "-Removed Row Resize In Square Count.";
         private Size _formSize;
 
         public ModernMenu()
@@ -37,22 +37,22 @@ namespace L1FEOutdoors
     {
         if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
         {
-            Version ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
-            return string.Format("{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision);
+            var ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
+            return $"{ver.Major}.{ver.Minor}.{ver.Build}.{ver.Revision}";
         }
         else
         {
             var ver = Assembly.GetExecutingAssembly().GetName().Version;
-            return string.Format("{0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision);
+            return $"{ver.Major}.{ver.Minor}.{ver.Build}.{ver.Revision}";
         }
     }
 }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+        private static extern void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private static extern void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         //Random Color
         private Color SelectThemeColor()

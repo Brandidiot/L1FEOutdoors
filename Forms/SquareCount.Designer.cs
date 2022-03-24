@@ -49,6 +49,7 @@
             // 
             this.dgSquareCount.AllowUserToAddRows = false;
             this.dgSquareCount.AllowUserToDeleteRows = false;
+            this.dgSquareCount.AllowUserToResizeRows = false;
             this.dgSquareCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
