@@ -17,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Daily Data Update. \n-Side Panel Can Now Be Collapsed.";
+        private string _update = "-Daily Data Update.";
         private Size _formSize;
 
         public ModernMenu()

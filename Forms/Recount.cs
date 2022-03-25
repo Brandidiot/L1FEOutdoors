@@ -16,80 +16,6 @@ namespace L1FEOutdoors
             InitializeComponent();
         }
 
-        public static async Task GenerateDataTable(String sourceUrl, DataGridView dgv)
-        {
-            var dialog = new OpenFileDialog();
-            //var SourceURL = @"C:\Users\" + Environment.UserName + @"\Documents\Recounted.csv";
-
-            try
-            {
-                if (!File.Exists(sourceUrl))
-                {
-                    dialog.ShowDialog();
-                    sourceUrl = dialog.FileName;
-                }
-
-                int ImportedRecord = 0, inValidItem = 0;
-
-                //if (dialog.FileName == "") return;
-                DataTable dtNew;
-
-                if (File.Exists(sourceUrl) && sourceUrl.EndsWith(".csv"))
-                {
-                    dtNew = await GetDataTabletFromCsvFile(sourceUrl);
-
-                    /*if (Convert.ToString(dtNew.Columns[0]).ToLower() != "part")
-                    {
-                        MessageBox.Show("Invalid Items File");
-                        Save.Enabled = false;
-                        return;
-                    }*/
-
-                    //txtSearch.Text = dialog.SafeFileName;
-                    if (dtNew.Rows.ToString() != String.Empty)
-                    {
-                        dgv.DataSource = dtNew;
-                    }
-
-                    foreach (DataGridViewRow row in dgv.Rows)
-                    {
-                        foreach (DataGridViewColumn column in dgv.Columns)
-                        {
-                            if (Convert.ToString(row.Cells[column.Name].Value) == "" || row.Cells[column.Name].Value == null
-                                /*|| Convert.ToString(row.Cells["Available"].Value) == "" ||
-                                row.Cells["Available"].Value == null
-                                || Convert.ToString(row.Cells["UOM"].Value) == "" || row.Cells["UOM"].Value == null
-                                || Convert.ToString(row.Cells["Count"].Value) == "" || row.Cells["Count"].Value == null
-                                || Convert.ToString(row.Cells["Location"].Value) == "" ||
-                                row.Cells["Location"].Value == null*/)
-                            {
-                                //row.DefaultCellStyle.BackColor = Color.White;
-                                inValidItem += 1;
-                            }
-                            else
-                            {
-                                ImportedRecord += 1;
-                            }
-                        }
-                    }
-                    
-                    if (dgv.Rows.Count != 0) return;
-
-                    //Save.Enabled = false;
-                    LOMessageBox.Show("There is no data in this file", "No Data", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    LOMessageBox.Show("Recounted.csv Doesn't Exist. Please Import File.", "Doesn't Exist",
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            catch (Exception ex)
-            {
-                LOMessageBox.Show("Exception " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private async void Import_Click(object sender, EventArgs e)
         {
 
@@ -97,7 +23,10 @@ namespace L1FEOutdoors
                     "Import Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dialogResult != DialogResult.Yes) return;
-            
+
+            dgItems.DataSource = null;
+            dgItems.Rows.Clear();
+
             var dialog = new OpenFileDialog();
             var sourceUrl = @"C:\Users\" + Environment.UserName + @"\Documents\Recount.csv";
 
@@ -112,7 +41,7 @@ namespace L1FEOutdoors
 
                 if (sourceUrl.EndsWith(".csv"))
                 {
-                    dtNew = await GetDataTabletFromCsvFile(sourceUrl);
+                    dtNew = await GenerateDT.GetDataTabletFromCsvFile(sourceUrl);
 
                     if (Convert.ToString(dtNew.Columns[0]).ToLower() != "part")
                     {
@@ -144,7 +73,6 @@ namespace L1FEOutdoors
                         }
                     }
 
-                    FormatDataGridView();
                     if (dgItems.Rows.Count != 0) return;
 
                     Save.Enabled = false;
@@ -216,46 +144,6 @@ namespace L1FEOutdoors
             }
         }
 
-        public static Task<DataTable> GetDataTabletFromCsvFile(string csvFilePath)
-        {
-            var csvData = new DataTable();
-            try
-            {
-                if (csvFilePath.EndsWith(".csv"))
-                {
-                    using (Microsoft.VisualBasic.FileIO.TextFieldParser csvReader = new Microsoft.VisualBasic.FileIO.TextFieldParser(csvFilePath))
-                    {
-                        csvReader.SetDelimiters(new string[] { "," });
-                        csvReader.HasFieldsEnclosedInQuotes = true;
-                        //read column
-                        var colFields = csvReader.ReadFields();
-                        foreach (var column in colFields)
-                        {
-                            var datacolumn = new DataColumn(column);
-                            datacolumn.AllowDBNull = true;
-                            csvData.Columns.Add(datacolumn);
-                        }
-                        while (!csvReader.EndOfData)
-                        {
-                            var fieldData = csvReader.ReadFields();
-                            for (var i = 0; i < fieldData.Length; i++)
-                            {
-                                if (fieldData[i] == "")
-                                {
-                                    fieldData[i] = null;
-                                }
-                            }
-                            csvData.Rows.Add(fieldData);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                LOMessageBox.Show("Exce " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return Task.FromResult(csvData);
-        }
 
         private void Export_Click(object sender, EventArgs e)
         {
@@ -405,26 +293,7 @@ namespace L1FEOutdoors
             dgItems.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgItems.EnableHeadersVisualStyles = false;
             dgItems.BorderStyle = BorderStyle.None;
-            //dgItems.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
-            /*foreach (DataGridViewRow dgvr in dgItems.Rows)//dgv is datagridview
-            {
-                if (dgvr.Index % 2 == 0)
-                {
-                    dgvr.Cells["Part"].Style.BackColor = Color.LightGray;
-                    dgvr.Cells["Available"].Style.BackColor = Color.LightGray;
-                    dgvr.Cells["UOM"].Style.BackColor = Color.LightGray;
-                    dgvr.Cells["Location"].Style.BackColor = Color.LightGray;
-                    dgvr.Cells["Count"].Style.BackColor = Color.LightGray;
-                }
-                else
-                {
-                    dgvr.Cells["Part"].Style.BackColor = Color.White;
-                    dgvr.Cells["Available"].Style.BackColor = Color.White;
-                    dgvr.Cells["UOM"].Style.BackColor = Color.White;
-                    dgvr.Cells["Location"].Style.BackColor = Color.White;
-                    dgvr.Cells["Count"].Style.BackColor = Color.White;
-                }
-            }*/
+
             dgItems.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             dgItems.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgItems.DefaultCellStyle.SelectionBackColor = ThemeColor.SecondaryColor;
@@ -442,8 +311,15 @@ namespace L1FEOutdoors
 
         private async void Recount_Load(object sender, EventArgs e)
         {
-            
-            
+            try
+            {
+                await GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Recount.csv", dgItems);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
         }
 
         private void loTextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -468,17 +344,8 @@ namespace L1FEOutdoors
             Save_Click(sender,e);
         }
 
-        private async void Recount_Shown(object sender, EventArgs e)
+        private void Recount_Shown(object sender, EventArgs e)
         {
-            try
-            {
-                await GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Recount.csv", dgItems);
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception);
-                throw;
-            }
             LoadTheme();
             FormatDataGridView();
         }

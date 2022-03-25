@@ -67,7 +67,9 @@
             this.dgItems.AllowUserToAddRows = false;
             this.dgItems.AllowUserToDeleteRows = false;
             this.dgItems.AllowUserToResizeRows = false;
-            this.dgItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -79,7 +81,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Part, this.Available, this.UOM, this.Count, this.Location });
+            this.dgItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Part,
+            this.Available,
+            this.UOM,
+            this.Count,
+            this.Location});
             this.dgItems.Location = new System.Drawing.Point(12, 46);
             this.dgItems.Name = "dgItems";
             this.dgItems.RowHeadersVisible = false;
@@ -219,7 +226,57 @@
             this.loComboBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loComboBox1.ForeColor = System.Drawing.Color.DarkGray;
             this.loComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.loComboBox1.Items.AddRange(new object[] { "Warehouse", "Store Front", "HTG_1_A", "HTG_1_B", "HTG_1_C", "HTG_1_D", "HTG_1_E", "HTG_1_F", "HTG_2_A", "HTG_2_B", "HTG_2_C", "HTG_2_D", "HTG_2_E", "HTG_2_F", "HTG_3_A", "HTG_3_B", "HTG_3_C", "HTG_3_D", "HTG_3_E", "HTG_3_F", "HTG_4_A", "HTG_4_B", "HTG_4_C", "HTG_4_D", "HTG_4_E", "HTG_4_F", "HTG_5_A", "HTG_5_B", "HTG_5_C", "HTG_5_D", "HTG_5_E", "HTG_5_F", "HTG_6_A", "HTG_6_B", "HTG_6_C", "HTG_6_D", "HTG_6_E", "HTG_6_F", "HTG_7_A", "HTG_7_B", "HTG_7_C", "HTG_7_D", "HTG_7_E", "HTG_7_F", "HTG_8_A", "HTG_8_B", "HTG_8_C", "HTG_8_D", "HTG_8_E", "HTG_8_F" });
+            this.loComboBox1.Items.AddRange(new object[] {
+            "Warehouse",
+            "Store Front",
+            "HTG_1_A",
+            "HTG_1_B",
+            "HTG_1_C",
+            "HTG_1_D",
+            "HTG_1_E",
+            "HTG_1_F",
+            "HTG_2_A",
+            "HTG_2_B",
+            "HTG_2_C",
+            "HTG_2_D",
+            "HTG_2_E",
+            "HTG_2_F",
+            "HTG_3_A",
+            "HTG_3_B",
+            "HTG_3_C",
+            "HTG_3_D",
+            "HTG_3_E",
+            "HTG_3_F",
+            "HTG_4_A",
+            "HTG_4_B",
+            "HTG_4_C",
+            "HTG_4_D",
+            "HTG_4_E",
+            "HTG_4_F",
+            "HTG_5_A",
+            "HTG_5_B",
+            "HTG_5_C",
+            "HTG_5_D",
+            "HTG_5_E",
+            "HTG_5_F",
+            "HTG_6_A",
+            "HTG_6_B",
+            "HTG_6_C",
+            "HTG_6_D",
+            "HTG_6_E",
+            "HTG_6_F",
+            "HTG_7_A",
+            "HTG_7_B",
+            "HTG_7_C",
+            "HTG_7_D",
+            "HTG_7_E",
+            "HTG_7_F",
+            "HTG_8_A",
+            "HTG_8_B",
+            "HTG_8_C",
+            "HTG_8_D",
+            "HTG_8_E",
+            "HTG_8_F"});
             this.loComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.loComboBox1.ListTextColor = System.Drawing.Color.DimGray;
             this.loComboBox1.Location = new System.Drawing.Point(326, 9);
@@ -248,9 +305,11 @@
             this.Name = "Recount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recount";
+            this.Load += new System.EventHandler(this.Recount_Load);
             this.Shown += new System.EventHandler(this.Recount_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
