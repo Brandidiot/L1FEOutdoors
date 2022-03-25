@@ -17,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Load Data In Safer Manner.";
+        private string _update = "-Daily Data Update. \n-Side Panel Can Now Be Collapsed.";
         private Size _formSize;
 
         public ModernMenu()
@@ -346,7 +346,6 @@ namespace L1FEOutdoors
 
         private void label1_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
         }
 
         private void CollapseMenu()
@@ -354,7 +353,8 @@ namespace L1FEOutdoors
             if (this.panelMenu.Width > 200)
             {
                 panelMenu.Width = 50;
-                label1.Text = "L1";
+                btnMenu.Dock = DockStyle.Fill;
+                label1.Visible = false;
                 //label1.Dock = DockStyle.Fill;
                 foreach (Button btn in panelMenu.Controls.OfType<Button>())
                 {
@@ -366,7 +366,8 @@ namespace L1FEOutdoors
             else
             {
                 panelMenu.Width = 220;
-                label1.Text = "L1FE OUTDOORS";
+                btnMenu.Dock = DockStyle.None;
+                label1.Visible = true;
                 //label1.Dock = DockStyle.Fill;
                 foreach (Button btn in panelMenu.Controls.OfType<Button>())
                 {
@@ -400,6 +401,11 @@ namespace L1FEOutdoors
             var btn = sender as IconButton;
             btn.IconColor = Color.DarkGray;
         }
-#endregion
+        #endregion
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
+        }
     }
 }

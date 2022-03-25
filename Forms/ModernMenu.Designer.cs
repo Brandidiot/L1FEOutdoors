@@ -46,6 +46,7 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -70,10 +71,11 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
             this.button1.Image = global::L1FEOutdoors.Properties.Resources.Money2;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -90,10 +92,11 @@
             // 
             // btnHelp
             // 
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnHelp.Image = global::L1FEOutdoors.Properties.Resources.questionwhite;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,10 +114,11 @@
             // 
             // btnCheckSquare
             // 
+            this.btnCheckSquare.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheckSquare.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCheckSquare.FlatAppearance.BorderSize = 0;
             this.btnCheckSquare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckSquare.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckSquare.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckSquare.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCheckSquare.Image = global::L1FEOutdoors.Properties.Resources.checkmark;
             this.btnCheckSquare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,10 +135,11 @@
             // 
             // btnRecount
             // 
+            this.btnRecount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRecount.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRecount.FlatAppearance.BorderSize = 0;
             this.btnRecount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecount.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecount.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecount.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnRecount.Image = ((System.Drawing.Image)(resources.GetObject("btnRecount.Image")));
             this.btnRecount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,10 +156,11 @@
             // 
             // btnSquareRecount
             // 
+            this.btnSquareRecount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSquareRecount.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSquareRecount.FlatAppearance.BorderSize = 0;
             this.btnSquareRecount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSquareRecount.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSquareRecount.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSquareRecount.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSquareRecount.Image = ((System.Drawing.Image)(resources.GetObject("btnSquareRecount.Image")));
             this.btnSquareRecount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,6 +178,7 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.btnMenu);
             this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -184,13 +191,13 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(3, 29);
+            this.label1.Location = new System.Drawing.Point(67, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 25);
+            this.label1.Size = new System.Drawing.Size(136, 50);
             this.label1.TabIndex = 0;
-            this.label1.Tag = "";
-            this.label1.Text = "L1FE OUTDOORS";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Tag = "L1FE Outdoors";
+            this.label1.Text = "L1FE \r\nOUTDOORS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelTitleBar
@@ -211,6 +218,7 @@
             // iconButton3
             // 
             this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -232,6 +240,7 @@
             // iconButton2
             // 
             this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -253,6 +262,7 @@
             // iconButton1
             // 
             this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -274,6 +284,7 @@
             // btnCloseChildForm
             // 
             this.btnCloseChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
+            this.btnCloseChildForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -332,6 +343,24 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnMenu
+            // 
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.btnMenu.IconColor = System.Drawing.Color.White;
+            this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenu.IconSize = 40;
+            this.btnMenu.Location = new System.Drawing.Point(12, 25);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(40, 40);
+            this.btnMenu.TabIndex = 3;
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // ModernMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,5 +408,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnMenu;
     }
 }
