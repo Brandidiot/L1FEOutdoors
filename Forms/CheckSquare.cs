@@ -89,7 +89,7 @@ namespace L1FEOutdoors
             //Get Data From InvQtys
             try
             {
-                var dtNew = await GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvQtys.csv");
+                var dtNew = await GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\InvAvail.csv");
 
                 foreach (DataGridViewRow rows in dgSquare.Rows)
                 {
@@ -98,12 +98,12 @@ namespace L1FEOutdoors
 
                     if (contains)
                         MessageBox.Show("Found SKU " + SKU + " in Row " + dtNew. );*/
-                    if (dtNew.Select("PartNumber = '" + sku + "'").Length > 0)
+                    if (dtNew.Select("Part = '" + sku + "'").Length > 0)
                     {
-                        DataRow[] dr = dtNew.Select("PartNumber = '" + sku + "'");
+                        DataRow[] dr = dtNew.Select("Part = '" + sku + "'");
 
-                        var part = dr[0]["PartNumber"].ToString();
-                        var qty = dr[0]["Qty"].ToString();
+                        var part = dr[0]["Part"].ToString();
+                        var qty = dr[0]["Available"].ToString();
 
                         //rows.Cells["FishbowlQty"].Value = "0";
                         rows.Cells[7].Value = qty;
