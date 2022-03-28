@@ -30,7 +30,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>44</ApplicationRevision>
+    <ApplicationRevision>45</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -310,5 +310,8 @@
   </ItemGroup>
   <Target Name="StrongName" BeforeTargets="PrepareForBuild">
     <Exec Command="&quot;$(PkgBrutal_Dev_StrongNameSigner)\build\StrongNameSigner.Console.exe&quot; -InputDirectory &quot;$(PkgFontAwesome_Sharp)\lib&quot;" />
+  </Target>
+  <Target Name="BeforePublish">
+    <Exec Command="&quot;C:\Program Files (x86)\Microsoft SDKs\ClickOnce\SignTool\signtool.exe&quot; sign /a &quot;C:\Users\HP\Desktop\L1 Updated\published\setup.exe&quot;" />
   </Target>
 </Project>
