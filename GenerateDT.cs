@@ -86,6 +86,7 @@ namespace L1FEOutdoors
         public static Task<DataTable> GetDataTabletFromCsvFile(string csvFilePath)
         {
             var csvData = new DataTable();
+
             try
             {
                 if (csvFilePath.EndsWith(".csv"))

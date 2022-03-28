@@ -17,7 +17,7 @@ namespace L1FEOutdoors
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private string _update = "-Fixed Check Square Report To Use Inventory Availability.";
+        private readonly string _update = "-Daily Inventory Availability And Product Pricing Update.";
         private Size _formSize;
 
         public ModernMenu()
