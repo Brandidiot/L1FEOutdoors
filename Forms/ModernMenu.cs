@@ -541,7 +541,5 @@ namespace L1FEOutdoors
         {
             OpenChildForm(new Forms.Settings(), sender);
         }
-
-
     }
 }

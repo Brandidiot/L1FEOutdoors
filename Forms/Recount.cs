@@ -311,15 +311,7 @@ namespace L1FEOutdoors
 
         private async void Recount_Load(object sender, EventArgs e)
         {
-            try
-            {
-                await GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Recount.csv", dgItems);
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception);
-                throw;
-            }
+            
         }
 
         private void loTextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -344,8 +336,17 @@ namespace L1FEOutdoors
             Save_Click(sender,e);
         }
 
-        private void Recount_Shown(object sender, EventArgs e)
+        private async void Recount_Shown(object sender, EventArgs e)
         {
+            try
+            {
+                dgItems.DataSource = await GenerateDT.GetDataTabletFromCsvFile(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Recount.csv");
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
             LoadTheme();
             FormatDataGridView();
         }

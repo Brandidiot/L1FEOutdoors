@@ -8,17 +8,17 @@ namespace L1FEOutdoors
 {
     public class GenerateDT
     {
-        public static async Task GenerateDataTable(String SourceURL, DataGridView dgv)
+        public static async Task GenerateDataTable(String sourceUrl, DataGridView dgv)
         {
             var dialog = new OpenFileDialog();
             //var SourceURL = @"C:\Users\" + Environment.UserName + @"\Documents\Recounted.csv";
 
             try
             {
-                if (!File.Exists(SourceURL))
+                if (!File.Exists(sourceUrl))
                 {
                     dialog.ShowDialog();
-                    SourceURL = dialog.FileName;
+                    sourceUrl = dialog.FileName;
                 }
 
                 int ImportedRecord = 0, inValidItem = 0;
@@ -26,9 +26,9 @@ namespace L1FEOutdoors
                 //if (dialog.FileName == "") return;
                 DataTable dtNew;
 
-                if (File.Exists(SourceURL) && SourceURL.EndsWith(".csv"))
+                if (File.Exists(sourceUrl) && sourceUrl.EndsWith(".csv"))
                 {
-                    dtNew = await GetDataTabletFromCsvFile(SourceURL);
+                    dtNew = await GetDataTabletFromCsvFile(sourceUrl);
 
                     /*if (Convert.ToString(dtNew.Columns[0]).ToLower() != "part")
                     {
@@ -123,6 +123,41 @@ namespace L1FEOutdoors
                 LOMessageBox.Show("Exce " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return Task.FromResult(csvData);
+        }
+
+        public static Task<DataTable> CsvReader(string csvpath)
+        {
+            var data = new DataTable();
+            var lines = File.ReadAllLines(csvpath);
+
+            try
+            {
+                var fields = lines[0].Split(new char[] {','});
+                var columns = fields.GetLength(0);
+
+                for (var i = 0; i < columns; i++)
+                {
+                    data.Columns.Add(fields[i], typeof(string));
+                }
+                
+                for (var i = 1; i < lines.GetLength(0); i++)
+                {
+                    fields = lines[i].Split(new char[] {','});
+                    var row = data.NewRow();
+                    for (var j = 0; j < columns; j++)
+                    {
+                        row[j] = fields[j];
+                    }
+                    data.Rows.Add(row);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return Task.FromResult(data);
         }
     }
 }

@@ -33,17 +33,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recount));
             this.Save = new System.Windows.Forms.Button();
             this.dgItems = new System.Windows.Forms.DataGridView();
-            this.Part = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UOM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Import = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Export = new System.Windows.Forms.Button();
+            this.loComboBox1 = new L1FEOutdoors.LOControls.LOComboBox();
             this.loTextBox2 = new L1FEOutdoors.LOControls.LOTextBox();
             this.loTextBox1 = new L1FEOutdoors.LOControls.LOTextBox();
-            this.loComboBox1 = new L1FEOutdoors.LOControls.LOComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,57 +76,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Part,
-            this.Available,
-            this.UOM,
-            this.Count,
-            this.Location});
             this.dgItems.Location = new System.Drawing.Point(12, 46);
             this.dgItems.Name = "dgItems";
+            this.dgItems.ReadOnly = true;
             this.dgItems.RowHeadersVisible = false;
-            this.dgItems.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dgItems.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgItems.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgItems.Size = new System.Drawing.Size(987, 385);
             this.dgItems.TabIndex = 2;
             this.dgItems.TabStop = false;
-            // 
-            // Part
-            // 
-            this.Part.DataPropertyName = "Part";
-            this.Part.FillWeight = 304.5686F;
-            this.Part.HeaderText = "Part";
-            this.Part.Name = "Part";
-            this.Part.ReadOnly = true;
-            // 
-            // Available
-            // 
-            this.Available.DataPropertyName = "Available";
-            this.Available.FillWeight = 48.85788F;
-            this.Available.HeaderText = "Available";
-            this.Available.Name = "Available";
-            this.Available.ReadOnly = true;
-            // 
-            // UOM
-            // 
-            this.UOM.DataPropertyName = "UOM";
-            this.UOM.FillWeight = 48.85788F;
-            this.UOM.HeaderText = "UOM";
-            this.UOM.Name = "UOM";
-            // 
-            // Count
-            // 
-            this.Count.DataPropertyName = "Count";
-            this.Count.FillWeight = 48.85788F;
-            this.Count.HeaderText = "Count";
-            this.Count.Name = "Count";
-            // 
-            // Location
-            // 
-            this.Location.DataPropertyName = "Location";
-            this.Location.FillWeight = 48.85788F;
-            this.Location.HeaderText = "Location";
-            this.Location.Name = "Location";
             // 
             // Import
             // 
@@ -167,52 +119,6 @@
             this.Export.Text = "Export";
             this.Export.UseVisualStyleBackColor = false;
             this.Export.Click += new System.EventHandler(this.Export_Click);
-            // 
-            // loTextBox2
-            // 
-            this.loTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.loTextBox2.BorderColor = System.Drawing.Color.Empty;
-            this.loTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.loTextBox2.BorderRadius = 0;
-            this.loTextBox2.BorderSize = 2;
-            this.loTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loTextBox2.ForeColor = System.Drawing.Color.DarkGray;
-            this.loTextBox2.Location = new System.Drawing.Point(271, 9);
-            this.loTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.loTextBox2.MultiLine = false;
-            this.loTextBox2.Name = "loTextBox2";
-            this.loTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.loTextBox2.PasswordChar = false;
-            this.loTextBox2.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.loTextBox2.PlaceHolderText = "QTY";
-            this.loTextBox2.Size = new System.Drawing.Size(48, 31);
-            this.loTextBox2.TabIndex = 12;
-            this.loTextBox2.Texts = "";
-            this.loTextBox2.UnderlinedStyle = false;
-            this.loTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loTextBox2_KeyPress);
-            // 
-            // loTextBox1
-            // 
-            this.loTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.loTextBox1.BorderColor = System.Drawing.Color.Empty;
-            this.loTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.loTextBox1.BorderRadius = 0;
-            this.loTextBox1.BorderSize = 2;
-            this.loTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loTextBox1.ForeColor = System.Drawing.Color.DarkGray;
-            this.loTextBox1.Location = new System.Drawing.Point(13, 9);
-            this.loTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.loTextBox1.MultiLine = false;
-            this.loTextBox1.Name = "loTextBox1";
-            this.loTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.loTextBox1.PasswordChar = false;
-            this.loTextBox1.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.loTextBox1.PlaceHolderText = "SKU";
-            this.loTextBox1.Size = new System.Drawing.Size(250, 31);
-            this.loTextBox1.TabIndex = 11;
-            this.loTextBox1.Texts = "";
-            this.loTextBox1.UnderlinedStyle = false;
-            this.loTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loTextBox1_KeyPress);
             // 
             // loComboBox1
             // 
@@ -287,6 +193,52 @@
             this.loComboBox1.TabIndex = 13;
             this.loComboBox1.Texts = "LOCATION";
             // 
+            // loTextBox2
+            // 
+            this.loTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.loTextBox2.BorderColor = System.Drawing.Color.Empty;
+            this.loTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.loTextBox2.BorderRadius = 0;
+            this.loTextBox2.BorderSize = 2;
+            this.loTextBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loTextBox2.ForeColor = System.Drawing.Color.DarkGray;
+            this.loTextBox2.Location = new System.Drawing.Point(271, 9);
+            this.loTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.loTextBox2.MultiLine = false;
+            this.loTextBox2.Name = "loTextBox2";
+            this.loTextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.loTextBox2.PasswordChar = false;
+            this.loTextBox2.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.loTextBox2.PlaceHolderText = "QTY";
+            this.loTextBox2.Size = new System.Drawing.Size(48, 31);
+            this.loTextBox2.TabIndex = 12;
+            this.loTextBox2.Texts = "";
+            this.loTextBox2.UnderlinedStyle = false;
+            this.loTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loTextBox2_KeyPress);
+            // 
+            // loTextBox1
+            // 
+            this.loTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.loTextBox1.BorderColor = System.Drawing.Color.Empty;
+            this.loTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.loTextBox1.BorderRadius = 0;
+            this.loTextBox1.BorderSize = 2;
+            this.loTextBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loTextBox1.ForeColor = System.Drawing.Color.DarkGray;
+            this.loTextBox1.Location = new System.Drawing.Point(13, 9);
+            this.loTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.loTextBox1.MultiLine = false;
+            this.loTextBox1.Name = "loTextBox1";
+            this.loTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.loTextBox1.PasswordChar = false;
+            this.loTextBox1.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.loTextBox1.PlaceHolderText = "SKU";
+            this.loTextBox1.Size = new System.Drawing.Size(250, 31);
+            this.loTextBox1.TabIndex = 11;
+            this.loTextBox1.Texts = "";
+            this.loTextBox1.UnderlinedStyle = false;
+            this.loTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loTextBox1_KeyPress);
+            // 
             // Recount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -319,11 +271,6 @@
         private System.Windows.Forms.Button Import;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button Export;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Part;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Available;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UOM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
         private LOControls.LOTextBox loTextBox1;
         private LOControls.LOTextBox loTextBox2;
         private LOControls.LOComboBox loComboBox1;
