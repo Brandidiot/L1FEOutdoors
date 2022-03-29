@@ -102,7 +102,6 @@ namespace L1FEOutdoors
                 {
                     case "btnPricing":
                     {
-                        LOMessageBox.Show("Made It");
                         var color = Properties.Settings.Default.PPColor;
 
                         DeactivateButton();
@@ -123,7 +122,6 @@ namespace L1FEOutdoors
                     }
                     case "btnCheckSquare":
                     {
-                        LOMessageBox.Show("Made It");
                         var color = Properties.Settings.Default.CSColor;
 
                         DeactivateButton();
@@ -144,7 +142,6 @@ namespace L1FEOutdoors
                     }
                     case "btnRecount":
                     {
-                        LOMessageBox.Show("Made It");
                         var color = Properties.Settings.Default.RColor;
 
                         DeactivateButton();
@@ -165,7 +162,6 @@ namespace L1FEOutdoors
                     }
                     case "btnSquareRecount":
                     {
-                        LOMessageBox.Show("Made It");
                         var color = Properties.Settings.Default.SRColor;
 
                         DeactivateButton();
@@ -186,7 +182,6 @@ namespace L1FEOutdoors
                     }
                     case "btnSettings":
                     {
-                        LOMessageBox.Show("Made It");
                         var color = Properties.Settings.Default.SColor;
 
                         DeactivateButton();
@@ -207,7 +202,6 @@ namespace L1FEOutdoors
                     }
                     case "btnHelp":
                     {
-                        LOMessageBox.Show("Made It");
                         var color = Properties.Settings.Default.HColor;
 
                         DeactivateButton();
