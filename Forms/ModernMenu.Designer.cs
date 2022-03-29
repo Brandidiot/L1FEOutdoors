@@ -47,7 +47,6 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -222,7 +221,6 @@
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.panelTitleBar.Controls.Add(this.iconButton4);
             this.panelTitleBar.Controls.Add(this.iconButton3);
             this.panelTitleBar.Controls.Add(this.iconButton2);
             this.panelTitleBar.Controls.Add(this.iconButton1);
@@ -363,24 +361,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // iconButton4
-            // 
-            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
-            this.iconButton4.Location = new System.Drawing.Point(86, 25);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(25, 25);
-            this.iconButton4.TabIndex = 5;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
             // ModernMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +409,5 @@
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton btnMenu;
-        private FontAwesome.Sharp.IconButton iconButton4;
     }
 }
