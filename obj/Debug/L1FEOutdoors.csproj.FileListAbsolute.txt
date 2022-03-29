@@ -81,3 +81,4 @@ C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.application
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.csproj.CopyComplete
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.exe
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.pdb
+C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.Settings.resources

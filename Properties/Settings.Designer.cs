@@ -23,15 +23,12 @@ namespace L1FEOutdoors.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool FirstRun {
             get {
                 return ((bool)(this["FirstRun"]));
-            }
-            set {
-                this["FirstRun"] = value;
             }
         }
         
@@ -44,6 +41,90 @@ namespace L1FEOutdoors.Properties {
             }
             set {
                 this["Version"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Navy")]
+        public global::System.Drawing.Color PPColor {
+            get {
+                return ((global::System.Drawing.Color)(this["PPColor"]));
+            }
+            set {
+                this["PPColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool RandomColor {
+            get {
+                return ((bool)(this["RandomColor"]));
+            }
+            set {
+                this["RandomColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Navy")]
+        public global::System.Drawing.Color CSColor {
+            get {
+                return ((global::System.Drawing.Color)(this["CSColor"]));
+            }
+            set {
+                this["CSColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Navy")]
+        public global::System.Drawing.Color RColor {
+            get {
+                return ((global::System.Drawing.Color)(this["RColor"]));
+            }
+            set {
+                this["RColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Navy")]
+        public global::System.Drawing.Color SRColor {
+            get {
+                return ((global::System.Drawing.Color)(this["SRColor"]));
+            }
+            set {
+                this["SRColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Navy")]
+        public global::System.Drawing.Color SColor {
+            get {
+                return ((global::System.Drawing.Color)(this["SColor"]));
+            }
+            set {
+                this["SColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Navy")]
+        public global::System.Drawing.Color HColor {
+            get {
+                return ((global::System.Drawing.Color)(this["HColor"]));
+            }
+            set {
+                this["HColor"] = value;
             }
         }
     }

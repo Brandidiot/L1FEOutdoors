@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModernMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnCheckSquare = new System.Windows.Forms.Button();
-            this.btnRecount = new System.Windows.Forms.Button();
-            this.btnSquareRecount = new System.Windows.Forms.Button();
+            this.btnSquareRecount = new FontAwesome.Sharp.IconButton();
+            this.btnRecount = new FontAwesome.Sharp.IconButton();
+            this.btnCheckSquare = new FontAwesome.Sharp.IconButton();
+            this.btnPricing = new FontAwesome.Sharp.IconButton();
+            this.btnSettings = new FontAwesome.Sharp.IconButton();
+            this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,102 +58,18 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.button1);
-            this.panelMenu.Controls.Add(this.btnHelp);
-            this.panelMenu.Controls.Add(this.btnCheckSquare);
-            this.panelMenu.Controls.Add(this.btnRecount);
             this.panelMenu.Controls.Add(this.btnSquareRecount);
+            this.panelMenu.Controls.Add(this.btnRecount);
+            this.panelMenu.Controls.Add(this.btnCheckSquare);
+            this.panelMenu.Controls.Add(this.btnPricing);
+            this.panelMenu.Controls.Add(this.btnSettings);
+            this.panelMenu.Controls.Add(this.btnHelp);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 500);
             this.panelMenu.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = global::L1FEOutdoors.Properties.Resources.Money2;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 260);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(12);
-            this.button1.Size = new System.Drawing.Size(220, 60);
-            this.button1.TabIndex = 4;
-            this.button1.Tag = "Product Pricing";
-            this.button1.Text = "  Product Pricing";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnHelp.FlatAppearance.BorderSize = 0;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelp.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnHelp.Image = global::L1FEOutdoors.Properties.Resources.questionwhite;
-            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 440);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Padding = new System.Windows.Forms.Padding(12);
-            this.btnHelp.Size = new System.Drawing.Size(220, 60);
-            this.btnHelp.TabIndex = 3;
-            this.btnHelp.Tag = "Help";
-            this.btnHelp.Text = "  Help";
-            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHelp.UseVisualStyleBackColor = true;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
-            // 
-            // btnCheckSquare
-            // 
-            this.btnCheckSquare.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheckSquare.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCheckSquare.FlatAppearance.BorderSize = 0;
-            this.btnCheckSquare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckSquare.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckSquare.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCheckSquare.Image = global::L1FEOutdoors.Properties.Resources.checkmark;
-            this.btnCheckSquare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckSquare.Location = new System.Drawing.Point(0, 200);
-            this.btnCheckSquare.Name = "btnCheckSquare";
-            this.btnCheckSquare.Padding = new System.Windows.Forms.Padding(12);
-            this.btnCheckSquare.Size = new System.Drawing.Size(220, 60);
-            this.btnCheckSquare.TabIndex = 2;
-            this.btnCheckSquare.Tag = "Check Square";
-            this.btnCheckSquare.Text = "  Check Square";
-            this.btnCheckSquare.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCheckSquare.UseVisualStyleBackColor = true;
-            this.btnCheckSquare.Click += new System.EventHandler(this.btnCheckSquare_Click);
-            // 
-            // btnRecount
-            // 
-            this.btnRecount.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRecount.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRecount.FlatAppearance.BorderSize = 0;
-            this.btnRecount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecount.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRecount.Image = ((System.Drawing.Image)(resources.GetObject("btnRecount.Image")));
-            this.btnRecount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecount.Location = new System.Drawing.Point(0, 140);
-            this.btnRecount.Name = "btnRecount";
-            this.btnRecount.Padding = new System.Windows.Forms.Padding(12);
-            this.btnRecount.Size = new System.Drawing.Size(220, 60);
-            this.btnRecount.TabIndex = 1;
-            this.btnRecount.Tag = "Recount";
-            this.btnRecount.Text = "  Recount";
-            this.btnRecount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRecount.UseVisualStyleBackColor = true;
-            this.btnRecount.Click += new System.EventHandler(this.btnRecount_Click);
             // 
             // btnSquareRecount
             // 
@@ -162,18 +79,135 @@
             this.btnSquareRecount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSquareRecount.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSquareRecount.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSquareRecount.Image = ((System.Drawing.Image)(resources.GetObject("btnSquareRecount.Image")));
+            this.btnSquareRecount.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.btnSquareRecount.IconColor = System.Drawing.Color.White;
+            this.btnSquareRecount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSquareRecount.IconSize = 40;
             this.btnSquareRecount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSquareRecount.Location = new System.Drawing.Point(0, 80);
+            this.btnSquareRecount.Location = new System.Drawing.Point(0, 260);
             this.btnSquareRecount.Name = "btnSquareRecount";
-            this.btnSquareRecount.Padding = new System.Windows.Forms.Padding(12);
             this.btnSquareRecount.Size = new System.Drawing.Size(220, 60);
-            this.btnSquareRecount.TabIndex = 0;
-            this.btnSquareRecount.Tag = "Square Recount";
-            this.btnSquareRecount.Text = "  Square Recount";
-            this.btnSquareRecount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSquareRecount.TabIndex = 10;
+            this.btnSquareRecount.Tag = "        Square Recount";
+            this.btnSquareRecount.Text = "        Square Recount";
+            this.btnSquareRecount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSquareRecount.UseVisualStyleBackColor = true;
             this.btnSquareRecount.Click += new System.EventHandler(this.btnSquareRecount_Click);
+            // 
+            // btnRecount
+            // 
+            this.btnRecount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRecount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecount.FlatAppearance.BorderSize = 0;
+            this.btnRecount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecount.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecount.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRecount.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
+            this.btnRecount.IconColor = System.Drawing.Color.White;
+            this.btnRecount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRecount.IconSize = 40;
+            this.btnRecount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecount.Location = new System.Drawing.Point(0, 200);
+            this.btnRecount.Name = "btnRecount";
+            this.btnRecount.Size = new System.Drawing.Size(220, 60);
+            this.btnRecount.TabIndex = 9;
+            this.btnRecount.Tag = "        Recount";
+            this.btnRecount.Text = "        Recount";
+            this.btnRecount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecount.UseVisualStyleBackColor = true;
+            this.btnRecount.Click += new System.EventHandler(this.btnRecount_Click);
+            // 
+            // btnCheckSquare
+            // 
+            this.btnCheckSquare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckSquare.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCheckSquare.FlatAppearance.BorderSize = 0;
+            this.btnCheckSquare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckSquare.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckSquare.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCheckSquare.IconChar = FontAwesome.Sharp.IconChar.CheckSquare;
+            this.btnCheckSquare.IconColor = System.Drawing.Color.White;
+            this.btnCheckSquare.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCheckSquare.IconSize = 40;
+            this.btnCheckSquare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckSquare.Location = new System.Drawing.Point(0, 140);
+            this.btnCheckSquare.Name = "btnCheckSquare";
+            this.btnCheckSquare.Size = new System.Drawing.Size(220, 60);
+            this.btnCheckSquare.TabIndex = 8;
+            this.btnCheckSquare.Tag = "        Check Square";
+            this.btnCheckSquare.Text = "        Check Square";
+            this.btnCheckSquare.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckSquare.UseVisualStyleBackColor = true;
+            this.btnCheckSquare.Click += new System.EventHandler(this.btnCheckSquare_Click);
+            // 
+            // btnPricing
+            // 
+            this.btnPricing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPricing.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPricing.FlatAppearance.BorderSize = 0;
+            this.btnPricing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPricing.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPricing.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPricing.IconChar = FontAwesome.Sharp.IconChar.DollarSign;
+            this.btnPricing.IconColor = System.Drawing.Color.White;
+            this.btnPricing.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPricing.IconSize = 40;
+            this.btnPricing.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPricing.Location = new System.Drawing.Point(0, 80);
+            this.btnPricing.Name = "btnPricing";
+            this.btnPricing.Size = new System.Drawing.Size(220, 60);
+            this.btnPricing.TabIndex = 7;
+            this.btnPricing.Tag = "        Product Pricing";
+            this.btnPricing.Text = "        Product Pricing";
+            this.btnPricing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPricing.UseVisualStyleBackColor = true;
+            this.btnPricing.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSettings.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSettings.IconChar = FontAwesome.Sharp.IconChar.SlidersH;
+            this.btnSettings.IconColor = System.Drawing.Color.White;
+            this.btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSettings.IconSize = 40;
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.Location = new System.Drawing.Point(0, 380);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(220, 60);
+            this.btnSettings.TabIndex = 6;
+            this.btnSettings.Tag = "        Settings";
+            this.btnSettings.Text = "        Settings";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnHelp.FlatAppearance.BorderSize = 0;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnHelp.IconColor = System.Drawing.Color.White;
+            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHelp.IconSize = 40;
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.Location = new System.Drawing.Point(0, 440);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(220, 60);
+            this.btnHelp.TabIndex = 5;
+            this.btnHelp.Tag = "        Help";
+            this.btnHelp.Text = "        Help";
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // panelLogo
             // 
@@ -392,9 +426,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnCheckSquare;
-        private System.Windows.Forms.Button btnRecount;
-        private System.Windows.Forms.Button btnSquareRecount;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Label lblTitle;
@@ -402,12 +433,16 @@
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblVersion;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton btnMenu;
+        private FontAwesome.Sharp.IconButton btnSettings;
+        private FontAwesome.Sharp.IconButton btnHelp;
+        private FontAwesome.Sharp.IconButton btnPricing;
+        private FontAwesome.Sharp.IconButton btnSquareRecount;
+        private FontAwesome.Sharp.IconButton btnRecount;
+        private FontAwesome.Sharp.IconButton btnCheckSquare;
     }
 }

@@ -60,7 +60,7 @@ namespace L1FEOutdoors
                  blue = (255 - blue) * correctionFactor + blue;
              }
 
-            return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
+             return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
          }
     }
 }

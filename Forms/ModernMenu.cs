@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -7,13 +8,12 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using L1FEOutdoors.Forms;
 using L1FEOutdoors.LOControls;
-using L1FEOutdoors.Properties;
 
 namespace L1FEOutdoors
 {
     public partial class ModernMenu : Form
     {
-        private Button _currentButton;
+        private IconButton _currentButton;
         private Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
@@ -73,32 +73,167 @@ namespace L1FEOutdoors
         private void ActivateButton(object btnSender)
         {
             if (btnSender == null) return;
-            if (_currentButton == (Button) btnSender) return;
+            if (_currentButton == (IconButton) btnSender) return;
+            
+            if (Properties.Settings.Default.RandomColor)
+            {
+                var color = SelectThemeColor();
 
-            var color = SelectThemeColor();
+                DeactivateButton();
+                _currentButton = (IconButton) btnSender;
+                _currentButton.BackColor = color;
+                _currentButton.ForeColor = Color.White;
+                _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte) (0)));
+                panelTitleBar.BackColor = color;
+                //iconButton1.BackColor = color;
+                //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
 
-            DeactivateButton();
-            _currentButton = (Button) btnSender;
-            _currentButton.BackColor = color;
-            _currentButton.ForeColor = Color.White;
-            _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
-            panelTitleBar.BackColor = color;
-            //iconButton1.BackColor = color;
-            //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
+                ThemeColor.PrimaryColor = color;
+                ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
 
-            ThemeColor.PrimaryColor = color;
-            ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
+                btnCloseChildForm.Visible = true;
+                btnCloseChildForm.BackColor = color;
+                //btnMin.BackColor = ThemeColor.PrimaryColor;
+                //btnClose.BackColor = ThemeColor.PrimaryColor;
+            }
+            else
+            {
+                switch (((IconButton)btnSender).Name)
+                {
+                    case "btnPricing":
+                    {
+                        LOMessageBox.Show("Made It");
+                        var color = Properties.Settings.Default.PPColor;
 
-            btnCloseChildForm.Visible = true;
-            btnCloseChildForm.BackColor = color;
-            //btnMin.BackColor = ThemeColor.PrimaryColor;
-            //btnClose.BackColor = ThemeColor.PrimaryColor;
+                        DeactivateButton();
+                        _currentButton = (IconButton)btnSender;
+                        _currentButton.BackColor = color;
+                        _currentButton.ForeColor = Color.White;
+                        _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                        panelTitleBar.BackColor = color;
+                        //iconButton1.BackColor = color;
+                        //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
+
+                        ThemeColor.PrimaryColor = color;
+                        ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
+
+                        btnCloseChildForm.Visible = true;
+                        btnCloseChildForm.BackColor = color;
+                        break;
+                    }
+                    case "btnCheckSquare":
+                    {
+                        LOMessageBox.Show("Made It");
+                        var color = Properties.Settings.Default.CSColor;
+
+                        DeactivateButton();
+                        _currentButton = (IconButton)btnSender;
+                        _currentButton.BackColor = color;
+                        _currentButton.ForeColor = Color.White;
+                        _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                        panelTitleBar.BackColor = color;
+                        //iconButton1.BackColor = color;
+                        //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
+
+                        ThemeColor.PrimaryColor = color;
+                        ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
+
+                        btnCloseChildForm.Visible = true;
+                        btnCloseChildForm.BackColor = color;
+                            break;
+                    }
+                    case "btnRecount":
+                    {
+                        LOMessageBox.Show("Made It");
+                        var color = Properties.Settings.Default.RColor;
+
+                        DeactivateButton();
+                        _currentButton = (IconButton)btnSender;
+                        _currentButton.BackColor = color;
+                        _currentButton.ForeColor = Color.White;
+                        _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                        panelTitleBar.BackColor = color;
+                        //iconButton1.BackColor = color;
+                        //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
+
+                        ThemeColor.PrimaryColor = color;
+                        ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
+
+                        btnCloseChildForm.Visible = true;
+                        btnCloseChildForm.BackColor = color;
+                            break;
+                    }
+                    case "btnSquareRecount":
+                    {
+                        LOMessageBox.Show("Made It");
+                        var color = Properties.Settings.Default.SRColor;
+
+                        DeactivateButton();
+                        _currentButton = (IconButton)btnSender;
+                        _currentButton.BackColor = color;
+                        _currentButton.ForeColor = Color.White;
+                        _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                        panelTitleBar.BackColor = color;
+                        //iconButton1.BackColor = color;
+                        //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
+
+                        ThemeColor.PrimaryColor = color;
+                        ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
+
+                        btnCloseChildForm.Visible = true;
+                        btnCloseChildForm.BackColor = color;
+                            break;
+                    }
+                    case "btnSettings":
+                    {
+                        LOMessageBox.Show("Made It");
+                        var color = Properties.Settings.Default.SColor;
+
+                        DeactivateButton();
+                        _currentButton = (IconButton)btnSender;
+                        _currentButton.BackColor = color;
+                        _currentButton.ForeColor = Color.White;
+                        _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                        panelTitleBar.BackColor = color;
+                        //iconButton1.BackColor = color;
+                        //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
+
+                        ThemeColor.PrimaryColor = color;
+                        ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
+
+                        btnCloseChildForm.Visible = true;
+                        btnCloseChildForm.BackColor = color;
+                            break;
+                    }
+                    case "btnHelp":
+                    {
+                        LOMessageBox.Show("Made It");
+                        var color = Properties.Settings.Default.HColor;
+
+                        DeactivateButton();
+                        _currentButton = (IconButton)btnSender;
+                        _currentButton.BackColor = color;
+                        _currentButton.ForeColor = Color.White;
+                        _currentButton.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+                        panelTitleBar.BackColor = color;
+                        //iconButton1.BackColor = color;
+                        //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.2f);
+
+                        ThemeColor.PrimaryColor = color;
+                        ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3f);
+
+                        btnCloseChildForm.Visible = true;
+                        btnCloseChildForm.BackColor = color;
+                            break;
+                    }
+                }
+            }
         }
         private void DeactivateButton()
         {
             foreach (Control previousBtn in panelMenu.Controls)
             {
-                if (previousBtn.GetType() != typeof(Button)) continue;
+                if (previousBtn.GetType() != typeof(IconButton)) continue;
 
                 previousBtn.BackColor = Color.FromArgb(51, 51, 76);
                 previousBtn.ForeColor = Color.Gainsboro;
@@ -218,11 +353,11 @@ namespace L1FEOutdoors
         {
             //LOMessageBox.Show(VersionLabel);
             lblVersion.Text = VersionLabel;
-            if (Settings.Default.Version == VersionLabel) return;
+            if (Properties.Settings.Default.Version == VersionLabel) return;
             //lblGreetings.Text = "Welcome New User";
             //Change the value since the program has run once now
-            Settings.Default.Version = VersionLabel;
-            Settings.Default.Save();
+            Properties.Settings.Default.Version = VersionLabel;
+            Properties.Settings.Default.Save();
             LOUpdateBox.Show(_update, "Updated To " + VersionLabel, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -356,7 +491,7 @@ namespace L1FEOutdoors
                 btnMenu.Dock = DockStyle.Fill;
                 label1.Visible = false;
                 //label1.Dock = DockStyle.Fill;
-                foreach (Button btn in panelMenu.Controls.OfType<Button>())
+                foreach (IconButton btn in panelMenu.Controls.OfType<IconButton>())
                 {
                     btn.Text = "";
                     btn.ImageAlign = ContentAlignment.MiddleCenter;
@@ -369,11 +504,11 @@ namespace L1FEOutdoors
                 btnMenu.Dock = DockStyle.None;
                 label1.Visible = true;
                 //label1.Dock = DockStyle.Fill;
-                foreach (Button btn in panelMenu.Controls.OfType<Button>())
+                foreach (IconButton btn in panelMenu.Controls.OfType<IconButton>())
                 {
-                    btn.Text = "  " + btn.Tag;
+                    btn.Text = btn.Tag.ToString();
                     btn.ImageAlign = ContentAlignment.MiddleLeft;
-                    btn.Padding = new Padding(10,0,0,0);
+                    btn.Padding = new Padding(0,0,0,0);
                 }
             }
         }
@@ -407,5 +542,12 @@ namespace L1FEOutdoors
         {
             CollapseMenu();
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Settings(), sender);
+        }
+
+
     }
 }
