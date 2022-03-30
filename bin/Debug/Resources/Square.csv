@@ -27,7 +27,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #12-bog-hoodie-xl-aqua,73ZOAHREHYXD2MEXZL4NWDSK,1/2 Bog Hoodie,XL Aqua,TNHGO3LF,,Gator Waders,220.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #12-bog-hoodie-xl-seven-red,76BWOZQ57YTMIKNEXSAI2VFO,1/2 Bog Hoodie,XL Seven Red,BOG57MXL,,Gator Waders,220.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #12-bog-hoodie-2xl-realtree-max-5,BLTNTQTPHSMNDRL7XUOBHMUK,1/2 Bog Hoodie,2XL Realtree Max-5,810064792588,,Gator Waders,220.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#12-bog-hoodie-2xl-black-seven,NPQ6S3RIXFQ4OOE7TZSXT7OK,1/2 Bog Hoodie,2XL Black Seven,810049597849,,Gator Waders,220.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#12-bog-hoodie-2xl-black-seven,NPQ6S3RIXFQ4OOE7TZSXT7OK,1/2 Bog Hoodie,2XL Black Seven,810049597849,,Gator Waders,220.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #12-bog-hoodie-2xl-orange,44UTBNKE3LSP7IKVRUW7TTRQ,1/2 Bog Hoodie,2XL Orange,TN3VCMW9,,Gator Waders,220.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #12-bog-hoodie-2xl-lime,F3FWELDUNTYNDVECBCG5D7LW,1/2 Bog Hoodie,2XL Lime,TN0X045K,,Gator Waders,220.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #12-bog-hoodie-3xl-seven-black,YC7KFLUB7ZCKN4357URUCMGO,1/2 Bog Hoodie,3XL Seven Black,TN49BKR2,,Gator Waders,220.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -73,7 +73,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #amsoil-synthetic-atvutv-front-drive-fluid-946ml,QA3KFDCIUSDHFWFGMTMRROPR,AMSOIL Synthetic ATV/UTV Front Drive Fluid,946ml,AUFDQT-EA,,Lubricants,17.00,,,Y,5,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #amsoil-synthetic-transmission-differential-fluid-946ml,EY6KQJZGUM4EHTROMYKZNJL3,AMSOIL Synthetic Transmission & Differential Fluid,946ml,AUDTPK-EA,,Lubricants,24.00,,,Y,13,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #barkers-exhaust-quiet-core-1-,LELRKFSEHNYYC64OXLCFJNFI,"Barker's Exhaust Quiet Core - 1""",,BAR-QC-1,,Parts,39.00,,,Y,7,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#battery-isolator-with-wiring-kit-,4IDQHI6TIFJF6VTREQL6NZZ3,Battery Isolator with Wiring Kit,,70-2000,,Accessories,117.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#battery-isolator-with-wiring-kit-,4IDQHI6TIFJF6VTREQL6NZZ3,Battery Isolator with Wiring Kit,,70-2000,,Accessories,117.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #battery-tender-ring-terminal-harness-,PKAQGUKJIBBAQYWC4HOGW5O2,Battery Tender Ring Terminal Harness,,BATTEND,,Accessories,8.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #boombottle-magic-mount-speaker-black,PWI3MWOFWQ2D3WGG6SCJ34BF,BoomBottle Magic Mount Speaker,Black,BTMSC1-BB2,,Accessories,169.99,,,Y,13,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #boombottle-magic-mount-speaker-black-camo,ABX6BTN5CXJUPA6SBHUPQUOM,BoomBottle Magic Mount Speaker,Black Camo,BTMSC5-BB2,,Accessories,169.99,,,Y,8,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -86,7 +86,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #bronco-gun-boot-case-,CRPNSAPHAVNWUXZQKMVEQPBR,Bronco Gun Boot Case,,33-05700,,Accessories,170.00,,,Y,9,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-heated-grips-and-thumb-warmer-,YKXX2K43H3P6MQTTWQUCL773,Bronco Heated Grips and Thumb Warmer,,340-1530,,Accessories,115.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-wheel-spacers-1-4110-10mm,6RIVYK4ZQO5HKZLSBYVX26NC,Bronco Wheel Spacers,"1"" 4/110 10mm",02-02400,,Parts,80.00,,,Y,11,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#bronco-wheel-spacers-1-4110-12mm-x-125,NU4UAYILGFEPXNFWTWGD4CCB,Bronco Wheel Spacers,"1"" 4/110 12mm x 1.25",02-02403,,Parts,80.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#bronco-wheel-spacers-1-4110-12mm-x-125,NU4UAYILGFEPXNFWTWGD4CCB,Bronco Wheel Spacers,"1"" 4/110 12mm x 1.25",02-02403,,Parts,80.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-wheel-spacers-1-4115-10mm,4RFN35OWFX4ZYNI6PJXDIDGI,Bronco Wheel Spacers,"1"" 4/115 10mm",02-02410,,Parts,80.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-wheel-spacers-1-4137-10mm,P4IORVABJOCIBETA7ZHY2MZ7,Bronco Wheel Spacers,"1"" 4/137 10mm",02-02420,,Parts,87.00,,,Y,13,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #bronco-wheel-spacers-1-4137-12mm-x-125,PDZSA7XCDQZRU7MRU5BVF2AF,Bronco Wheel Spacers,"1"" 4/137 12mm x 1.25",02-02423,,Parts,87.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -127,7 +127,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #dalton-clutch-kit-can-am-850-up-to-27-tires,2WCXPVVJ2PS23N45VYLC25EI,Dalton Clutch Kit,"CAN-AM 850 up to 27"" tires",DBO850,,Dalton,245.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-clutch-kit-can-am-850m,TWOSRTI5HFMMNRGYVNJ32PUP,Dalton Clutch Kit,CAN-AM 850M,DBO850M,,Dalton,260.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-clutch-kit-can-am-dbo-1000-x,2OAAE23Y77ZZIHUOGSMTPQQB,Dalton Clutch Kit,CAN-AM DBO 1000 X,DBO1000X,,Dalton,275.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#dalton-clutch-kit-canam-800m,WW3TVLHXLHDMPBJ3TRK6TK6P,Dalton Clutch Kit,CanAm 800M,DBO800M,,Dalton,260.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#dalton-clutch-kit-canam-800m,WW3TVLHXLHDMPBJ3TRK6TK6P,Dalton Clutch Kit,CanAm 800M,DBO800M,,Dalton,260.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-clutch-kit-pol-1000,ERTTADY7V6QSGG27Q7BWSVAV,Dalton Clutch Kit,POL 1000,DP1000,,Dalton,305.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-clutch-kit-pol-sportsman-570ebs-28-tires-18-20,TFGYBLCFZFYBAXCSIFUVUYIJ,Dalton Clutch Kit,"POL Sportsman 570EBS 28""+ Tires (18-20)",DBW570EBS,,Dalton,290.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #dalton-clutch-kit-pol-850-12,4TB6SZMTW3NYV4VG4SA2NH2E,Dalton Clutch Kit,POL 850-12,DP850-12,,Dalton,325.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -374,7 +374,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #hjc-cl-max-3-2xl-gallant-red,TLUZ3MUAKLHIKTSWDUOB4WJI,HJC CL-MAX 3,2XL Gallant Red,0100-1845,,Helmet,195.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #hjc-cl-max-3-2xl-gallant-silvergrey,YGXM7FPL3R5GBJ7DL4NIXQOP,HJC CL-MAX 3,2XL Gallant Silver/Grey,0100-1863,,Helmet,195.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #hjc-cl-max-3-2xl-gallant-blue,Q6VK7U2JOAQFZ6TBHLKP3WQJ,HJC CL-MAX 3,2XL Gallant Blue,0100-1851,,Helmet,195.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#hjc-cl-x7-plus-4xl-flat-black,4Q67O3FXHZHNLSQTAQO35BFG,HJC CL-X7 Plus,4XL Flat Black,416077,,Helmet,110.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#hjc-cl-x7-plus-4xl-flat-black,4Q67O3FXHZHNLSQTAQO35BFG,HJC CL-X7 Plus,4XL Flat Black,416077,,Helmet,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #hjc-cl-x7-plus-5xl-flat-black,LPMJU77N7T33VL43R6NWA5T2,HJC CL-X7 Plus,5XL Flat Black,416078,,Helmet,110.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #hjc-cl-xy2-youth-helmet-flat-black-xl,2DEBABP7KFU4BP5ZMG4MIGJT,HJC CL-XY2 Youth Helmet,Flat Black XL,0111-0961,,Helmet,115.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #hjc-cl-xy2-youth-helmet-ym-blueblack,45ZEELB3FLC4STQ3I535AJUW,HJC CL-XY2 Youth Helmet,YM Blue/Black,0111-1367,,Helmet,115.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -454,7 +454,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #k100s-fuel-treatment-8oz,VFRNZOGWSRQM4AHJENOEJSAU,K100S+ Fuel Treatment,8oz,757288002010,,Chemical,11.50,,,Y,10,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-2-rear-receiver-can-am,6VRVRQQLWIDHW6GVLTLHWG25,"KFI 2"" Rear Receiver",Can-Am,100945,,KFI,63.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-2-rear-receiver-honda,DTQONNSRYS4OZJBPY6BFXERP,"KFI 2"" Rear Receiver",Honda,101465,,KFI,64.99,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#kfi-split-cable-hook-stopper-,CKLWD4443UQ5TR2NQERSGDKU,KFI Split Cable Hook Stopper,,33-08638,,KFI,14.00,,,Y,24,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#kfi-split-cable-hook-stopper-,CKLWD4443UQ5TR2NQERSGDKU,KFI Split Cable Hook Stopper,,33-08638,,KFI,14.00,,,Y,22,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-tiger-tail-mount-1-14,63ZBUCLZT76LPNHRTDSMUVYW,KFI Tiger Tail Mount,"1-1/4""",101115,,KFI,100.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-tiger-tail-mount-2,HZ4ROOGP2JGA6MG24GLEI4E3,KFI Tiger Tail Mount,"2""",101110,,KFI,105.00,,,Y,5,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #kfi-tigertail-hook-bracket-kit-,7XHZVRR64SOIVROTPNQLJQT5,KFI Tigertail Hook Bracket Kit,,101132-R,,KFI,25.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -543,7 +543,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #maxima-air-filter-cleaner-155oz,FPBICKFNUXM55NYLFFBBPF7K,Maxima Air Filter Cleaner,15.5oz,79920,,Chemical,17.50,,,Y,10,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #maxima-brake-fluid-500ml,22YGYYUL63BAL5IY5V64DQAI,Maxima Brake Fluid,500ml,80-86916,,Lubricants,10.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #maxima-sc1-cleaningpolishing-4oz,UIXE3ZKV4XOTQGTBEKACF5TN,Maxima SC1 Cleaning/Polishing,4oz,78904,,Chemical,8.00,,,Y,46,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#maxima-sc1-cleaningpolishing-12oz,2WRHAH7NALUSWCNP5EWM7RTP,Maxima SC1 Cleaning/Polishing,12oz,78920,,Chemical,12.50,,,Y,237,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#maxima-sc1-cleaningpolishing-12oz,2WRHAH7NALUSWCNP5EWM7RTP,Maxima SC1 Cleaning/Polishing,12oz,78920,,Chemical,12.50,,,Y,235,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #maxima-transmission-lube-80wt-1l,XBUVWZF75N4TAG2A4SMG54BS,Maxima Transmission Lube 80wt,1L,41901,,Lubricants,13.00,,,Y,8,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #mechanix-wear-m-pact-gloves-large-grey,RGEZBR3AADX7OTIJWD5AHKP2,Mechanix Wear M-Pact Gloves,Large Grey,781513631294,,Gloves,39.99,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #mechanix-wear-m-pact-gloves-medium-grey,R4INYH3RIPWCRXU22BNKOSIA,Mechanix Wear M-Pact Gloves,Medium Grey,781513631287,,Gloves,39.99,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -679,9 +679,9 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #patch-hat-olive,KOTH2ZMABWFYLQV3YG2DNZCV,Patch Hat,Olive,TNZYKCXR,,Gator Waders,35.00,,,Y,9,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #patch-hat-topo-black,IDLMBMTYYYHFNNJ3PBJIBXKP,Patch Hat,Topo Black,TN6A2685,,Gator Waders,35.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #patch-hat-cork-black,RF6SMR33GITFODF4IIKYNRQ5,Patch Hat,Cork Black,GW-HAT-CORK-BLK,,Gator Waders,35.00,,,Y,9,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#phx-helmet-gloss-blackred-xl,RTIRHAJVVDZRBYEJZPP42AOJ,PHX Helmet,Gloss Black/Red XL,PHXHELMET,,Helmet,110.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#phx-helmet-gloss-blackred-xl,RTIRHAJVVDZRBYEJZPP42AOJ,PHX Helmet,Gloss Black/Red XL,PHXHELMET,,Helmet,110.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #powermadd-atv-handguard-mount-,P2AEZRUQKEE46STFJH5OS2Y5,PowerMadd ATV Handguard Mount,,34252,,Accessories,60.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#powermadd-grab-bar-for-78-bar-,ONP4RXXOP5NBCZ5FP5DX64RC,"PowerMadd Grab Bar For 7/8"" Bar",,43588,,Accessories,47.00,,,Y,7,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#powermadd-grab-bar-for-78-bar-,ONP4RXXOP5NBCZ5FP5DX64RC,"PowerMadd Grab Bar For 7/8"" Bar",,43588,,Accessories,47.00,,,Y,6,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #powermadd-hand-guards-suzuki-yellow,ZWRY43KSV3UG3432DFAMP2AN,PowerMadd Hand Guards,Suzuki Yellow,34206,,Accessories,50.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #powermadd-hand-guards-orange,5J5PVRO3O4GERNKYNLLVZFVR,PowerMadd Hand Guards,Orange,34205,,Accessories,50.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #powermadd-hand-guards-redblack,7IK4S6NVZLY2SHED7HUKHQJZ,PowerMadd Hand Guards,Red/Black,TNV2HSBB,,Accessories,50.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -722,13 +722,13 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #rjwc-billet-shifter-20-for-polaris-black,WRVSN4XG3BIPNXBBUVENST25,RJWC Billet Shifter 2.0 for Polaris,Black,1506BK,,RJWC,85.00,,,Y,9,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-can-am-metal-skeleton-shifter-,PRQQPDL6Y2FPJ6REAHZUAAZP,RJWC Can-Am Metal Skeleton Shifter,,1507,,RJWC,90.00,,,Y,22,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-can-am-outlander-g2-steel-bumpercaps-,BOMTUY5VP2ACFOFLH4KT2JMQ,RJWC Can-Am Outlander G2 Steel Bumpercaps,,1121,,RJWC,125.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#rjwc-can-am-polymer-skeleton-shifter-,ATENKLVW7I3G5DLG5TEMJZPI,RJWC Can-Am Polymer Skeleton Shifter,,1508,,RJWC,55.00,,,Y,17,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#rjwc-can-am-polymer-skeleton-shifter-,ATENKLVW7I3G5DLG5TEMJZPI,RJWC Can-Am Polymer Skeleton Shifter,,1508,,RJWC,55.00,,,Y,16,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-efi-tuner-kawasaki-brute-force-750-15-16,W4TEHL3UVZKAFWCQYHFCST2U,RJWC EFI Tuner,Kawasaki Brute Force 750 15-16,1289,,RJWC,330.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-efi-tuner-cf-moto-z8-utvatv-8008501000,2EBUAC6K2I6Q6JLVCM4UCUCP,RJWC EFI Tuner,CF Moto Z8 UTV/ATV 800/850/1000,1230,,RJWC,330.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-efi-tuner-outrene-500650-06-09-800-06-12,6Y4P6YH33RQHL3KTEO6NPAE4,RJWC EFI Tuner,Out/Rene 500/650 (06-09) & 800 (06-12),1225,,RJWC,330.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#rjwc-efi-tuner-outlander-renegade-g2-5006508501000,UB4DYFPUHIZHJBGK6LB4SUDP,RJWC EFI Tuner,Outlander / Renegade G2 500/650/850/1000,1226,,RJWC,330.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#rjwc-efi-tuner-outlander-renegade-g2-5006508501000,UB4DYFPUHIZHJBGK6LB4SUDP,RJWC EFI Tuner,Outlander / Renegade G2 500/650/850/1000,1226,,RJWC,330.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-efi-tuner-polaris-sportman-scrambler-1000,ZN5F2A2F4NF6F6PNJ6TZKW2Q,RJWC EFI Tuner,Polaris Sportman / Scrambler 1000,1235/1236,,RJWC,330.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#rjwc-elbraaapo-gas-cap-black,7NHZSULHMNCYDLTGDROZYWP6,RJWC EL'BRAAAPO Gas Cap,Black,1503BK,,RJWC,100.00,,,Y,26,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#rjwc-elbraaapo-gas-cap-black,7NHZSULHMNCYDLTGDROZYWP6,RJWC EL'BRAAAPO Gas Cap,Black,1503BK,,RJWC,100.00,,,Y,25,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-elpatron-billet-aluminum-shifter-for-can-am-red,UZQQZ3NYFVAK4ZUCPE5G6EZE,RJWC El'Patron Billet Aluminum Shifter for Can-Am,Red,1522RD,,RJWC,69.00,,,Y,7,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-elpatron-billet-aluminum-shifter-for-can-am-silver,WKDAESRZ3LAL3NWXFKXBUIML,RJWC El'Patron Billet Aluminum Shifter for Can-Am,Silver,1522AG,,RJWC,69.00,,,Y,5,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-elpatron-billet-aluminum-shifter-for-can-am-black,RNHDMOMYGX5W7ZFXIV5YNB7P,RJWC El'Patron Billet Aluminum Shifter for Can-Am,Black,1522BK,,RJWC,69.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -739,7 +739,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #rjwc-elpatron-billet-aluminum-shifter-for-polaris-silver,CUKWB22PG33J3PRTPO43DEWN,RJWC El'Patron Billet Aluminum Shifter for Polaris,Silver,1524AG,,RJWC,69.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-end-clamp-,VX5YOTNNPSZTUH2SZCEX2G2I,RJWC End Clamp,,1312,,RJWC,80.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-exhaust-clamp-50mm,BVICMT3G3CQ7RWDCCMZE4VZB,RJWC Exhaust Clamp,50mm,131350,,RJWC,12.50,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#rjwc-g2-billet-airbox-lid-,OX3OPOAFLJMBER3TMGTQFYCO,RJWC G2 Billet Airbox Lid,,1112,,RJWC,165.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#rjwc-g2-billet-airbox-lid-,OX3OPOAFLJMBER3TMGTQFYCO,RJWC G2 Billet Airbox Lid,,1112,,RJWC,165.00,,,Y,17,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-hawse-fairlead-,I6C3EPYDWNZLNXU7CWQW2AGA,RJWC Hawse Fairlead,,1701,,RJWC,60.00,,,Y,7,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-high-flow-foam-air-filter-can-am-outrene-g2,WXT3QWMW4WA4WLK3IFNVBOQE,RJWC High-Flow Foam Air Filter,Can-Am OUT/RENE G2,11601,,RJWC,54.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #rjwc-krossflow-endtip-,IQMQ72ETNAJO67XKH6WTERHU,RJWC Krossflow Endtip,,1310KF,,RJWC,99.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -854,7 +854,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #thor-spectrum-gloves-medium-black,33IFMEFD2C5MC4PP2GWWAKX7,Thor Spectrum Gloves,Medium Black,3330-6820,,Gloves,30.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #thor-spectrum-gloves-large-black,DNW3U6NJKV2PLRHSOMUU6DI6,Thor Spectrum Gloves,Large Black,3330-6821,,Gloves,30.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #thor-spectrum-gloves-xl-black,BNB7UIBJN3JF3UPPCVZXRJCX,Thor Spectrum Gloves,XL Black,3330-6822,,Gloves,30.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#torq-locker-canam,7UC34GN7LD5ULW4QRQ2YQUK3,Torq Locker,CanAm,TL-CANAM,,Parts,590.00,,,Y,12,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#torq-locker-canam,7UC34GN7LD5ULW4QRQ2YQUK3,Torq Locker,CanAm,TL-CANAM,,Parts,590.00,,,Y,11,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #torq-locker-honda-pioneer,V27BZD5ARJBPEQNACQKJTZT5,Torq Locker,Honda Pioneer,tl-hp500,,Parts,615.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-6-w-small-snake-skin,55FSJIOAIVU2GMTMEA5K6LOD,Uninsulated Swamp Wader,6 W Small Snake Skin,810064790591,,Gator Waders,300.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-6-w-medium-bowspray,FLZGYC63F3I2GK3C7XZKWICL,Uninsulated Swamp Wader,6 W Medium Bowspray,810064790492,,Gator Waders,300.00,,,Y,4,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -899,7 +899,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #uninsulated-swamp-wader-14-m-long-equator,R5YJRSP6FWK5S3BIP5FB7B6Y,Uninsulated Swamp Wader,14 M Long Equator,810064790225,,Gator Waders,300.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-14-m-long-gale,AXICEWFLQV5JC4POLHHD4J4K,Uninsulated Swamp Wader,14 M Long Gale,810064790126,,Gator Waders,300.00,,,Y,3,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #uninsulated-swamp-wader-10-m-stout-equator,GG3VBHMH5ZZHUOPRR7EIHD4Y,Uninsulated Swamp Wader,10 M Stout Equator,SWU49MS10,,Gator Waders,300.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#valve-caps-4pc-sets-,T4BYBXCEOQQMOQVXIMJPHORU,Valve Caps (4pc sets),,ValveCaps,,Accessories,5.00,,,Y,64,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#valve-caps-4pc-sets-,T4BYBXCEOQQMOQVXIMJPHORU,Valve Caps (4pc sets),,ValveCaps,,Accessories,5.00,,,Y,63,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #warn-winches-axon-35-s,SLWBVK6FZIWOSQEJLV7GOOJU,Warn Winches,Axon 35-S,101130,,Winches,740.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #warn-winches-axon-45-s,3V64GUPFEQQ2ZHGEXZHG5OKN,Warn Winches,Axon 45-S,101140,,Winches,900.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #warn-winches-vrx-35-s,CF25GO2A6MR4GUBWMIE34HA4,Warn Winches,VRX 35-S,101030,,Winches,550.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -914,7 +914,7 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #water-shoes-10-lime,5YZCYXE4JUIJQ6FNAC2BJZ5Q,Water Shoes,10 Lime,6001510060458,,Gator Waders,79.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #water-shoes-12-lime,RZZ5X54QVR3O3GU63ZDHRQX5,Water Shoes,12 Lime,6001510060373,,Gator Waders,79.00,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #water-shoes-12-blue,QEQYOXMW46RUGYTU43SATPBX,Water Shoes,12 Blue,TNNCZM3L,,Gator Waders,79.00,,,Y,2,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#winch-hook-,7BG2ES4SPQJSLOGCPHRYXNWY,Winch Hook,,TN79NZ1R,,Accessories,6.00,,,Y,93,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#winch-hook-,7BG2ES4SPQJSLOGCPHRYXNWY,Winch Hook,,TN79NZ1R,,Accessories,6.00,,,Y,92,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #winch-rope-2500lb-with-hook,OHHAGOB7OK5I3L6WRNONGUO3,Winch Rope,2500lb with Hook,TNTD085K,,Accessories,42.00,,,Y,8,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #winch-rope-short-5mm316-x-8-black,BW7ITROIHFORVBTHAONTVE77,Winch Rope,Short (5mm)3/16 x 8' Black,TNCF8BNA,,Accessories,35.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #winch-rope-quadrax-short-blue-synthetic-winch-rope,BJEJ6JD4M6NJU33FWDAZUAAJ,Winch Rope,Quadrax Short Blue Synthetic Winch Rope,TNVUWH2Q,,Accessories,35.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -924,8 +924,8 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #winch-rope-synthetic-no-hook-blue-3500lbs,C6LPZFFEECN73R55D4G7DPB7,Winch Rope,Synthetic No Hook Blue 3500lbs,TNAL3RYG,,Accessories,41.00,,,Y,63,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #winch-rope-synthetic-no-hook-grey-3500lbs,CIHIMHTYA33QPA76Q47KGYZI,Winch Rope,Synthetic No Hook Grey 3500lbs,TNYC5U7I,,Accessories,41.00,,,Y,28,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #winch-rope-synthetic-no-hook-blue-4500lbs,KGFXFCQT5Z3ROBMK5BQ5GWPA,Winch Rope,Synthetic No Hook Blue 4500lbs,TNJHKFPM,,Accessories,47.00,,,Y,49,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#winch-rope-synthetic-no-hook-grey-4500lbs,ALHAIUSWHDWSPPQ4XEDVP7AV,Winch Rope,Synthetic No Hook Grey 4500lbs,TNMA3396,,Accessories,47.00,,,Y,23,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#winch-rope-synthetic-no-hook-blue-5000lbs,SEFCJM5D4R47SCBLG3SJ2P3X,Winch Rope,Synthetic No Hook Blue 5000lbs,HW5225B,,Accessories,50.00,,,Y,13,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#winch-rope-synthetic-no-hook-grey-4500lbs,ALHAIUSWHDWSPPQ4XEDVP7AV,Winch Rope,Synthetic No Hook Grey 4500lbs,TNMA3396,,Accessories,47.00,,,Y,22,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#winch-rope-synthetic-no-hook-blue-5000lbs,SEFCJM5D4R47SCBLG3SJ2P3X,Winch Rope,Synthetic No Hook Blue 5000lbs,HW5225B,,Accessories,50.00,,,Y,12,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #winch-rope-synthetic-no-hook-grey-5000lbs,3KAERGK5AE6LSGZILF6B5TLZ,Winch Rope,Synthetic No Hook Grey 5000lbs,HW5225G,,Accessories,50.00,,,Y,5,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #yamaha-shifter-knob-,ZDJY5VILAYOAS4AAQX3S5OWB,Yamaha Shifter Knob,,TN6KMXCB,,Accessories,39.99,,,Y,6,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #youth-bog-jacket-medium-aqua,JBNF3U56APXHHBVV27GUHV4N,Youth Bog Jacket,Medium Aqua,YGWMA,,Gator Waders,125.00,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
@@ -1007,4 +1007,4 @@ Reference Handle,Token,Item Name,Variation Name,SKU,Description,Category,Price,O
 #zox-rush-sfx-medium-blue,HNO2ZIHJIJ3JTBGJICKPYA6Y,Zox Rush SFX,Medium Blue,88-32683,,Helmet,139.95,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #zox-rush-sfx-xl-orange,TC45GYKLG4AZKEZADBFES26B,Zox Rush SFX,XL Orange,88-32715,,Helmet,139.95,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
 #zox-thunder-r2-2xl-blade-matte-hi-viz-yellow,IGPMWOMETGW7SO4FHEDTUTLQ,ZOX Thunder R2,2XL Blade Matte Hi-Viz Yellow,88-34866,,Helmet,98.50,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
-#zox-thunder-r2-2xl-blade-redblack,3JHOLWU22UGPGGG2IFZ56FIR,ZOX Thunder R2,2XL Blade Red/Black,88-34876,,Helmet,98.50,,,Y,1,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
+#zox-thunder-r2-2xl-blade-redblack,3JHOLWU22UGPGGG2IFZ56FIR,ZOX Thunder R2,2XL Blade Red/Black,88-34876,,Helmet,98.50,,,Y,0,,,,,N,,,,,,N,N,N,N,N,N,N,N,N,N,N,N,N,N,Y,N,N
