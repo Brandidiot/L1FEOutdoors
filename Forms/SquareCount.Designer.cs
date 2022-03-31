@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SquareCount));
             this.dgSquareCount = new System.Windows.Forms.DataGridView();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Variation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExport = new System.Windows.Forms.Button();
             this.txtSKU = new L1FEOutdoors.LOControls.LOTextBox();
+            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VariationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgSquareCount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,68 +67,21 @@
             this.dgSquareCount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSquareCount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Product,
-            this.Variation,
+            this.VariationName,
             this.SKU,
             this.Category,
-            this.QTY,
+            this.Qty,
             this.Count});
             this.dgSquareCount.Location = new System.Drawing.Point(12, 12);
             this.dgSquareCount.MultiSelect = false;
             this.dgSquareCount.Name = "dgSquareCount";
             this.dgSquareCount.ReadOnly = true;
             this.dgSquareCount.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgSquareCount.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgSquareCount.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgSquareCount.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSquareCount.Size = new System.Drawing.Size(776, 370);
             this.dgSquareCount.TabIndex = 1;
-            // 
-            // Product
-            // 
-            this.Product.DataPropertyName = "Item Name";
-            this.Product.HeaderText = "Product";
-            this.Product.MinimumWidth = 20;
-            this.Product.Name = "Product";
-            this.Product.ReadOnly = true;
-            // 
-            // Variation
-            // 
-            this.Variation.DataPropertyName = "Variation Name";
-            this.Variation.HeaderText = "Variation";
-            this.Variation.Name = "Variation";
-            this.Variation.ReadOnly = true;
-            // 
-            // SKU
-            // 
-            this.SKU.DataPropertyName = "SKU";
-            this.SKU.HeaderText = "SKU";
-            this.SKU.Name = "SKU";
-            this.SKU.ReadOnly = true;
-            // 
-            // Category
-            // 
-            this.Category.DataPropertyName = "Category";
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // QTY
-            // 
-            this.QTY.DataPropertyName = "Option Name 1";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.QTY.DefaultCellStyle = dataGridViewCellStyle2;
-            this.QTY.HeaderText = "QTY";
-            this.QTY.Name = "QTY";
-            this.QTY.ReadOnly = true;
-            // 
-            // Count
-            // 
-            this.Count.DataPropertyName = "Option Value 1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Count.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Count.HeaderText = "Count";
-            this.Count.Name = "Count";
-            this.Count.ReadOnly = true;
             // 
             // btnExport
             // 
@@ -167,6 +122,56 @@
             this.txtSKU.UnderlinedStyle = false;
             this.txtSKU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSKU_KeyPress);
             // 
+            // Product
+            // 
+            this.Product.DataPropertyName = "Item Name";
+            this.Product.HeaderText = "Product";
+            this.Product.Name = "Product";
+            this.Product.ReadOnly = true;
+            // 
+            // VariationName
+            // 
+            this.VariationName.DataPropertyName = "Variation Name";
+            this.VariationName.HeaderText = "Variation Name";
+            this.VariationName.Name = "VariationName";
+            this.VariationName.ReadOnly = true;
+            // 
+            // SKU
+            // 
+            this.SKU.DataPropertyName = "SKU";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SKU.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SKU.HeaderText = "SKU";
+            this.SKU.Name = "SKU";
+            this.SKU.ReadOnly = true;
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "Category";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Category.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // Qty
+            // 
+            this.Qty.DataPropertyName = "Option Name 1";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Qty.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Qty.HeaderText = "Qty";
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            // 
+            // Count
+            // 
+            this.Count.DataPropertyName = "Option Value 1";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Count.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Count.HeaderText = "Count";
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
+            // 
             // SquareCount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,12 +196,12 @@
         #endregion
         private System.Windows.Forms.DataGridView dgSquareCount;
         private System.Windows.Forms.Button btnExport;
+        private LOControls.LOTextBox txtSKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Variation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VariationName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SKU;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QTY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Qty;
         private System.Windows.Forms.DataGridViewTextBoxColumn Count;
-        private LOControls.LOTextBox txtSKU;
     }
 }

@@ -127,5 +127,14 @@ namespace L1FEOutdoors.Properties {
                 this["HColor"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("EAAAEGUM0M9LiXIgUUDe2P4_tD26FCirUnMi90O8ZJT5gJlXdgDPRc6XDz_vqPRh")]
+        public string token {
+            get {
+                return ((string)(this["token"]));
+            }
+        }
     }
 }

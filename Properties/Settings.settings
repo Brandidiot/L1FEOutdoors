@@ -29,5 +29,8 @@
     <Setting Name="HColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Navy</Value>
     </Setting>
+    <Setting Name="token" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">EAAAEGUM0M9LiXIgUUDe2P4_tD26FCirUnMi90O8ZJT5gJlXdgDPRc6XDz_vqPRh</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

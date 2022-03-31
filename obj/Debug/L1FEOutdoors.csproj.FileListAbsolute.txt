@@ -82,3 +82,10 @@ C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.csproj.CopyComplete
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.exe
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.pdb
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.Settings.resources
+C:\Users\HP\Desktop\L1 Updated\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\HP\Desktop\L1 Updated\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\L1 Updated\bin\Debug\Polly.dll
+C:\Users\HP\Desktop\L1 Updated\bin\Debug\Polly.pdb
+C:\Users\HP\Desktop\L1 Updated\bin\Debug\Square.dll
+C:\Users\HP\Desktop\L1 Updated\bin\Debug\System.Collections.Immutable.dll
+C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.Test.resources

@@ -27,15 +27,6 @@ namespace L1FEOutdoors
                 Console.WriteLine(e);
                 throw;
             }
-            //Hide Useless Columns
-            //dgSquareCount.Columns.Remove("Token");
-            //dgSquareCount.Columns.Remove("Description");
-            //dgSquareCount.Columns.Remove("Price");
-            //dgSquareCount.Columns.Remove("Enabled L1FE Outdoors");
-
-            //var columns = new List<string>();
-
-            //Hide More Useless Columns
         }
 
         private async void PopulateInvQty()
@@ -60,12 +51,12 @@ namespace L1FEOutdoors
                         var qty = dr[0]["Qty"].ToString();
 
                         //rows.Cells["FishbowlQty"].Value = "0";
-                        rows.Cells["QTY"].Value = qty;
+                        rows.Cells["Qty"].Value = qty;
                         //MessageBox.Show(rows.Cells[0].Value.ToString());
                     }
                     else
                     {
-                        rows.Cells["QTY"].Value = "0";
+                        rows.Cells["Qty"].Value = "0";
                     }
                 }
             }
@@ -140,7 +131,7 @@ namespace L1FEOutdoors
                         {
                             for (var j = 0; j < columnCount; j++)
                             {
-                                if (dgSquareCount.Rows[i - 1].Cells[0].Value.ToString().Contains(","))
+                                if (dgSquareCount.Rows[i - 1].Cells["Product"].Value.ToString().Contains(","))
                                 {
                                     if (j == columnCount - 1)
                                     {
@@ -148,9 +139,9 @@ namespace L1FEOutdoors
                                     }
                                     else if (j == 0)
                                     {
-                                        if (dgSquareCount.Rows[i - 1].Cells[0].Value.ToString().Contains("\""))
+                                        if (dgSquareCount.Rows[i - 1].Cells["Product"].Value.ToString().Contains("\""))
                                         {
-                                            var index = dgSquareCount.Rows[i - 1].Cells[0].Value.ToString().IndexOf("\"", StringComparison.Ordinal);
+                                            var index = dgSquareCount.Rows[i - 1].Cells["Product"].Value.ToString().IndexOf("\"", StringComparison.Ordinal);
                                             outputCsv[i] += "\"" + dgSquareCount.Rows[i - 1].Cells[j].Value.ToString().Insert(index, "\"") + "\"" + ",";
                                         }
                                         else
@@ -248,13 +239,31 @@ namespace L1FEOutdoors
             dgSquareCount.DefaultCellStyle.SelectionBackColor = ThemeColor.SecondaryColor;
         }
 
-        private void SquareCount_Shown(object sender, EventArgs e)
+        private async void SquareCount_Shown(object sender, EventArgs e)
         {
-            PopulateSquareInfo();
-            PopulateInvQty();
             LoadTheme();
             FormatDataGridView();
+            if (Program.IsConnectedToInternet())
+            { 
+                BeginInvoke(new Action(() => LOMessageBox.Show("Retrieving Data From Square", "Retrieving Data",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information)));
+                dgSquareCount.Columns.Remove("VariationName");
+                dgSquareCount.Columns.Remove("Category");
+                var test = await Program.RetrieveItemsAsync();
+                
+                dgSquareCount.DataSource = test;
+            }
+            else
+            {
+                LOMessageBox.Show("Cannot Connect To Square. Using Stored Data");
+                PopulateSquareInfo();
+                PopulateInvQty();
+                UpdateColumns();
+            }
+        }
 
+        private void UpdateColumns()
+        {
             //Remove Useless Columns
             dgSquareCount.Columns.Remove("Reference Handle");
             dgSquareCount.Columns.Remove("Token");
@@ -285,18 +294,18 @@ namespace L1FEOutdoors
 
                 foreach (DataGridViewRow row in dgSquareCount.Rows)
                 {
-                    if (!row.Cells[2].Value.ToString().Equals(searchValue)) continue;
+                    if (!row.Cells["SKU"].Value.ToString().Equals(searchValue)) continue;
                     found = true;
                     const int qty = 1;
-
+                    
                     //row.Selected = true;
-                    if (row.Cells[5].Value == DBNull.Value)
+                    if (row.Cells["Count"].Value == DBNull.Value)
                     {
-                        row.Cells[5].Value = "0";
+                        row.Cells["Count"].Value = "0";
                     }
 
-                    var cell = int.Parse(row.Cells[5].Value.ToString());
-                    row.Cells[5].Value = (cell + qty).ToString();
+                    var cell = int.Parse(row.Cells["Count"].Value.ToString());
+                    row.Cells["Count"].Value = (cell + qty).ToString();
 
                     //row.Cells[4].Value = cmbLoc.SelectedItem.ToString();
 

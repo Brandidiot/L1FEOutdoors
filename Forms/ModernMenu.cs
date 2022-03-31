@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -14,10 +13,10 @@ namespace L1FEOutdoors
     public partial class ModernMenu : Form
     {
         private IconButton _currentButton;
-        private Random _randomColor;
+        private readonly Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private readonly string _update = "-Daily Inventory Availability And Product Pricing Update.";
+        private const string _update = "-Daily Inventory Availability And Product Pricing Update.";
         private Size _formSize;
 
         public ModernMenu()
@@ -309,7 +308,7 @@ namespace L1FEOutdoors
         private void Reset()
         {
             DeactivateButton();
-            lblTitle.Text = "HOME";
+            lblTitle.Text = @"HOME";
             panelTitleBar.BackColor = Color.FromArgb(36, 53, 73);
             _currentButton = null;
             btnCloseChildForm.Visible = false;
@@ -540,6 +539,11 @@ namespace L1FEOutdoors
         private void btnSettings_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Settings(), sender);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Test(), sender);
         }
     }
 }

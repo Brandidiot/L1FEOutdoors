@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[5.15.4, )",
               "generatePathProperty": true
+            },
+            "Square": {
+              "target": "Package",
+              "version": "[17.3.0, )"
             }
           }
         }
