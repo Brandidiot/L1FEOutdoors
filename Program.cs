@@ -42,52 +42,76 @@ namespace L1FEOutdoors
         public static async Task<DataTable> RetrieveItemsAsync()
         {
             var data = new DataTable();
-            
+            data.Columns.Add("Item Name");
+            data.Columns.Add("SKU");
+            data.Columns.Add("Category");
+            data.Columns.Add("Option Name 1");//Qty
+            data.Columns.Add("Option Value 1");//Count
+
+            var catData = new DataTable();
+            catData.Columns.Add("ID");
+            catData.Columns.Add("Name");
+
 
             try
             {
-                data.Columns.Add("Item Name");
-                data.Columns.Add("SKU");
-                data.Columns.Add("Option Name 1");//Qty
-                data.Columns.Add("Option Value 1");//Count
-                var cat = await _client.CatalogApi.ListCatalogAsync(types: "item");
+                
+                var item = await _client.CatalogApi.ListCatalogAsync(types: "item");
+                var category = await _client.CatalogApi.ListCatalogAsync(types: "category");
                 var inventory = await RetrieveInventoryAsync();
 
-                var cursor = cat.Cursor;
+                var cursor = item.Cursor;
 
-                foreach (var catalog in cat.Objects)
+                //Find all categories first
+                foreach (var catalog in category.Objects)
+                {
+                    if (catalog.Type != "CATEGORY") continue;
+                    
+                    catData.Rows.Add(catalog.Id, catalog.CategoryData.Name);
+                }
+
+                //Go through all items
+                foreach (var catalog in item.Objects)
                 {
                     if (catalog.ItemData.Variations.Count <= 0) continue;
+
                     foreach (var variation in catalog.ItemData.Variations)
                     {
                         foreach (DataRow row in inventory.Rows)
                         {
-                            if (string.Equals((string)row[0], variation.Id))
+                            if (!string.Equals((string) row[0], variation.Id)) continue;
+
+                            foreach (DataRow catid in catData.Rows)
                             {
-                                data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
-                                    variation.ItemVariationData.Sku, row[1]);
+                                if(string.Equals((string)catid[0], catalog.ItemData.CategoryId))
+                                    data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
+                                        variation.ItemVariationData.Sku, (string)catid[1],row[1], "0");
                             }
                         }
                     }
+                    
                 }
 
                 while (cursor != null)
                 {
-                    var cat2 = await _client.CatalogApi.ListCatalogAsync(cursor: cursor, types: "item");
+                    var item2 = await _client.CatalogApi.ListCatalogAsync(cursor: cursor, types: "item");
 
-                    cursor = cat2.Cursor;
+                    cursor = item2.Cursor;
 
-                    foreach (var catalog in cat2.Objects)
+                    foreach (var catalog in item2.Objects)
                     {
                         if (catalog.ItemData.Variations.Count <= 0) continue;
                         foreach (var variation in catalog.ItemData.Variations)
                         {
                             foreach (DataRow row in inventory.Rows)
                             {
-                                if (string.Equals((string)row[0], variation.Id))
+                                if (!string.Equals((string)row[0], variation.Id)) continue;
+
+                                foreach (DataRow catid in catData.Rows)
                                 {
-                                    data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
-                                        variation.ItemVariationData.Sku, row[1]);
+                                    if (string.Equals((string)catid[0], catalog.ItemData.CategoryId))
+                                        data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
+                                            variation.ItemVariationData.Sku, (string)catid[1], row[1], "0");
                                 }
                             }
                         }

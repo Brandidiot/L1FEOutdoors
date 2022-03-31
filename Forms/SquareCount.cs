@@ -248,7 +248,7 @@ namespace L1FEOutdoors
                 BeginInvoke(new Action(() => LOMessageBox.Show("Retrieving Data From Square", "Retrieving Data",
                     MessageBoxButtons.OK, MessageBoxIcon.Information)));
                 dgSquareCount.Columns.Remove("VariationName");
-                dgSquareCount.Columns.Remove("Category");
+                //dgSquareCount.Columns.Remove("Category");
                 var test = await Program.RetrieveItemsAsync();
                 
                 dgSquareCount.DataSource = test;
