@@ -540,10 +540,5 @@ namespace L1FEOutdoors
         {
             OpenChildForm(new Forms.Settings(), sender);
         }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.Test(), sender);
-        }
     }
 }
