@@ -13,6 +13,7 @@ namespace L1FEOutdoors
         public SquareCount()
         {
             InitializeComponent();
+            UseWaitCursor = true;
         }
 
         private async void PopulateSquareInfo()
@@ -47,7 +48,6 @@ namespace L1FEOutdoors
                     {
                         var dr = dtNew.Select("PartNumber = '" + sku + "'");
 
-                        var part = dr[0]["PartNumber"].ToString();
                         var qty = dr[0]["Qty"].ToString();
 
                         //rows.Cells["FishbowlQty"].Value = "0";
@@ -122,7 +122,7 @@ namespace L1FEOutdoors
                             }
                             else
                             {
-                                columnNames += dgSquareCount.Columns[i].HeaderText.ToString() + ",";
+                                columnNames += dgSquareCount.Columns[i].HeaderText + ",";
                             }
                         }
                         outputCsv[0] += columnNames;
@@ -244,12 +244,14 @@ namespace L1FEOutdoors
             LoadTheme();
             FormatDataGridView();
             if (Program.IsConnectedToInternet())
-            { 
-                BeginInvoke(new Action(() => LOMessageBox.Show("Retrieving Data From Square", "Retrieving Data",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information)));
+            {
+                var backgroundWorker = new Forms.BackgroundWorker();
+                BeginInvoke(new Action(() => backgroundWorker.Show()));
                 dgSquareCount.Columns.Remove("VariationName");
                 //dgSquareCount.Columns.Remove("Category");
-                var test = await Program.RetrieveItemsAsync();
+                var program = new Program();
+                var progressReport = new Progress<int>(backgroundWorker.ReportProcessingProgress);
+                var test = await program.RetrieveItemsAsync(progressReport, backgroundWorker);
                 
                 dgSquareCount.DataSource = test;
             }
@@ -260,6 +262,7 @@ namespace L1FEOutdoors
                 PopulateInvQty();
                 UpdateColumns();
             }
+            UseWaitCursor = false;
         }
 
         private void UpdateColumns()

@@ -24,28 +24,28 @@ namespace L1FEOutdoors
             InitializeComponent();
             _randomColor = new Random();
             btnCloseChildForm.Visible = false;
-            this.Text = string.Empty;
+            Text = string.Empty;
             //this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            this.WindowState = FormWindowState.Maximized;
+            MaximizedBounds = Screen.FromHandle(Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
         }
 
-        public string VersionLabel
-{
-    get
-    {
-        if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
-        {
-            var ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
-            return $"{ver.Major}.{ver.Minor}.{ver.Build}.{ver.Revision}";
+        private static string VersionLabel
+        { 
+            get
+            { 
+                if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+                {
+                    var ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
+                    return $"{ver.Major}.{ver.Minor}.{ver.Build}.{ver.Revision}";
+                }
+                else
+                {
+                    var ver = Assembly.GetExecutingAssembly().GetName().Version;
+                    return $"{ver.Major}.{ver.Minor}.{ver.Build}.{ver.Revision}";
+                }
+            }
         }
-        else
-        {
-            var ver = Assembly.GetExecutingAssembly().GetName().Version;
-            return $"{ver.Major}.{ver.Minor}.{ver.Build}.{ver.Revision}";
-        }
-    }
-}
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
@@ -253,6 +253,7 @@ namespace L1FEOutdoors
             lblTitle.Text = childForm.Text;
         }
 
+        #region Buttons
         private void btnSquareRecount_Click(object sender, EventArgs e)
         {
             if (CheckForRecount()) return;
@@ -280,6 +281,59 @@ namespace L1FEOutdoors
 
             CheckForRecount();
         }
+        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            var dialogResult = LOMessageBox.Show(@"Are you sure you want to close the application?",
+                "Close?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (dialogResult != DialogResult.Yes) return;
+            Application.Exit();
+        }
+        
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Help(), sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProductPrice(), sender);
+        }
+        
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_MouseEnter(object sender, EventArgs e)
+        {
+            var btn = sender as IconButton;
+            btn!.IconColor = Color.Gainsboro;
+        }
+
+        private void btn_MouseLeave(object sender, EventArgs e)
+        {
+            var btn = sender as IconButton;
+            btn!.IconColor = Color.White;
+        }
+
+        private void btn_MouseDown(object sender, MouseEventArgs e)
+        {
+            var btn = sender as IconButton;
+            btn!.IconColor = Color.DarkGray;
+        }
+        
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
+        }
+        
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Settings(), sender);
+        }
+        #endregion
 
         private bool CheckForRecount()
         {
@@ -322,26 +376,6 @@ namespace L1FEOutdoors
             ReleaseCapture();
             SendMessage(this.Handle,0x112,0xf012,0);
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            var dialogResult = LOMessageBox.Show(@"Are you sure you want to close the application?",
-                "Close?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-            if (dialogResult != DialogResult.Yes) return;
-            Application.Exit();
-        }
-        
-        private void btnHelp_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Help(), sender);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ProductPrice(), sender);
-        }
-
         private void ModernMenu_Shown(object sender, EventArgs e)
         {
             //LOMessageBox.Show(VersionLabel);
@@ -375,66 +409,66 @@ namespace L1FEOutdoors
             const int HTBOTTOM = 15; //Lower-horizontal border of a window, allows resize vertically down
             const int HTBOTTOMLEFT = 16;//Lower-left corner of a window border, allows resize diagonally to the left
             const int HTBOTTOMRIGHT = 17;//Lower-right corner of a window border, allows resize diagonally to the right
-            ///<Doc> More Information: https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-nchittest </Doc>
-            if (m.Msg == WM_NCHITTEST)
-            { //If the windows m is WM_NCHITTEST
-                base.WndProc(ref m);
-                if (this.WindowState == FormWindowState.Normal)//Resize the form if it is in normal state
+            switch (m.Msg)
+            {
+                //<Doc> More Information: https://docs.microsoft.com/en-us/windows/win32/inputdev/wm-nchittest </Doc>
+                case WM_NCHITTEST:
                 {
-                    if ((int)m.Result == HTCLIENT)//If the result of the m (mouse pointer) is in the client area of the window
+                    //If the windows m is WM_NCHITTEST
+                    base.WndProc(ref m);
+                    if (this.WindowState != FormWindowState.Normal) return;
+                    if ((int)m.Result != HTCLIENT) return;
+                    var screenPoint = new Point(m.LParam.ToInt32()); //Gets screen point coordinates(X and Y coordinate of the pointer)                           
+                    var clientPoint = this.PointToClient(screenPoint); //Computes the location of the screen point into client coordinates                          
+                    if (clientPoint.Y <= resizeAreaSize)//If the pointer is at the top of the form (within the resize area- X coordinate)
                     {
-                        Point screenPoint = new Point(m.LParam.ToInt32()); //Gets screen point coordinates(X and Y coordinate of the pointer)                           
-                        Point clientPoint = this.PointToClient(screenPoint); //Computes the location of the screen point into client coordinates                          
-                        if (clientPoint.Y <= resizeAreaSize)//If the pointer is at the top of the form (within the resize area- X coordinate)
-                        {
-                            if (clientPoint.X <= resizeAreaSize) //If the pointer is at the coordinate X=0 or less than the resizing area(X=10) in 
-                                m.Result = (IntPtr)HTTOPLEFT; //Resize diagonally to the left
-                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize))//If the pointer is at the coordinate X=11 or less than the width of the form(X=Form.Width-resizeArea)
-                                m.Result = (IntPtr)HTTOP; //Resize vertically up
-                            else //Resize diagonally to the right
-                                m.Result = (IntPtr)HTTOPRIGHT;
-                        }
-                        else if (clientPoint.Y <= (this.Size.Height - resizeAreaSize)) //If the pointer is inside the form at the Y coordinate(discounting the resize area size)
-                        {
-                            if (clientPoint.X <= resizeAreaSize)//Resize horizontally to the left
-                                m.Result = (IntPtr)HTLEFT;
-                            else if (clientPoint.X > (this.Width - resizeAreaSize))//Resize horizontally to the right
-                                m.Result = (IntPtr)HTRIGHT;
-                        }
-                        else
-                        {
-                            if (clientPoint.X <= resizeAreaSize)//Resize diagonally to the left
-                                m.Result = (IntPtr)HTBOTTOMLEFT;
-                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize)) //Resize vertically down
-                                m.Result = (IntPtr)HTBOTTOM;
-                            else //Resize diagonally to the right
-                                m.Result = (IntPtr)HTBOTTOMRIGHT;
-                        }
+                        if (clientPoint.X <= resizeAreaSize) //If the pointer is at the coordinate X=0 or less than the resizing area(X=10) in 
+                            m.Result = (IntPtr)HTTOPLEFT; //Resize diagonally to the left
+                        else if (clientPoint.X < (this.Size.Width - resizeAreaSize))//If the pointer is at the coordinate X=11 or less than the width of the form(X=Form.Width-resizeArea)
+                            m.Result = (IntPtr)HTTOP; //Resize vertically up
+                        else //Resize diagonally to the right
+                            m.Result = (IntPtr)HTTOPRIGHT;
                     }
+                    else if (clientPoint.Y <= (this.Size.Height - resizeAreaSize)) //If the pointer is inside the form at the Y coordinate(discounting the resize area size)
+                    {
+                        if (clientPoint.X <= resizeAreaSize)//Resize horizontally to the left
+                            m.Result = (IntPtr)HTLEFT;
+                        else if (clientPoint.X > (this.Width - resizeAreaSize))//Resize horizontally to the right
+                            m.Result = (IntPtr)HTRIGHT;
+                    }
+                    else
+                    {
+                        if (clientPoint.X <= resizeAreaSize)//Resize diagonally to the left
+                            m.Result = (IntPtr)HTBOTTOMLEFT;
+                        else if (clientPoint.X < (this.Size.Width - resizeAreaSize)) //Resize vertically down
+                            m.Result = (IntPtr)HTBOTTOM;
+                        else //Resize diagonally to the right
+                            m.Result = (IntPtr)HTBOTTOMRIGHT;
+                    }
+                    return;
                 }
-                return;
+                //Remove border and keep snap window
+                case WM_NCCALCSIZE when m.WParam.ToInt32() == 1:
+                    return;
+                //Keep form size when it is minimized and restored. Since the form is resized because it takes into account the size of the title bar and borders.
+                case WM_SYSCOMMAND:
+                {
+                    /// <see cref="https://docs.microsoft.com/en-us/windows/win32/menurc/wm-syscommand"/>
+                    /// Quote:
+                    /// In WM_SYSCOMMAND messages, the four low - order bits of the wParam parameter 
+                    /// are used internally by the system.To obtain the correct result when testing 
+                    /// the value of wParam, an application must combine the value 0xFFF0 with the 
+                    /// wParam value by using the bitwise AND operator.
+                    int wParam = (m.WParam.ToInt32() & 0xFFF0);
+                    if (wParam == SC_MINIMIZE)  //Before
+                        _formSize = this.ClientSize;
+                    if (wParam == SC_RESTORE)// Restored form(Before)
+                        this.Size = _formSize;
+                    break;
+                }
             }
             #endregion
-            //Remove border and keep snap window
-            if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
-            {
-                return;
-            }
-            //Keep form size when it is minimized and restored. Since the form is resized because it takes into account the size of the title bar and borders.
-            if (m.Msg == WM_SYSCOMMAND)
-            {
-                /// <see cref="https://docs.microsoft.com/en-us/windows/win32/menurc/wm-syscommand"/>
-                /// Quote:
-                /// In WM_SYSCOMMAND messages, the four low - order bits of the wParam parameter 
-                /// are used internally by the system.To obtain the correct result when testing 
-                /// the value of wParam, an application must combine the value 0xFFF0 with the 
-                /// wParam value by using the bitwise AND operator.
-                int wParam = (m.WParam.ToInt32() & 0xFFF0);
-                if (wParam == SC_MINIMIZE)  //Before
-                    _formSize = this.ClientSize;
-                if (wParam == SC_RESTORE)// Restored form(Before)
-                    this.Size = _formSize;
-            }
+
             base.WndProc(ref m);
         }
 
@@ -504,41 +538,6 @@ namespace L1FEOutdoors
                     btn.Padding = new Padding(0,0,0,0);
                 }
             }
-        }
-
-        #region Button Stuff
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btn_MouseEnter(object sender, EventArgs e)
-        {
-            var btn = sender as IconButton;
-            btn.IconColor = Color.Gainsboro;
-        }
-
-        private void btn_MouseLeave(object sender, EventArgs e)
-        {
-            var btn = sender as IconButton;
-            btn.IconColor = Color.White;
-        }
-
-        private void btn_MouseDown(object sender, MouseEventArgs e)
-        {
-            var btn = sender as IconButton;
-            btn.IconColor = Color.DarkGray;
-        }
-        #endregion
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            CollapseMenu();
-        }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Forms.Settings(), sender);
         }
     }
 }

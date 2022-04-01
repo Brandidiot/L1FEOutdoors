@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Net;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using L1FEOutdoors.Forms;
 using Square;
 using Square.Exceptions;
 using Square.Models;
 
 namespace L1FEOutdoors
 {
-    internal static class Program
+    internal class Program
     {
         private static ISquareClient _client;
 
@@ -39,7 +36,7 @@ namespace L1FEOutdoors
             private static ModernMenu _modernmenu;
         }
 
-        public static async Task<DataTable> RetrieveItemsAsync()
+        public async Task<DataTable> RetrieveItemsAsync(IProgress<int> progress = null, Forms.BackgroundWorker backgroundWorker = null)
         {
             var data = new DataTable();
             data.Columns.Add("Item Name");
@@ -52,70 +49,107 @@ namespace L1FEOutdoors
             catData.Columns.Add("ID");
             catData.Columns.Add("Name");
 
-
+            var invData = new DataTable();
+            invData.Columns.Add("ObjectID");
+            invData.Columns.Add("Quantity");
+            
+            var index = 0;
+            double percentage = 0;
+            int percentageInt = 0;
+            
             try
             {
-                
+                backgroundWorker!.label1.Text = @"Getting Item Data...";
                 var item = await _client.CatalogApi.ListCatalogAsync(types: "item");
-                var category = await _client.CatalogApi.ListCatalogAsync(types: "category");
-                var inventory = await RetrieveInventoryAsync();
-
                 var cursor = item.Cursor;
 
+                index = 100;
+                percentage = (double)index / 1500;
+                percentage *= 100;
+                percentageInt = (int)Math.Round(percentage, 0);
+                progress.Report(percentageInt);
+                
+                backgroundWorker!.label1.Text = @"Getting Category Data...";
+                var category = await _client.CatalogApi.ListCatalogAsync(types: "category");
+                
+                index = 200;
+                percentage = (double)index / 1500;
+                percentage *= 100;
+                percentageInt = (int)Math.Round(percentage, 0);
+                progress.Report(percentageInt);
+                
+                backgroundWorker!.label1.Text = @"Getting Inventory Counts...";
+                var locationIds = new List<string> { "AM8KMXKM977CD" };
+                var body = new BatchRetrieveInventoryCountsRequest.Builder()
+                    .LocationIds(locationIds)
+                    .Build();
+                var inv = await _client.InventoryApi.BatchRetrieveInventoryCountsAsync(body: body);
+                var invCursor = inv.Cursor;
+
+                index = 300;
+                percentage = (double)index / 1500;
+                percentage *= 100;
+                percentageInt = (int)Math.Round(percentage, 0);
+                progress.Report(percentageInt);
+
+                backgroundWorker!.label1.Text = @"Adding Categories To DataTable...";
                 //Find all categories first
                 foreach (var catalog in category.Objects)
                 {
                     if (catalog.Type != "CATEGORY") continue;
-                    
+
                     catData.Rows.Add(catalog.Id, catalog.CategoryData.Name);
                 }
 
-                //Go through all items
-                foreach (var catalog in item.Objects)
+                backgroundWorker!.label1.Text = @"Adding Counts To DataTable...";
+                while (invCursor != null)
                 {
-                    if (catalog.ItemData.Variations.Count <= 0) continue;
-
-                    foreach (var variation in catalog.ItemData.Variations)
+                    foreach (var obj in inv.Counts)
                     {
-                        foreach (DataRow row in inventory.Rows)
-                        {
-                            if (!string.Equals((string) row[0], variation.Id)) continue;
-
-                            foreach (DataRow catid in catData.Rows)
-                            {
-                                if(string.Equals((string)catid[0], catalog.ItemData.CategoryId))
-                                    data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
-                                        variation.ItemVariationData.Sku, (string)catid[1],row[1], "0");
-                            }
-                        }
+                        invData.Rows.Add(obj.CatalogObjectId, obj.Quantity);
                     }
-                    
+                    //Set cursor to next set of items.
+                    body = new BatchRetrieveInventoryCountsRequest.Builder()
+                        .LocationIds(locationIds)
+                        .Cursor(invCursor)
+                        .Build();
+                    inv = await _client.InventoryApi.BatchRetrieveInventoryCountsAsync(body: body);
+                    invCursor = inv.Cursor;
                 }
 
                 while (cursor != null)
                 {
-                    var item2 = await _client.CatalogApi.ListCatalogAsync(cursor: cursor, types: "item");
-
-                    cursor = item2.Cursor;
-
-                    foreach (var catalog in item2.Objects)
+                    backgroundWorker!.label1.Text = @"Combining DataTables...";
+                    //Go through all items
+                    foreach (var catalog in item.Objects)
                     {
                         if (catalog.ItemData.Variations.Count <= 0) continue;
+
                         foreach (var variation in catalog.ItemData.Variations)
                         {
-                            foreach (DataRow row in inventory.Rows)
+                            foreach (DataRow row in invData.Rows)
                             {
-                                if (!string.Equals((string)row[0], variation.Id)) continue;
-
+                                if (!string.Equals((string) row[0], variation.Id)) continue;
+                                index++;
                                 foreach (DataRow catid in catData.Rows)
                                 {
-                                    if (string.Equals((string)catid[0], catalog.ItemData.CategoryId))
+                                    if (string.Equals((string) catid[0], catalog.ItemData.CategoryId))
                                         data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
-                                            variation.ItemVariationData.Sku, (string)catid[1], row[1], "0");
+                                            variation.ItemVariationData.Sku, (string) catid[1], row[1], "0");
+                                    
+                                    //Update Progress Bar
+                                    percentage = (double)index / 1500;
+                                    percentage *= 100;
+                                    percentageInt = (int)Math.Round(percentage, 0);
+                                    progress.Report(percentageInt);
                                 }
                             }
                         }
                     }
+                    //Set cursor to next set of items.
+                    item = await _client.CatalogApi.ListCatalogAsync(cursor: cursor, types: "item");
+                    cursor = item.Cursor;
+                    
                 }
             }
             catch (ApiException e)
@@ -147,74 +181,11 @@ namespace L1FEOutdoors
                 Debug.Print("Exception: " + e);
                 // Your error handling code
             }
-
+            progress.Report(100);
+            backgroundWorker.label1.Text = @"Completed";
+            backgroundWorker.Close();
             return data;
         }
-
-        public static async Task<DataTable> RetrieveInventoryAsync()
-        {
-            var data = new DataTable();
-            var locationIds = new List<string> { "AM8KMXKM977CD" };
-
-            var body = new BatchRetrieveInventoryCountsRequest.Builder()
-                .LocationIds(locationIds)
-                .Build();
-
-            var inventory = await _client.InventoryApi.BatchRetrieveInventoryCountsAsync(body: body);
-            var cursor = inventory.Cursor;
-
-            try
-            {
-                data.Columns.Add("ObjectID");
-                data.Columns.Add("Quantity");
-
-                foreach (var obj in inventory.Counts)
-                {
-                    data.Rows.Add(obj.CatalogObjectId, obj.Quantity);
-                }
-
-                while (cursor != null)
-                {
-                    var body2 = new BatchRetrieveInventoryCountsRequest.Builder()
-                        .LocationIds(locationIds)
-                        .Cursor(cursor)
-                        .Build();
-                    var inventory2 = await _client.InventoryApi.BatchRetrieveInventoryCountsAsync(body: body2);
-                    cursor = inventory2.Cursor;
-
-                    foreach (var obj in inventory2.Counts)
-                    {
-                        data.Rows.Add(obj.CatalogObjectId, obj.Quantity);
-                    }
-
-                }
-            }
-            catch (ApiException e)
-            {
-                var errors = e.Errors;
-                var statusCode = e.ResponseCode;
-                var httpContext = e.HttpContext;
-                Debug.Print("ApiException occurred:");
-                Debug.Print("Headers:");
-                Console.WriteLine(@"ApiException occurred:");
-                Console.WriteLine(@"Headers:");
-                foreach (var item in httpContext.Request.Headers.Where(item => item.Key != "Authorization"))
-                {
-                    Console.WriteLine(@"	{0}: 	{1}", item.Key, item.Value);
-                    Debug.Print("\t{0}: \t{1}", item.Key, item.Value);
-                }
-
-                Console.WriteLine(@"Status Code: 	{0}", statusCode);
-                foreach (var error in errors)
-                {
-                    Console.WriteLine(@"Error Category:{0} Code:{1} Detail:{2}", error.Category, error.Code,
-                        error.Detail);
-                    Debug.Print("Error Category:{0} Code:{1} Detail:{2}", error.Category, error.Code, error.Detail);
-                }
-            }
-            return data;
-        }
-
         public static bool IsConnectedToInternet(int timeoutMs = 10000, string url = null)
         {
             try
@@ -242,6 +213,7 @@ namespace L1FEOutdoors
                 throw;
             }
         }
+        
     }
 
 }

@@ -100,9 +100,8 @@ namespace L1FEOutdoors
                         MessageBox.Show("Found SKU " + SKU + " in Row " + dtNew. );*/
                     if (dtNew.Select("Part = '" + sku + "'").Length > 0)
                     {
-                        DataRow[] dr = dtNew.Select("Part = '" + sku + "'");
+                        var dr = dtNew.Select("Part = '" + sku + "'");
 
-                        var part = dr[0]["Part"].ToString();
                         var qty = dr[0]["Available"].ToString();
 
                         //rows.Cells["FishbowlQty"].Value = "0";
