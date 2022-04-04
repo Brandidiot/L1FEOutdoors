@@ -309,7 +309,7 @@ namespace L1FEOutdoors
             }
         }
 
-        private async void Recount_Load(object sender, EventArgs e)
+        private void Recount_Load(object sender, EventArgs e)
         {
             
         }
