@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModernMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSquareRecount = new FontAwesome.Sharp.IconButton();
@@ -48,12 +49,16 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ButtonsEnabled = new System.ComponentModel.BackgroundWorker();
+            this.loDropDownMenu1 = new L1FEOutdoors.LOControls.LODropDownMenu(this.components);
+            this.squareRecountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkSquareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.loDropDownMenu1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -396,10 +401,40 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // ButtonsEnabled
+            // loDropDownMenu1
             // 
-            this.ButtonsEnabled.DoWork += new System.ComponentModel.DoWorkEventHandler(this.ButtonsEnabled_DoWork);
-            this.ButtonsEnabled.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ButtonsEnabled_RunWorkerCompleted);
+            this.loDropDownMenu1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loDropDownMenu1.IsMainMenu = false;
+            this.loDropDownMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.squareRecountToolStripMenuItem,
+            this.recountToolStripMenuItem,
+            this.checkSquareToolStripMenuItem});
+            this.loDropDownMenu1.MenuItemHeight = 25;
+            this.loDropDownMenu1.Name = "loDropDownMenu1";
+            this.loDropDownMenu1.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
+            this.loDropDownMenu1.Size = new System.Drawing.Size(180, 70);
+            this.loDropDownMenu1.TextColor = System.Drawing.Color.DimGray;
+            // 
+            // squareRecountToolStripMenuItem
+            // 
+            this.squareRecountToolStripMenuItem.Name = "squareRecountToolStripMenuItem";
+            this.squareRecountToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.squareRecountToolStripMenuItem.Text = "Square Recount";
+            this.squareRecountToolStripMenuItem.Click += new System.EventHandler(this.squareRecountToolStripMenuItem_Click);
+            // 
+            // recountToolStripMenuItem
+            // 
+            this.recountToolStripMenuItem.Name = "recountToolStripMenuItem";
+            this.recountToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.recountToolStripMenuItem.Text = "Recount";
+            this.recountToolStripMenuItem.Click += new System.EventHandler(this.recountToolStripMenuItem_Click);
+            // 
+            // checkSquareToolStripMenuItem
+            // 
+            this.checkSquareToolStripMenuItem.Name = "checkSquareToolStripMenuItem";
+            this.checkSquareToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.checkSquareToolStripMenuItem.Text = "Check Square";
+            this.checkSquareToolStripMenuItem.Click += new System.EventHandler(this.checkSquareToolStripMenuItem_Click);
             // 
             // ModernMenu
             // 
@@ -415,6 +450,7 @@
             this.Name = "ModernMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "L1FE OUTDOORS";
+            this.Load += new System.EventHandler(this.ModernMenu_Load);
             this.Shown += new System.EventHandler(this.ModernMenu_Shown);
             this.Resize += new System.EventHandler(this.ModernMenu_Resize);
             this.panelMenu.ResumeLayout(false);
@@ -425,9 +461,16 @@
             this.panelDesktop.ResumeLayout(false);
             this.panelDesktop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.loDropDownMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
+
+        private System.Windows.Forms.ToolStripMenuItem squareRecountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkSquareToolStripMenuItem;
+
+        private L1FEOutdoors.LOControls.LODropDownMenu loDropDownMenu1;
 
         #endregion
 
@@ -449,7 +492,6 @@
         private FontAwesome.Sharp.IconButton btnSquareRecount;
         private FontAwesome.Sharp.IconButton btnRecount;
         private FontAwesome.Sharp.IconButton btnCheckSquare;
-        public System.ComponentModel.BackgroundWorker ButtonsEnabled;
         public FontAwesome.Sharp.IconButton btnPricing;
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -72,7 +74,8 @@ namespace L1FEOutdoors
         private void ActivateButton(object btnSender)
         {
             if (btnSender == null) return;
-            if (_currentButton == (IconButton) btnSender) return;
+            if (_currentButton == (IconButton)btnSender) return;
+            
             
             if (Properties.Settings.Default.RandomColor)
             {
@@ -237,6 +240,11 @@ namespace L1FEOutdoors
         {
             _activeForm?.Close();
 
+            if (btnSender.GetType() != typeof(IconButton))
+            {
+                btnSender = btnHelp;
+            }
+            
             ActivateButton(btnSender);
             _activeForm = childForm;
 
@@ -304,7 +312,8 @@ namespace L1FEOutdoors
         
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Help(), sender);
+            //OpenChildForm(new Help(), sender);
+            loDropDownMenu1.Show(btnHelp, btnHelp.Width,0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -551,20 +560,50 @@ namespace L1FEOutdoors
             }
         }
 
-        private void ButtonsEnabled_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        private void ModernMenu_Load(object sender, EventArgs e)
         {
-            foreach (Control btn in panelMenu.Controls)
-            {
-                btn.Enabled = false;
-            }
+            loDropDownMenu1.IsMainMenu = true;
         }
 
-        public void ButtonsEnabled_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void squareRecountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Control btn in panelMenu.Controls)
-            {
-                btn.Enabled = true;
-            }
+            var help = new Help();
+            OpenChildForm(help, sender);
+            
+            help.UpdateTitle("Square Recount");
+            help.UpdateRequired(@"Square.csv" + Environment.NewLine + @"InvQtys.csv");
+            help.UpdateBody(@"-Download Square item library and save as Square.csv in C:/Documents." + Environment.NewLine +
+                            @"-Export Fishbowl Inventory Quantities and save as InvQtys.csv in C:/Documents." + Environment.NewLine +
+                            @"-Open InvQtys.csv in Excel and consolidate all data to combine location quantities." + Environment.NewLine +
+                            @"-Save InvQtys.csv and now you should be good to use Square Recount.");
+        }
+
+        private void recountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var help = new Help();
+            OpenChildForm(help, sender);
+            
+            help.UpdateTitle("Recount");
+            help.UpdateRequired(@"Recounted.csv");
+            help.UpdateBody(@"-Save Fishbowl Available Cycle Count List report as Recount.csv in C:/Documents." + Environment.NewLine +
+                            @"-Open Recount.csv in Excel" + Environment.NewLine +
+                            @"-Delete rows 1-4 and column B and D." + Environment.NewLine +
+                            @"-Make headers in row A as Part, Available, UOM, Count, and Location" + Environment.NewLine +
+                            @"-Select column B and delete all blank cell rows." + Environment.NewLine +
+                            @"-Save Recount.csv and now you should be good to use Recount.");
+        }
+
+        private void checkSquareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var help = new Help();
+            OpenChildForm(help, sender);
+            
+            help.UpdateTitle("Check Square");
+            help.UpdateRequired(@"Square.csv" + Environment.NewLine + @"InvQtys.csv");
+            help.UpdateBody(@"-Download Square item library and save as Square.csv in C:/Documents." + Environment.NewLine +
+                            @"-Export Fishbowl Inventory Quantities and save as InvQtys.csv in C:/Documents." + Environment.NewLine +
+                            @"-Open InvQtys.csv in Excel and consolidate all data to combine location quantities." + Environment.NewLine +
+                            @"-Save InvQtys.csv and now you should be good to use Check Square.");
         }
     }
 }

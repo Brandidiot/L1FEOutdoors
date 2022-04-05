@@ -39,8 +39,7 @@ namespace L1FEOutdoors
         //Square Count
         private void button1_Click(object sender, EventArgs e)
         {
-            labelCSV.Text = @"Square.csv" + Environment.NewLine +
-                            @"InvQtys.csv";
+            labelCSV.Text = @"Square.csv" + Environment.NewLine + @"InvQtys.csv";
 
             labelBody.Text = @"-Download Square item library and save as Square.csv in C:/Documents." + Environment.NewLine +
                              @"-Export Fishbowl Inventory Quantities and save as InvQtys.csv in C:/Documents." + Environment.NewLine +
@@ -71,6 +70,21 @@ namespace L1FEOutdoors
                              @"-Export Fishbowl Inventory Quantities and save as InvQtys.csv in C:/Documents." + Environment.NewLine +
                              @"-Open InvQtys.csv in Excel and consolidate all data to combine location quantities." + Environment.NewLine +
                              @"-Save InvQtys.csv and now you should be good to use Check Square.";
+        }
+
+        public void UpdateRequired(string text)
+        {
+            labelCSV.Text = text;
+        }
+
+        public void UpdateBody(string text)
+        {
+            labelBody.Text = text;
+        }
+
+        public void UpdateTitle(string text)
+        {
+            txtTitle.Text = text;
         }
     }
 }

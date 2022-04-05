@@ -17,8 +17,35 @@ namespace L1FEOutdoors.LOControls
         {
             if (isMainMenu)
             {
-                _backColor = 
+                _backColor = Color.FromArgb(51, 51, 76);
+                _leftColumnColor = Color.FromArgb(46, 46, 70);
+                _borderColor = Color.FromArgb(46, 46, 70);
+                _menuItemBorderColor = primaryColor;
+                _menuItemSelectedColor = primaryColor;
+            }
+            else
+            {
+                _backColor = Color.White;
+                _leftColumnColor = Color.LightGray;
+                _borderColor = Color.LightGray;;
+                _menuItemBorderColor = primaryColor;
+                _menuItemSelectedColor = primaryColor;
             }
         }
+        
+        //Overrides
+        public override Color ToolStripDropDownBackground => _backColor;
+
+        public override Color MenuBorder => _borderColor;
+
+        public override Color MenuItemBorder => _menuItemBorderColor;
+
+        public override Color MenuItemSelected => _menuItemSelectedColor;
+
+        public override Color ImageMarginGradientBegin => _leftColumnColor;
+
+        public override Color ImageMarginGradientMiddle => _leftColumnColor;
+
+        public override Color ImageMarginGradientEnd => _leftColumnColor;
     }
 }

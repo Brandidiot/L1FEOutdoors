@@ -36,14 +36,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SquareCount));
             this.dgSquareCount = new System.Windows.Forms.DataGridView();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.txtSKU = new L1FEOutdoors.LOControls.LOTextBox();
             this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VariationName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.txtSKU = new L1FEOutdoors.LOControls.LOTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgSquareCount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +52,9 @@
             this.dgSquareCount.AllowUserToAddRows = false;
             this.dgSquareCount.AllowUserToDeleteRows = false;
             this.dgSquareCount.AllowUserToResizeRows = false;
-            this.dgSquareCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgSquareCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgSquareCount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -63,7 +65,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgSquareCount.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgSquareCount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSquareCount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { this.Product, this.VariationName, this.SKU, this.Category, this.Qty, this.Count });
+            this.dgSquareCount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Product,
+            this.VariationName,
+            this.SKU,
+            this.Category,
+            this.Qty,
+            this.Count});
             this.dgSquareCount.Location = new System.Drawing.Point(12, 12);
             this.dgSquareCount.MultiSelect = false;
             this.dgSquareCount.Name = "dgSquareCount";
@@ -74,6 +82,45 @@
             this.dgSquareCount.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgSquareCount.Size = new System.Drawing.Size(776, 370);
             this.dgSquareCount.TabIndex = 1;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(666, 388);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(122, 50);
+            this.btnExport.TabIndex = 2;
+            this.btnExport.TabStop = false;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // txtSKU
+            // 
+            this.txtSKU.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtSKU.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSKU.BorderColor = System.Drawing.Color.Empty;
+            this.txtSKU.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtSKU.BorderRadius = 6;
+            this.txtSKU.BorderSize = 2;
+            this.txtSKU.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSKU.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSKU.Location = new System.Drawing.Point(277, 399);
+            this.txtSKU.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSKU.MultiLine = false;
+            this.txtSKU.Name = "txtSKU";
+            this.txtSKU.Padding = new System.Windows.Forms.Padding(7);
+            this.txtSKU.PasswordChar = false;
+            this.txtSKU.PlaceHolderColor = System.Drawing.Color.DarkGray;
+            this.txtSKU.PlaceHolderText = "SKU";
+            this.txtSKU.Size = new System.Drawing.Size(250, 31);
+            this.txtSKU.TabIndex = 4;
+            this.txtSKU.Texts = "";
+            this.txtSKU.UnderlinedStyle = false;
+            this.txtSKU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSKU_KeyPress);
             // 
             // Product
             // 
@@ -125,45 +172,6 @@
             this.Count.Name = "Count";
             this.Count.ReadOnly = true;
             // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExport.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.Location = new System.Drawing.Point(666, 388);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(122, 50);
-            this.btnExport.TabIndex = 2;
-            this.btnExport.TabStop = false;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // txtSKU
-            // 
-            this.txtSKU.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtSKU.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSKU.BorderColor = System.Drawing.Color.Empty;
-            this.txtSKU.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtSKU.BorderRadius = 6;
-            this.txtSKU.BorderSize = 2;
-            this.txtSKU.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSKU.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSKU.Location = new System.Drawing.Point(277, 399);
-            this.txtSKU.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSKU.MultiLine = false;
-            this.txtSKU.Name = "txtSKU";
-            this.txtSKU.Padding = new System.Windows.Forms.Padding(7);
-            this.txtSKU.PasswordChar = false;
-            this.txtSKU.PlaceHolderColor = System.Drawing.Color.DarkGray;
-            this.txtSKU.PlaceHolderText = "SKU";
-            this.txtSKU.Size = new System.Drawing.Size(250, 31);
-            this.txtSKU.TabIndex = 4;
-            this.txtSKU.Texts = "";
-            this.txtSKU.UnderlinedStyle = false;
-            this.txtSKU.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSKU_KeyPress);
-            // 
             // SquareCount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +190,7 @@
             this.Shown += new System.EventHandler(this.SquareCount_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgSquareCount)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
