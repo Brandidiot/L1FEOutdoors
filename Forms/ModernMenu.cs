@@ -16,9 +16,9 @@ namespace L1FEOutdoors
         private readonly Random _randomColor;
         private int _tempIndex;
         private Form _activeForm;
-        private const string _update = "-Daily Inventory Availability And Product Pricing Update.";
+        private const string _update = "-Daily Product Pricing Update.";
         private Size _formSize;
-
+        
         public ModernMenu()
         {
             InitializeComponent();
@@ -257,8 +257,19 @@ namespace L1FEOutdoors
         private void btnSquareRecount_Click(object sender, EventArgs e)
         {
             if (CheckForRecount()) return;
+            UpdateButtons();
             OpenChildForm(new SquareCount(),sender);
             this.Size = new Size(1000, 500);
+        }
+
+        public void UpdateButtons()
+        {
+            foreach (Control btn in panelMenu.Controls)
+            {
+                if (btn.GetType() != typeof(IconButton)) continue;
+
+                btn.Enabled = !btn.Enabled;
+            }
         }
 
         private void btnRecount_Click(object sender, EventArgs e)
@@ -537,6 +548,22 @@ namespace L1FEOutdoors
                     btn.ImageAlign = ContentAlignment.MiddleLeft;
                     btn.Padding = new Padding(0,0,0,0);
                 }
+            }
+        }
+
+        private void ButtonsEnabled_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            foreach (Control btn in panelMenu.Controls)
+            {
+                btn.Enabled = false;
+            }
+        }
+
+        public void ButtonsEnabled_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            foreach (Control btn in panelMenu.Controls)
+            {
+                btn.Enabled = true;
             }
         }
     }

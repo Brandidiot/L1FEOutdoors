@@ -13,6 +13,7 @@ namespace L1FEOutdoors
         public SquareCount()
         {
             InitializeComponent();
+
             UseWaitCursor = true;
         }
 
@@ -183,29 +184,6 @@ namespace L1FEOutdoors
             }
         }
 
-        private DataTable DataGridToTable()
-        {
-            var dt = new DataTable();
-
-            for (var i = 0; i < dgSquareCount.Columns.Count; i++)
-            {
-                dt.Columns.Add(dgSquareCount.Columns[i].Name);
-            }
-
-            foreach (DataGridViewRow row in dgSquareCount.Rows)
-            {
-                var dr = dt.NewRow();
-                for (var j = 0; j < dgSquareCount.Columns.Count; j++)
-                {
-                    dr[dgSquareCount.Columns[j].Name] = row.Cells[j].Value.ToString();
-                }
-
-                dt.Rows.Add(dr);
-            }
-
-            return dt;
-        }
-
         private void LoadTheme()
         {
             foreach (Control ctrl in this.Controls)
@@ -263,6 +241,7 @@ namespace L1FEOutdoors
                 UpdateColumns();
             }
             UseWaitCursor = false;
+            Program.FormProvider.ModernMenu.UpdateButtons();
         }
 
         private void UpdateColumns()

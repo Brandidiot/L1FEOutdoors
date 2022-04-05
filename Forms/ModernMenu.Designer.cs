@@ -48,6 +48,7 @@
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ButtonsEnabled = new System.ComponentModel.BackgroundWorker();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -395,6 +396,11 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // ButtonsEnabled
+            // 
+            this.ButtonsEnabled.DoWork += new System.ComponentModel.DoWorkEventHandler(this.ButtonsEnabled_DoWork);
+            this.ButtonsEnabled.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ButtonsEnabled_RunWorkerCompleted);
+            // 
             // ModernMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,9 +446,10 @@
         private FontAwesome.Sharp.IconButton btnMenu;
         private FontAwesome.Sharp.IconButton btnSettings;
         private FontAwesome.Sharp.IconButton btnHelp;
-        private FontAwesome.Sharp.IconButton btnPricing;
         private FontAwesome.Sharp.IconButton btnSquareRecount;
         private FontAwesome.Sharp.IconButton btnRecount;
         private FontAwesome.Sharp.IconButton btnCheckSquare;
+        public System.ComponentModel.BackgroundWorker ButtonsEnabled;
+        public FontAwesome.Sharp.IconButton btnPricing;
     }
 }
