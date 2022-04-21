@@ -58,7 +58,6 @@ namespace L1FEOutdoors
             await GenerateDT.GenerateDataTable(AppDomain.CurrentDomain.BaseDirectory + @"\Resources\Square.csv", dgSquare);
 
             //Hide Useless Columns
-            dgSquare.Columns.Remove("Reference Handle");
             dgSquare.Columns["Token"]!.Visible = false;
             dgSquare.Columns["Description"]!.Visible = false;
             dgSquare.Columns["Price"]!.Visible = false;

@@ -247,7 +247,6 @@ namespace L1FEOutdoors
         private void UpdateColumns()
         {
             //Remove Useless Columns
-            dgSquareCount.Columns.Remove("Reference Handle");
             dgSquareCount.Columns.Remove("Token");
             dgSquareCount.Columns.Remove("Description");
             dgSquareCount.Columns.Remove("Price");
