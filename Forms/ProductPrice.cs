@@ -66,10 +66,19 @@ namespace L1FEOutdoors.Forms
         private void txtSearch__TextChanged(object sender, EventArgs e)
         {
             dgProduct.CurrentCell = null;
+            
+            /*BindingSource bs = new BindingSource();
+            bs.DataSource = dgProduct.DataSource;
+            bs.Filter = "Part" + " like '%" + txtSearch.Texts + "%'";
+            dgProduct.DataSource = bs;*/
+
+            ((DataTable) dgProduct.DataSource).DefaultView.RowFilter = string.Format("Part like '%{0}%' OR Description like '%{0}%'", txtSearch.Texts);
 
             //dgProduct.Rows[0].Visible = false;
-            foreach (DataGridViewRow dr in dgProduct.Rows)
+            /*foreach (DataGridViewRow dr in dgProduct.Rows)
             {
+                
+
                 if (txtSearch.Texts == "")
                     dr.Visible = true;
 
@@ -82,7 +91,7 @@ namespace L1FEOutdoors.Forms
                 {
                     dr.Visible = false;
                 }
-            }
+            }*/
         }
 
         private void LoadTheme()
