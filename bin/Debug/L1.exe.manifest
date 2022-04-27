@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="L1.exe" version="1.1.0.17" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="L1.exe" version="1.1.0.18" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="L1Logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="L1" version="1.0.8152.19859" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="L1" version="1.0.8152.19884" language="neutral" processorArchitecture="msil" />
     <commandLine file="L1.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="L1.exe" size="846240">
-      <assemblyIdentity name="L1" version="1.0.8152.19859" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="L1" version="1.0.8152.19884" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kG1p5R/L6ZzXRl4RvjK2Om07Tqqgp6la1qzwrki3PSI=</dsig:DigestValue>
+        <dsig:DigestValue>dr/J8FTmr2gAbshtUYd0ydjPwR8yrHXdQ2yOGJmLnIY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -153,13 +153,13 @@
       <dsig:DigestValue>YB+KOYuzP57qVKzzBZezR7PrzyCv0mvP4QDoU6pGCho=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\InvAvail.csv" size="180117">
+  <file name="Resources\InvAvail.csv" size="180014">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GMeFhfVCy5hyM+FBPvsl7wan8XwDtOeg3tKC9dnIzX8=</dsig:DigestValue>
+      <dsig:DigestValue>XyvdyiX6q7lzFZZLwnGk+dn7hF3QX5PZWzSstFqxV1o=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\InvQtys.csv" size="48941">
