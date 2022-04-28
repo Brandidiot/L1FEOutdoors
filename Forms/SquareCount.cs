@@ -75,7 +75,7 @@ namespace L1FEOutdoors
 
             if (dgSquareCount.Rows.Count > 0)
             {
-                SaveFileDialog sfd = new SaveFileDialog();
+                var sfd = new SaveFileDialog();
                 sfd.Filter = @"CSV (*.csv)|*.csv";
 
                 var folderName = @"C:\Users\" + Environment.UserName + @"\Desktop\" + DateTime.Now.ToString("M/d/yyyy");
@@ -304,7 +304,7 @@ namespace L1FEOutdoors
 
                 if (found) return;
                 //If SKU not found play Error sound and clear SKU
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"c:\Windows\Media\Windows Critical Stop.wav");
+                var player = new System.Media.SoundPlayer(@"c:\Windows\Media\Windows Critical Stop.wav");
                 player.Play();
                 txtSKU.Texts = "";
                 txtSKU.Focus();
