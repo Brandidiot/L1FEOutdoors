@@ -72,6 +72,8 @@ namespace L1FEOutdoors.Forms
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
+            Program.FormProvider.ModernMenu.UpdateButtons();
+
             var beginDate =
                 dateTimePicker1.Value.ToString("yyyy-MM-dd'T'HH:mm:ss.fffzzz", DateTimeFormatInfo.InvariantInfo);
             var endDate =
