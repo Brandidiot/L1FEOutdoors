@@ -7,6 +7,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using L1FEOutdoors.Forms;
 using Square;
 using Square.Exceptions;
 using Square.Models;
@@ -180,6 +182,147 @@ namespace L1FEOutdoors
                 Console.WriteLine(@"Exception occurred");
                 Debug.Print("Exception: " + e);
                 // Your error handling code
+            }
+            progress.Report(100);
+            backgroundWorker.label1.Text = @"Completed";
+            backgroundWorker.Close();
+            return data;
+        }
+
+        public async Task<DataTable> RetrievePaymentsAsync(string bTime, string eTime, IProgress<int> progress = null,
+            BackgroundWorker backgroundWorker = null)
+        {
+            var data = new DataTable();
+            data.Columns.Add("Date");
+            data.Columns.Add("Time");
+            data.Columns.Add("Receipt");
+            data.Columns.Add("Type");
+            data.Columns.Add("Amount");
+            data.Columns.Add("Paid");
+
+            var index = 0;
+            double percentage = 0;
+            int percentageInt = 0;
+
+            try
+            {
+                backgroundWorker!.label1.Text = @"Getting Payment Data...";
+                var payment = await _client.PaymentsApi.ListPaymentsAsync(beginTime: bTime, endTime: eTime);
+                var cursor = payment.Cursor;
+
+                bool first = true;
+
+                index = 100;
+                percentage = (double)index / 1500;
+                percentage *= 100;
+                percentageInt = (int)Math.Round(percentage, 0);
+                progress!.Report(percentageInt);
+
+                string card = null;
+                float? approved = null;
+                
+
+                if (cursor == null && first)
+                {
+                    foreach (var pay in payment.Payments)
+                    {
+                        percentage = (double)index / 1500;
+                        percentage *= 100;
+                        percentageInt = (int)Math.Round(percentage, 0);
+                        progress.Report(percentageInt);
+
+                        var utcDateTime = DateTime.Parse(pay.CreatedAt,
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.RoundtripKind);
+
+                        var date = TimeZoneInfo.ConvertTimeFromUtc(utcDateTime,
+                            TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+
+                        if (pay.TotalMoney.Amount == 0) continue;
+
+                        if (pay.SourceType == "CARD")
+                        {
+                            card = pay.SourceType + " " + pay.CardDetails.Card.CardBrand;
+
+                            if (pay.ApprovedMoney != null)
+                            {
+                                approved = pay.ApprovedMoney.Amount / 100f;
+                            }
+                        }
+                        else
+                        {
+                            if (pay.CashDetails.BuyerSuppliedMoney.Amount != 0)
+                            {
+                                approved = pay.TotalMoney.Amount / 100f;
+                            }
+
+                            card = pay.SourceType;
+                        }
+
+
+                        data.Rows.Add(date.ToString("MMMM dd, yyyy"), date.ToString("h:mm tt"), pay.ReceiptNumber,
+                            card, "$" + pay.TotalMoney.Amount / 100f, "$"+approved);
+                        percentage = (double)index / 1500;
+                        percentage *= 100;
+                        percentageInt = (int)Math.Round(percentage, 0);
+                        progress.Report(percentageInt);
+                    }
+                    first = false;
+                }
+                else
+                {
+                    while (cursor != null)
+                    {
+                        backgroundWorker!.label1.Text = @"Combining DataTables...";
+                        foreach (var pay in payment.Payments)
+                        {
+                            var utcDateTime = DateTime.Parse(pay.CreatedAt,
+                                CultureInfo.InvariantCulture,
+                                DateTimeStyles.RoundtripKind);
+
+                            var date = TimeZoneInfo.ConvertTimeFromUtc(utcDateTime,
+                                TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+
+                            if (pay.TotalMoney.Amount == 0) continue;
+
+                            if (pay.SourceType == "CARD")
+                            {
+                                card = pay.SourceType + " " + pay.CardDetails.Card.CardBrand;
+
+                                if (pay.ApprovedMoney != null)
+                                {
+                                    approved = pay.ApprovedMoney.Amount / 100f;
+                                }
+                            }
+                            else
+                            {
+                                if (pay.CashDetails.BuyerSuppliedMoney.Amount != 0)
+                                {
+                                    approved = pay.TotalMoney.Amount / 100f;
+                                }
+
+                                card = pay.SourceType;
+                            }
+
+                            data.Rows.Add(date.ToString("MMMM dd, yyyy"), date.ToString("h:mm tt"), pay.ReceiptNumber,
+                                card, "$" + pay.TotalMoney.Amount / 100f, "$" + approved);
+
+                            percentage = (double)index / 1500;
+                            percentage *= 100;
+                            percentageInt = (int)Math.Round(percentage, 0);
+                            progress.Report(percentageInt);
+                        }
+
+                        //Set cursor to next set of items.
+                        payment = await _client.PaymentsApi.ListPaymentsAsync(cursor: cursor);
+                        cursor = payment.Cursor;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
             }
             progress.Report(100);
             backgroundWorker.label1.Text = @"Completed";

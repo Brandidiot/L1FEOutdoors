@@ -270,6 +270,14 @@ namespace L1FEOutdoors
             this.Size = new Size(1000, 500);
         }
 
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            if (CheckForRecount()) return;
+            UpdateButtons();
+            OpenChildForm(new Payment(), sender);
+            this.Size = new Size(1000, 500);
+        }
+
         public void UpdateButtons()
         {
             foreach (Control btn in panelMenu.Controls)

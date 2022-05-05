@@ -53,6 +53,7 @@
             this.squareRecountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkSquareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -64,6 +65,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnPayment);
             this.panelMenu.Controls.Add(this.btnSquareRecount);
             this.panelMenu.Controls.Add(this.btnRecount);
             this.panelMenu.Controls.Add(this.btnCheckSquare);
@@ -436,6 +438,29 @@
             this.checkSquareToolStripMenuItem.Text = "Check Square";
             this.checkSquareToolStripMenuItem.Click += new System.EventHandler(this.checkSquareToolStripMenuItem_Click);
             // 
+            // btnPayment
+            // 
+            this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa;
+            this.btnPayment.IconColor = System.Drawing.Color.White;
+            this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPayment.IconSize = 40;
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.Location = new System.Drawing.Point(0, 320);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(220, 60);
+            this.btnPayment.TabIndex = 11;
+            this.btnPayment.Tag = "        Payments";
+            this.btnPayment.Text = "        Payments";
+            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
             // ModernMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,5 +518,6 @@
         private FontAwesome.Sharp.IconButton btnRecount;
         private FontAwesome.Sharp.IconButton btnCheckSquare;
         public FontAwesome.Sharp.IconButton btnPricing;
+        private FontAwesome.Sharp.IconButton btnPayment;
     }
 }
