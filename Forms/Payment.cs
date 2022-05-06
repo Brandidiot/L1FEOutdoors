@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 
 namespace L1FEOutdoors.Forms
 {
@@ -32,6 +33,7 @@ namespace L1FEOutdoors.Forms
         private async void Payment_Shown(object sender, EventArgs e)
         {
             FormatDataGridView();
+            LoadTheme();
 
             var beginDate =
                 dateTimePicker1.Value.ToString("yyyy-MM-dd'T'HH:mm:ss.fffzzz", DateTimeFormatInfo.InvariantInfo);
@@ -97,6 +99,20 @@ namespace L1FEOutdoors.Forms
             }
             UseWaitCursor = false;
             Program.FormProvider.ModernMenu.UpdateButtons();
+        }
+
+        private void LoadTheme()
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl.GetType() != typeof(IconButton)) continue;
+
+                var btn = (IconButton)ctrl;
+
+                btn.BackColor = ThemeColor.PrimaryColor;
+                btn.ForeColor = Color.White;
+                btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+            }
         }
     }
 }
