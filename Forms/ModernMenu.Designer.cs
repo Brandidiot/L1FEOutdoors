@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModernMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.btnSquareRecount = new FontAwesome.Sharp.IconButton();
             this.btnRecount = new FontAwesome.Sharp.IconButton();
             this.btnCheckSquare = new FontAwesome.Sharp.IconButton();
@@ -53,7 +54,6 @@
             this.squareRecountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkSquareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -78,6 +78,29 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 500);
             this.panelMenu.TabIndex = 0;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa;
+            this.btnPayment.IconColor = System.Drawing.Color.White;
+            this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPayment.IconSize = 40;
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.Location = new System.Drawing.Point(0, 320);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(220, 60);
+            this.btnPayment.TabIndex = 11;
+            this.btnPayment.Tag = "        Payments";
+            this.btnPayment.Text = "        Payments";
+            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnSquareRecount
             // 
@@ -437,29 +460,6 @@
             this.checkSquareToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.checkSquareToolStripMenuItem.Text = "Check Square";
             this.checkSquareToolStripMenuItem.Click += new System.EventHandler(this.checkSquareToolStripMenuItem_Click);
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPayment.FlatAppearance.BorderSize = 0;
-            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.CcVisa;
-            this.btnPayment.IconColor = System.Drawing.Color.White;
-            this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPayment.IconSize = 40;
-            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayment.Location = new System.Drawing.Point(0, 320);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(220, 60);
-            this.btnPayment.TabIndex = 11;
-            this.btnPayment.Tag = "        Payments";
-            this.btnPayment.Text = "        Payments";
-            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayment.UseVisualStyleBackColor = true;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // ModernMenu
             // 

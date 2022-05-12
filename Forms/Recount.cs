@@ -109,6 +109,8 @@ namespace L1FEOutdoors
                     if (!row.Cells[0].Value.ToString().Contains(searchValue)) continue;
 
                     //LOMessageBox.Show("Found");
+
+                    dgItems.ClearSelection();
                     
                     var qty = int.Parse(loTextBox2.Texts);
                     //row.Selected = true;
