@@ -1,11 +1,4 @@
-L1FE Outdoors,,,,,,,,,,
-Availability,,,,,,,,,,
-  ,,,,,,,,,,
-Part,Description,UOM,"On
-Hand",Allocated,"Not
-Available","Drop
-Ship",Available,"On
-Order",Committed,Short
+Part,Description,UOM,"On Hand",Allocated,"Not Available","Drop Ship",Available,"On Order",Committed,Short
 0008,SYA Warrior Riser Snorkel kit for Arctic Cat Wildcat 700,ea,1,0,0,0,1,0,0,0
 001-1203,Out & Back XT 26x9-12,ea,2,0,0,0,2,0,0,0
 001-1204,Out & Back XT 26X11-12,ea,2,0,0,0,2,0,0,0
@@ -2878,4 +2871,3 @@ YTX24HL-BS,Yuasa Battery,ea,1,0,0,0,1,0,0,0
 YTX4L-BS,Yuasa Battery,ea,1,0,0,0,1,0,0,0
 YTX5L-BS,Yuasa Battery,ea,1,0,0,0,1,0,0,0
 YTX9-BS,Yuasa Battery,ea,1,0,0,0,1,0,0,0
-"May 7, 2022 8:19:40 AM EDT",,,,,,,,,,
