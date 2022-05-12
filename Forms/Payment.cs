@@ -48,7 +48,7 @@ namespace L1FEOutdoors.Forms
                 //dgSquareCount.Columns.Remove("Category");
                 var program = new Program();
                 var progressReport = new Progress<int>(backgroundWorker.ReportProcessingProgress);
-                var test = await program.RetrievePaymentsAsync(beginDate, endDate, progressReport, backgroundWorker);
+                var test = await program.RetriveOrdersAsync(beginDate, endDate, progressReport, backgroundWorker);
 
                 paymentGridView.DataSource = test;
             }
@@ -89,7 +89,7 @@ namespace L1FEOutdoors.Forms
                 //dgSquareCount.Columns.Remove("Category");
                 var program = new Program();
                 var progressReport = new Progress<int>(backgroundWorker.ReportProcessingProgress);
-                var test = await program.RetrievePaymentsAsync(beginDate, endDate, progressReport, backgroundWorker);
+                var test = await program.RetriveOrdersAsync(beginDate, endDate, progressReport, backgroundWorker);
 
                 paymentGridView.DataSource = test;
             }

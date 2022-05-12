@@ -107,6 +107,8 @@ namespace L1FEOutdoors
                 foreach (DataGridViewRow row in dgItems.Rows)
                 {
                     if (!row.Cells[0].Value.ToString().Contains(searchValue)) continue;
+
+                    //LOMessageBox.Show("Found");
                     
                     var qty = int.Parse(loTextBox2.Texts);
                     //row.Selected = true;

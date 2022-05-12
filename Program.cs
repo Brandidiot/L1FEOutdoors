@@ -329,6 +329,95 @@ namespace L1FEOutdoors
             backgroundWorker.Close();
             return data;
         }
+
+        public async Task<DataTable> RetriveOrdersAsync(string bTime, string eTime, IProgress<int> progress = null,
+            BackgroundWorker backgroundWorker = null)
+        {
+            var locationIds = new List<string> {"AM8KMXKM977CD"};
+
+            var createdAt = new TimeRange.Builder()
+                .StartAt(bTime)
+                .EndAt(eTime)
+                .Build();
+
+            var dateTimeFilter = new SearchOrdersDateTimeFilter.Builder()
+                .CreatedAt(createdAt)
+                .Build();
+
+            var filter = new SearchOrdersFilter.Builder()
+                .DateTimeFilter(dateTimeFilter)
+                .Build();
+
+            var query = new SearchOrdersQuery.Builder()
+                .Filter(filter)
+                .Build();
+
+            var body = new SearchOrdersRequest.Builder()
+                .LocationIds(locationIds)
+                .Query(query)
+                .ReturnEntries(false)
+                .Build();
+
+            var data = new DataTable();
+            data.Columns.Add("Date");
+            data.Columns.Add("Time");
+            data.Columns.Add("State");
+            data.Columns.Add("Amount");
+            data.Columns.Add("Paid");
+            data.Columns.Add("Note");
+
+            var index = 0;
+            double percentage = 0;
+            int percentageInt = 0;
+
+            backgroundWorker!.label1.Text = @"Getting Payments Data...";
+
+            try
+            {
+                index = 100;
+                percentage = (double)index / 1500;
+                percentage *= 100;
+                percentageInt = (int)Math.Round(percentage, 0);
+                progress!.Report(percentageInt);
+
+                var orders = await _client.OrdersApi.SearchOrdersAsync(body: body);
+
+                do
+                {
+                    foreach (var order in orders.Orders)
+                    {
+                        if(order.TotalMoney.Amount == 0) continue;
+                        
+                        var utcDateTime = DateTime.Parse(order.CreatedAt,
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.RoundtripKind);
+
+                        var date = TimeZoneInfo.ConvertTimeFromUtc(utcDateTime,
+                            TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
+
+                        string note = null;
+
+                        if (order.LineItems != null)
+                        {
+                            note = order.LineItems[0].Note;
+                        }
+                        
+                        data.Rows.Add(date.ToString("MMMM dd, yyyy"), date.ToString("h:mm tt"), order.State,
+                            "$" + order.TotalMoney.Amount / 100f, "$" + order.NetAmounts.TotalMoney.Amount / 100f, note);
+                    }
+                } while (orders.Cursor != null);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            progress.Report(100);
+            backgroundWorker.label1.Text = @"Completed";
+            backgroundWorker.Close();
+            return data;
+        }
         public static bool IsConnectedToInternet(int timeoutMs = 10000, string url = null)
         {
             try
