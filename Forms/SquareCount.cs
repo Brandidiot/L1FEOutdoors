@@ -275,7 +275,7 @@ namespace L1FEOutdoors
 
                 foreach (DataGridViewRow row in dgSquareCount.Rows)
                 {
-                    if (!row.Cells["SKU"].Value.ToString().Equals(searchValue)) continue;
+                    if (!row.Cells["SKU"].Value.ToString().Equals(searchValue.ToUpper())) continue;
                     found = true;
                     const int qty = 1;
                     
