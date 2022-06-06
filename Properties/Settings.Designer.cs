@@ -130,7 +130,7 @@ namespace L1FEOutdoors.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("EAAAEGUM0M9LiXIgUUDe2P4_tD26FCirUnMi90O8ZJT5gJlXdgDPRc6XDz_vqPRh")]
+        [global::System.Configuration.DefaultSettingValueAttribute("EAAAFJxjzC9s5N4Wr9NoIbj2gkxPWMttjdxi14748IF5IVlwx8-f0Y5ydb5mgpfN")]
         public string token {
             get {
                 return ((string)(this["token"]));

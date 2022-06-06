@@ -57,7 +57,7 @@ namespace L1FEOutdoors
             
             var index = 0;
             double percentage = 0;
-            int percentageInt = 0;
+            var percentageInt = 0;
             
             try
             {
@@ -104,29 +104,32 @@ namespace L1FEOutdoors
                 }
 
                 backgroundWorker!.label1.Text = @"Adding Counts To DataTable...";
-                while (invCursor != null)
+
+                do
                 {
                     foreach (var obj in inv.Counts)
                     {
                         invData.Rows.Add(obj.CatalogObjectId, obj.Quantity);
                     }
+
                     //Set cursor to next set of items.
                     body = new BatchRetrieveInventoryCountsRequest.Builder()
                         .LocationIds(locationIds)
                         .Cursor(invCursor)
                         .Build();
+                    if (invCursor == null) break;
                     inv = await _client.InventoryApi.BatchRetrieveInventoryCountsAsync(body: body);
                     invCursor = inv.Cursor;
-                }
+                } while (true);
 
-                while (cursor != null)
+                do
                 {
                     backgroundWorker!.label1.Text = @"Combining DataTables...";
+
                     //Go through all items
                     foreach (var catalog in item.Objects)
                     {
-                        if (catalog.ItemData.Variations.Count <= 0) continue;
-
+                        //if (catalog.ItemData.Variations.Count <= 0) continue;
                         foreach (var variation in catalog.ItemData.Variations)
                         {
                             foreach (DataRow row in invData.Rows)
@@ -138,21 +141,21 @@ namespace L1FEOutdoors
                                     if (string.Equals((string) catid[0], catalog.ItemData.CategoryId))
                                         data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
                                             variation.ItemVariationData.Sku, (string) catid[1], row[1], "0");
-                                    
+
                                     //Update Progress Bar
-                                    percentage = (double)index / 1500;
+                                    percentage = (double) index / 1500;
                                     percentage *= 100;
-                                    percentageInt = (int)Math.Round(percentage, 0);
+                                    percentageInt = (int) Math.Round(percentage, 0);
                                     progress.Report(percentageInt);
                                 }
                             }
                         }
                     }
+                    if (cursor == null) break;
                     //Set cursor to next set of items.
                     item = await _client.CatalogApi.ListCatalogAsync(cursor: cursor, types: "item");
                     cursor = item.Cursor;
-                    
-                }
+                } while (true);
             }
             catch (ApiException e)
             {
