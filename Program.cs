@@ -22,6 +22,7 @@ namespace L1FEOutdoors
         [STAThread]
         static void Main()
         {
+            //Set Square Environment, Either Production Or Sandbox
             _client = new SquareClient.Builder()
                 .Environment(Square.Environment.Production)
                 .AccessToken(Properties.Settings.Default.token)
@@ -29,17 +30,20 @@ namespace L1FEOutdoors
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(FormProvider.ModernMenu);
+            Application.Run(FormProvider.ModernMenu); //Starting Form
         }
 
+        //Make ModernMenu Singleton
         public class FormProvider
         {
             public static ModernMenu ModernMenu => _modernmenu ??= new ModernMenu();
             private static ModernMenu _modernmenu;
         }
 
+        //Retrieve Items With Counts From Square
         public async Task<DataTable> RetrieveItemsAsync(IProgress<int> progress = null, Forms.BackgroundWorker backgroundWorker = null)
         {
+            //Main Datatable To Return
             var data = new DataTable();
             data.Columns.Add("Item Name");
             data.Columns.Add("SKU");
@@ -47,14 +51,17 @@ namespace L1FEOutdoors
             data.Columns.Add("Option Name 1");//Qty
             data.Columns.Add("Option Value 1");//Count
 
+            //Square Catalog Data
             var catData = new DataTable();
             catData.Columns.Add("ID");
             catData.Columns.Add("Name");
 
+            //Square Inventory Data
             var invData = new DataTable();
             invData.Columns.Add("ObjectID");
             invData.Columns.Add("Quantity");
             
+            //Loading Bar Stuff
             var index = 0;
             double percentage = 0;
             var percentageInt = 0;
@@ -62,9 +69,12 @@ namespace L1FEOutdoors
             try
             {
                 backgroundWorker!.label1.Text = @"Getting Item Data...";
+                //Get Square Catalog Items
                 var item = await _client.CatalogApi.ListCatalogAsync(types: "item");
-                var cursor = item.Cursor;
+                //Set Catalog Item Cursor To Next Cursor
+                string cursor = null;
 
+                //Loading Bar Stuff
                 index = 100;
                 percentage = (double)index / 1500;
                 percentage *= 100;
@@ -72,8 +82,11 @@ namespace L1FEOutdoors
                 progress.Report(percentageInt);
                 
                 backgroundWorker!.label1.Text = @"Getting Category Data...";
+
+                //Get Square Catalog Categories
                 var category = await _client.CatalogApi.ListCatalogAsync(types: "category");
                 
+                //Loading Bar Stuff
                 index = 200;
                 percentage = (double)index / 1500;
                 percentage *= 100;
@@ -81,13 +94,19 @@ namespace L1FEOutdoors
                 progress.Report(percentageInt);
                 
                 backgroundWorker!.label1.Text = @"Getting Inventory Counts...";
-                var locationIds = new List<string> { "AM8KMXKM977CD" };
+
+                //Square Location ID's for Items
+                var locationIds = new List<string> { "AM8KMXKM977CD" };//Main Location
+                //Square Build Inventory Count Based On LocationIds
                 var body = new BatchRetrieveInventoryCountsRequest.Builder()
                     .LocationIds(locationIds)
                     .Build();
+                //Get Square Inventory Counts
                 var inv = await _client.InventoryApi.BatchRetrieveInventoryCountsAsync(body: body);
-                var invCursor = inv.Cursor;
+                //Set Square Inventory Counts Cursor To Next Cursor
+                string invCursor = null;
 
+                //Loading Bar Stuff
                 index = 300;
                 percentage = (double)index / 1500;
                 percentage *= 100;
@@ -95,52 +114,72 @@ namespace L1FEOutdoors
                 progress.Report(percentageInt);
 
                 backgroundWorker!.label1.Text = @"Adding Categories To DataTable...";
-                //Find all categories first
+                //Find all Square Categories First
                 foreach (var catalog in category.Objects)
                 {
                     if (catalog.Type != "CATEGORY") continue;
-
+                    //Place Found Category ID & Name in catData DataTable
                     catData.Rows.Add(catalog.Id, catalog.CategoryData.Name);
                 }
 
                 backgroundWorker!.label1.Text = @"Adding Counts To DataTable...";
 
+                //Square Item Counts
                 do
                 {
+                    //Set Cursor
+                    invCursor = inv.Cursor;
+
+                    //Find All Square Items Counts
                     foreach (var obj in inv.Counts)
                     {
+                        //Place ID and Quantity in invData DataTable
                         invData.Rows.Add(obj.CatalogObjectId, obj.Quantity);
                     }
 
-                    //Set cursor to next set of items.
+                    //Set Data to Next Set of Items In Cursor.
                     body = new BatchRetrieveInventoryCountsRequest.Builder()
                         .LocationIds(locationIds)
                         .Cursor(invCursor)
                         .Build();
-                    if (invCursor == null) break;
+                    //Break Out If No More Items Exist
+                    //if (invCursor == null) break;
+
+                    //Set Next Cursor
                     inv = await _client.InventoryApi.BatchRetrieveInventoryCountsAsync(body: body);
-                    invCursor = inv.Cursor;
-                } while (true);
+                } while (invCursor != null);
 
                 do
                 {
                     backgroundWorker!.label1.Text = @"Combining DataTables...";
 
-                    //Go through all items
+                    //Set cursor to next set of items
+                    cursor = item.Cursor;
+
+                    //Go Through All Square Items
                     foreach (var catalog in item.Objects)
                     {
                         //if (catalog.ItemData.Variations.Count <= 0) continue;
+
+                        //Go Through Each Variation Of Each Item
                         foreach (var variation in catalog.ItemData.Variations)
                         {
+                            //Start Searching In Inventory Count DataTable
                             foreach (DataRow row in invData.Rows)
                             {
+                                //Find The Inventory Count ID That Matches The Variation ID
                                 if (!string.Equals((string) row[0], variation.Id)) continue;
                                 index++;
+                                //Start Searching In Category DataTable
                                 foreach (DataRow catid in catData.Rows)
                                 {
+                                    //Find The Category ID That Matches the Item Category ID
                                     if (string.Equals((string) catid[0], catalog.ItemData.CategoryId))
+                                    {
+                                        //Add All The Data Found To Main Data DataTable
                                         data.Rows.Add(catalog.ItemData.Name + " " + variation.ItemVariationData.Name,
                                             variation.ItemVariationData.Sku, (string) catid[1], row[1], "0");
+                                    }
 
                                     //Update Progress Bar
                                     percentage = (double) index / 1500;
@@ -151,11 +190,12 @@ namespace L1FEOutdoors
                             }
                         }
                     }
-                    if (cursor == null) break;
-                    //Set cursor to next set of items.
+                    //If No More Items Exist Break
+                    //if (cursor == null) break;
+
+                    //Get Next Set Of Items
                     item = await _client.CatalogApi.ListCatalogAsync(cursor: cursor, types: "item");
-                    cursor = item.Cursor;
-                } while (true);
+                } while (cursor != null);
             }
             catch (ApiException e)
             {
@@ -186,156 +226,18 @@ namespace L1FEOutdoors
                 Debug.Print("Exception: " + e);
                 // Your error handling code
             }
+            //Complete Loading Bar & Return Data
             progress.Report(100);
             backgroundWorker.label1.Text = @"Completed";
             backgroundWorker.Close();
             return data;
         }
 
-        public async Task<DataTable> RetrievePaymentsAsync(string bTime, string eTime, IProgress<int> progress = null,
-            BackgroundWorker backgroundWorker = null)
-        {
-            var data = new DataTable();
-            data.Columns.Add("Date");
-            data.Columns.Add("Time");
-            data.Columns.Add("Receipt");
-            data.Columns.Add("Type");
-            data.Columns.Add("Amount");
-            data.Columns.Add("Paid");
-
-            var index = 0;
-            double percentage = 0;
-            int percentageInt = 0;
-
-            try
-            {
-                backgroundWorker!.label1.Text = @"Getting Payment Data...";
-                var payment = await _client.PaymentsApi.ListPaymentsAsync(beginTime: bTime, endTime: eTime);
-                var cursor = payment.Cursor;
-
-                bool first = true;
-
-                index = 100;
-                percentage = (double)index / 1500;
-                percentage *= 100;
-                percentageInt = (int)Math.Round(percentage, 0);
-                progress!.Report(percentageInt);
-
-                string card = null;
-                float? approved = null;
-                
-
-                if (cursor == null && first)
-                {
-                    foreach (var pay in payment.Payments)
-                    {
-                        percentage = (double)index / 1500;
-                        percentage *= 100;
-                        percentageInt = (int)Math.Round(percentage, 0);
-                        progress.Report(percentageInt);
-
-                        var utcDateTime = DateTime.Parse(pay.CreatedAt,
-                            CultureInfo.InvariantCulture,
-                            DateTimeStyles.RoundtripKind);
-
-                        var date = TimeZoneInfo.ConvertTimeFromUtc(utcDateTime,
-                            TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
-
-                        if (pay.TotalMoney.Amount == 0) continue;
-
-                        if (pay.SourceType == "CARD")
-                        {
-                            card = pay.SourceType + " " + pay.CardDetails.Card.CardBrand;
-
-                            if (pay.ApprovedMoney != null)
-                            {
-                                approved = pay.ApprovedMoney.Amount / 100f;
-                            }
-                        }
-                        else
-                        {
-                            if (pay.CashDetails.BuyerSuppliedMoney.Amount != 0)
-                            {
-                                approved = pay.TotalMoney.Amount / 100f;
-                            }
-
-                            card = pay.SourceType;
-                        }
-
-
-                        data.Rows.Add(date.ToString("MMMM dd, yyyy"), date.ToString("h:mm tt"), pay.ReceiptNumber,
-                            card, "$" + pay.TotalMoney.Amount / 100f, "$"+approved);
-                        percentage = (double)index / 1500;
-                        percentage *= 100;
-                        percentageInt = (int)Math.Round(percentage, 0);
-                        progress.Report(percentageInt);
-                    }
-                    first = false;
-                }
-                else
-                {
-                    while (cursor != null)
-                    {
-                        backgroundWorker!.label1.Text = @"Combining DataTables...";
-                        foreach (var pay in payment.Payments)
-                        {
-                            var utcDateTime = DateTime.Parse(pay.CreatedAt,
-                                CultureInfo.InvariantCulture,
-                                DateTimeStyles.RoundtripKind);
-
-                            var date = TimeZoneInfo.ConvertTimeFromUtc(utcDateTime,
-                                TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
-
-                            if (pay.TotalMoney.Amount == 0) continue;
-
-                            if (pay.SourceType == "CARD")
-                            {
-                                card = pay.SourceType + " " + pay.CardDetails.Card.CardBrand;
-
-                                if (pay.ApprovedMoney != null)
-                                {
-                                    approved = pay.ApprovedMoney.Amount / 100f;
-                                }
-                            }
-                            else
-                            {
-                                if (pay.CashDetails.BuyerSuppliedMoney.Amount != 0)
-                                {
-                                    approved = pay.TotalMoney.Amount / 100f;
-                                }
-
-                                card = pay.SourceType;
-                            }
-
-                            data.Rows.Add(date.ToString("MMMM dd, yyyy"), date.ToString("h:mm tt"), pay.ReceiptNumber,
-                                card, "$" + pay.TotalMoney.Amount / 100f, "$" + approved);
-
-                            percentage = (double)index / 1500;
-                            percentage *= 100;
-                            percentageInt = (int)Math.Round(percentage, 0);
-                            progress.Report(percentageInt);
-                        }
-
-                        //Set cursor to next set of items.
-                        payment = await _client.PaymentsApi.ListPaymentsAsync(cursor: cursor);
-                        cursor = payment.Cursor;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-            progress.Report(100);
-            backgroundWorker.label1.Text = @"Completed";
-            backgroundWorker.Close();
-            return data;
-        }
-
+        //Retrieve Square Payments
         public async Task<DataTable> RetriveOrdersAsync(string bTime, string eTime, IProgress<int> progress = null,
             BackgroundWorker backgroundWorker = null)
         {
+            //Main Location
             var locationIds = new List<string> {"AM8KMXKM977CD"};
 
             var createdAt = new TimeRange.Builder()
@@ -361,6 +263,7 @@ namespace L1FEOutdoors
                 .ReturnEntries(false)
                 .Build();
 
+            //Main Data
             var data = new DataTable();
             data.Columns.Add("Date");
             data.Columns.Add("Time");
@@ -369,6 +272,7 @@ namespace L1FEOutdoors
             data.Columns.Add("Paid");
             data.Columns.Add("Note");
 
+            //Loading Stuff
             var index = 0;
             double percentage = 0;
             int percentageInt = 0;
@@ -377,24 +281,28 @@ namespace L1FEOutdoors
 
             try
             {
+                //Loading Stuff
                 index = 100;
                 percentage = (double)index / 1500;
                 percentage *= 100;
                 percentageInt = (int)Math.Round(percentage, 0);
                 progress!.Report(percentageInt);
 
+                //Get Orders From Square
                 var orders = await _client.OrdersApi.SearchOrdersAsync(body: body);
 
                 do
                 {
+                    //Get Each Order
                     foreach (var order in orders.Orders)
                     {
+                        //Don't Show $0 Transactions
                         if(order.TotalMoney.Amount == 0) continue;
                         
+                        //Change Date & Time To EST
                         var utcDateTime = DateTime.Parse(order.CreatedAt,
                             CultureInfo.InvariantCulture,
                             DateTimeStyles.RoundtripKind);
-
                         var date = TimeZoneInfo.ConvertTimeFromUtc(utcDateTime,
                             TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time"));
 
@@ -405,6 +313,7 @@ namespace L1FEOutdoors
                             note = order.LineItems[0].Note;
                         }
                         
+                        //Add Order Details To DataTable
                         data.Rows.Add(date.ToString("MMMM dd, yyyy"), date.ToString("h:mm tt"), order.State,
                             "$" + order.TotalMoney.Amount / 100f, "$" + order.NetAmounts.TotalMoney.Amount / 100f, note);
                     }
@@ -421,6 +330,8 @@ namespace L1FEOutdoors
             backgroundWorker.Close();
             return data;
         }
+
+        //Check There's Internet Connection
         public static bool IsConnectedToInternet(int timeoutMs = 10000, string url = null)
         {
             try

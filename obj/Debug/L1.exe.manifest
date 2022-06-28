@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="L1.exe" version="1.1.0.37" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="L1.exe" version="1.1.0.38" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="L1Logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="L1" version="1.0.8208.23962" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="L1" version="1.0.8214.22767" language="neutral" processorArchitecture="msil" />
     <commandLine file="L1.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FontAwesome.Sharp.dll" size="457728">
-      <assemblyIdentity name="FontAwesome.Sharp" version="5.15.4.0" publicKeyToken="3519B11F2188CEF0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FontAwesome.Sharp.dll" size="744448">
+      <assemblyIdentity name="FontAwesome.Sharp" version="6.1.1.0" publicKeyToken="D16D1E4E568EC10F" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/ESwDY0cpt8Xm+JtJ+ksvqcu7W+8HwGglTE4a59uxlc=</dsig:DigestValue>
+        <dsig:DigestValue>12Z8LXAumesAnq+Rfq8XfoVZB+xfEO4gDsp6V+YRZyI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="L1.exe" size="867232">
-      <assemblyIdentity name="L1" version="1.0.8208.23962" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="L1.exe" size="862624">
+      <assemblyIdentity name="L1" version="1.0.8214.22767" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>oWnXWLVCHPzA5/yoOf0+yLjJmyk0g/8wxMmzVyi3bPg=</dsig:DigestValue>
+        <dsig:DigestValue>7UFUfwZLcP4ZU3ZninfHVUqtjok6o7fi9IrTI6Led64=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Square.dll" size="2020352">
-      <assemblyIdentity name="Square" version="17.3.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Square.dll" size="2233344">
+      <assemblyIdentity name="Square" version="19.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ELWuBT7RNTLmHv8P3U+Hn7fkZCz7x9UQLWqxTFSPo5A=</dsig:DigestValue>
+        <dsig:DigestValue>oKv6ahH5JVWfjp1pWb/GTaFDskwAWuYOVFlSA7TTW3o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -126,13 +126,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="L1.exe.config" size="2626">
+  <file name="L1.exe.config" size="2616">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ypqbAxJqso0pUzCQwv+ibfDAcaAffdbPLnGkF4J641s=</dsig:DigestValue>
+      <dsig:DigestValue>D2OKBJG/shcrUjbSSWxGaP5TyeiGdKjhP2WnBkSD7xc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="L1Logo.ico" size="5814">
@@ -153,13 +153,13 @@
       <dsig:DigestValue>YB+KOYuzP57qVKzzBZezR7PrzyCv0mvP4QDoU6pGCho=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\InvAvail.csv" size="201595">
+  <file name="Resources\InvAvail.csv" size="205858">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Y2NXvaoln3Xoic9mUW+Sf8On5W0c1yCYswU+NVCsxrg=</dsig:DigestValue>
+      <dsig:DigestValue>IKQ22n0X+H1oMk3MkZAS2rnA+4EOA0yxXnS4e4jHPmM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\InvQtys.csv" size="46394">
@@ -171,13 +171,13 @@
       <dsig:DigestValue>4G2rm9NbdA4TbJ7FB7/IU2zRt/jwj7wqWIVe4rrak9M=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\ProductPricing.csv" size="75700">
+  <file name="Resources\ProductPricing.csv" size="77351">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tMKxeSH1S1ibzBrm6O4REFXsCsmsaHilhnXFuEvQONs=</dsig:DigestValue>
+      <dsig:DigestValue>zgphNu7LSgOTJsIdovErJAX+9YotJZyEua7rnEjb4cY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Recount.csv" size="213628">

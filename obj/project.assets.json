@@ -1,14 +1,14 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.7.2": {
+    ".NETFramework,Version=v4.8": {
       "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.4": {
+      "FontAwesome.Sharp/6.1.1": {
         "type": "package",
         "frameworkAssemblies": [
           "PresentationCore",
@@ -18,10 +18,10 @@
           "WindowsBase"
         ],
         "compile": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         },
         "runtime": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.1": {
@@ -67,7 +67,7 @@
           "lib/net472/Polly.dll": {}
         }
       },
-      "Square/17.3.0": {
+      "Square/19.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.HashCode": "1.1.1",
@@ -93,14 +93,14 @@
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win": {
+    ".NETFramework,Version=v4.8/win": {
       "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.4": {
+      "FontAwesome.Sharp/6.1.1": {
         "type": "package",
         "frameworkAssemblies": [
           "PresentationCore",
@@ -110,10 +110,10 @@
           "WindowsBase"
         ],
         "compile": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         },
         "runtime": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.1": {
@@ -159,7 +159,7 @@
           "lib/net472/Polly.dll": {}
         }
       },
-      "Square/17.3.0": {
+      "Square/19.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.HashCode": "1.1.1",
@@ -185,14 +185,14 @@
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win-x64": {
+    ".NETFramework,Version=v4.8/win-x64": {
       "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.4": {
+      "FontAwesome.Sharp/6.1.1": {
         "type": "package",
         "frameworkAssemblies": [
           "PresentationCore",
@@ -202,10 +202,10 @@
           "WindowsBase"
         ],
         "compile": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         },
         "runtime": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.1": {
@@ -251,7 +251,7 @@
           "lib/net472/Polly.dll": {}
         }
       },
-      "Square/17.3.0": {
+      "Square/19.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.HashCode": "1.1.1",
@@ -277,14 +277,14 @@
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win-x86": {
+    ".NETFramework,Version=v4.8/win-x86": {
       "Brutal.Dev.StrongNameSigner/3.1.0": {
         "type": "package",
         "build": {
           "build/_._": {}
         }
       },
-      "FontAwesome.Sharp/5.15.4": {
+      "FontAwesome.Sharp/6.1.1": {
         "type": "package",
         "frameworkAssemblies": [
           "PresentationCore",
@@ -294,10 +294,10 @@
           "WindowsBase"
         ],
         "compile": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         },
         "runtime": {
-          "lib/net472/FontAwesome.Sharp.dll": {}
+          "lib/net48/FontAwesome.Sharp.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.1": {
@@ -343,7 +343,7 @@
           "lib/net472/Polly.dll": {}
         }
       },
-      "Square/17.3.0": {
+      "Square/19.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.HashCode": "1.1.1",
@@ -391,27 +391,22 @@
         "build/StrongNameSigner.Console.exe.config"
       ]
     },
-    "FontAwesome.Sharp/5.15.4": {
-      "sha512": "IqJe1IQas6tSVXMNHTWA/NJeP7azyxDTk6DCB+NMXOOED2F07IYI9nvfB1HP83r4yh5cntZoTdwSpIraA5XoXw==",
+    "FontAwesome.Sharp/6.1.1": {
+      "sha512": "p6dnSMcKQg790vGSJgvFk6S8gXQnEcCugfaJ21WFxZz9h+9KyxL+sX6kbGv8p4iVoX/e5BAMnTV4QJFJvx8QxQ==",
       "type": "package",
-      "path": "fontawesome.sharp/5.15.4",
+      "path": "fontawesome.sharp/6.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "fontawesome.sharp.5.15.4.nupkg.sha512",
+        "fontawesome.sharp.6.1.1.nupkg.sha512",
         "fontawesome.sharp.nuspec",
         "lib/net40/FontAwesome.Sharp.dll",
-        "lib/net40/FontAwesome.Sharp.dll.unsigned",
         "lib/net45/FontAwesome.Sharp.dll",
-        "lib/net45/FontAwesome.Sharp.dll.unsigned",
         "lib/net472/FontAwesome.Sharp.dll",
-        "lib/net472/FontAwesome.Sharp.dll.unsigned",
         "lib/net48/FontAwesome.Sharp.dll",
-        "lib/net48/FontAwesome.Sharp.dll.unsigned",
         "lib/net5.0-windows7.0/FontAwesome.Sharp.dll",
-        "lib/net5.0-windows7.0/FontAwesome.Sharp.dll.unsigned",
-        "lib/netcoreapp3.1/FontAwesome.Sharp.dll",
-        "lib/netcoreapp3.1/FontAwesome.Sharp.dll.unsigned"
+        "lib/net6.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
     },
     "Microsoft.Bcl.HashCode/1.1.1": {
@@ -564,15 +559,15 @@
         "polly.nuspec"
       ]
     },
-    "Square/17.3.0": {
-      "sha512": "UrKZKQxlDSSpZKZkSwlSJv7BGqddbNVJrrZidKPPXxsB5geRGzIllyKjagiZr1kdEyMZx087F0UrDZA1mfj0Yw==",
+    "Square/19.1.0": {
+      "sha512": "mz92Yi9mU3LBWean+9jKaWeiPYcF66I5NQTRf4UAhwjr3FnF/3r3+3xDK8Ncs1Uuesbx720xLUzJlvEJ35NSpQ==",
       "type": "package",
-      "path": "square/17.3.0",
+      "path": "square/19.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Square.dll",
-        "square.17.3.0.nupkg.sha512",
+        "square.19.1.0.nupkg.sha512",
         "square.nuspec"
       ]
     },
@@ -601,10 +596,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.7.2": [
+    ".NETFramework,Version=v4.8": [
       "Brutal.Dev.StrongNameSigner >= 3.1.0",
-      "FontAwesome.Sharp >= 5.15.4",
-      "Square >= 17.3.0"
+      "FontAwesome.Sharp >= 6.1.1",
+      "Square >= 19.1.0"
     ]
   },
   "packageFolders": {
@@ -630,20 +625,20 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net472"
+        "net48"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net472": {
+        "net48": {
           "projectReferences": {}
         }
       }
     },
     "frameworks": {
-      "net472": {
+      "net48": {
         "dependencies": {
           "Brutal.Dev.StrongNameSigner": {
             "include": "None",
@@ -653,12 +648,12 @@
           },
           "FontAwesome.Sharp": {
             "target": "Package",
-            "version": "[5.15.4, )",
+            "version": "[6.1.1, )",
             "generatePathProperty": true
           },
           "Square": {
             "target": "Package",
-            "version": "[17.3.0, )"
+            "version": "[19.1.0, )"
           }
         }
       }

@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "P6iMKwpf+KrRkhaaKKznS3PaQbuI3Zc5DB9eJnIpSt8UkT1Cig2+wSuFnhGuGV+8/IBU76FPYybLfbjg4wiM2g==",
+  "dgSpecHash": "R71q0Xjh0RuR8GOhKrh/a2W93gZFyO/sUgiD/W+fNeVXhXqt5YDKSizECa8dLrxz77kfCAd5rNOelIq4NOjYvA==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\L1 Updated\\L1FEOutdoors.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\brutal.dev.strongnamesigner\\3.1.0\\brutal.dev.strongnamesigner.3.1.0.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\polly\\7.2.1\\polly.7.2.1.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\square\\17.3.0\\square.17.3.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\square\\19.1.0\\square.19.1.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512"
   ],
   "logs": []

@@ -75,6 +75,7 @@ C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.CheckSquare.resources
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.FormUpdateBox.resources
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.Login.resources
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Help.resources
+C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.Payment.resources
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.ProductPrice.resources
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.Settings.resources
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.LOControls.LOTextBox.resources
@@ -89,4 +90,3 @@ C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.application
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.csproj.CopyComplete
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.exe
 C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1.pdb
-C:\Users\HP\Desktop\L1 Updated\obj\Debug\L1FEOutdoors.Forms.Payment.resources
