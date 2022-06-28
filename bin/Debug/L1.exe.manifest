@@ -4,7 +4,7 @@
   <description asmv2:iconFile="L1Logo.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="L1" version="1.0.8214.22767" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="L1" version="1.0.8214.22836" language="neutral" processorArchitecture="msil" />
     <commandLine file="L1.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="L1.exe" size="862624">
-      <assemblyIdentity name="L1" version="1.0.8214.22767" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="L1" version="1.0.8214.22836" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7UFUfwZLcP4ZU3ZninfHVUqtjok6o7fi9IrTI6Led64=</dsig:DigestValue>
+        <dsig:DigestValue>yPbh9DjVN3ho5wYPacN0N68O40tKmVruQxrgwjAF2LY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
