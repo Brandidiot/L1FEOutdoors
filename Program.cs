@@ -217,14 +217,11 @@ namespace L1FEOutdoors
                     Console.WriteLine(@"Error Category:{0} Code:{1} Detail:{2}", error.Category, error.Code, error.Detail);
                     Debug.Print("Error Category:{0} Code:{1} Detail:{2}", error.Category, error.Code, error.Detail);
                 }
-
-                // Your error handling code
             }
             catch (Exception e)
             {
                 Console.WriteLine(@"Exception occurred");
                 Debug.Print("Exception: " + e);
-                // Your error handling code
             }
             //Complete Loading Bar & Return Data
             progress.Report(100);
