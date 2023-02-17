@@ -1,8 +1,4 @@
-Part,Description,UOM,"On
-Hand",Allocated,"Not
-Available","Drop
-Ship",Available,"On
-Order",Committed,Short
+Part,Description,UOM,"On Hand",Allocated,"Not Available","Drop Ship",Available,"On Order",Committed,Short
 #1-2CK-009 P5SEK-DP115-CRHI,Rox SpeedFX Yamaha Grizzly/Kodiak 700 19+ Black Combo Kit WITH Handlebars,ea,0,0,0,0,0,0,0,0
 0008,SYA Warrior Riser Snorkel kit for Arctic Cat Wildcat 700 71-11338,ea,1,0,0,0,1,0,0,0
 001-1203,Out & Back XT 26x9-12,ea,2,0,0,0,2,0,0,0
@@ -345,7 +341,7 @@ Order",Committed,Short
 100620,"KFI 2"" Receiver Winch Mount 33-08614",ea,1,0,0,0,1,0,0,0
 100920,Winch Mount CanAm Renegade G2,ea,0,0,0,0,0,0,0,0
 100945,"KFI 2"" Rear Receiver for CanAm",ea,1,0,0,0,1,0,0,0
-10101030000,ODES Front wheel-hub,ea,3,0,0,0,3,0,0,0
+10101030000,ODES Front wheel-hub,ea,2,0,0,0,2,0,0,0
 10101070010,Odes A-Arm Inner Sleeve,ea,123,0,0,0,123,0,0,0
 10101070140,ODES A-arm nylon sleeve retainer,ea,61,0,0,0,61,0,0,0
 10101200020,"ODES oil seal, knuckle",ea,13,0,0,0,13,0,0,0
@@ -438,7 +434,7 @@ Order",Committed,Short
 106080,KFI Plow Mount for HiSun 33-58421,ea,1,0,0,0,1,0,0,0
 106270,Fairlead Plow Pully - Synthetic,ea,2,0,0,0,2,0,0,0
 106300,KFI UTV PlowPro 2.0 Base/Push Tube,ea,10,1,0,0,9,0,1,0
-10701030000,Front Wheel-Hub,ea,2,0,0,0,2,0,0,0
+10701030000,Front Wheel-Hub,ea,2,1,0,0,1,0,1,0
 10701210010,ODES Driver Side Torsion Link (LH),ea,6,0,0,0,6,0,0,0
 10701210050,ODES Passenger Side Torsion Link (RH),ea,6,0,0,0,6,0,0,0
 10705210010,Odes Steering Kunckle Spacer,ea,44,0,0,0,44,0,0,0
@@ -861,7 +857,7 @@ Order",Committed,Short
 1616054,"Rollbar Mount 44MM (1.75"")",ea,5,1,0,0,4,0,1,0
 1616055,"Rollbar Mount 51MM (2"")",ea,1,0,0,0,1,0,0,0
 1630210004,Tusk Terrabite 30x10-14,ea,0,0,0,0,0,0,0,0
-1640,RJWC Neutrino LED Rear Light Kit - Outlander & Renegade G2,ea,5,0,0,0,5,0,0,0
+1640,RJWC Neutrino LED Rear Light Kit - Outlander & Renegade G2,ea,4,0,0,0,4,0,0,0
 16501,RJWC Winch Hook Holder Black G2 - Polymer,ea,33,0,0,0,33,0,0,0
 165020,"RJWC 1/2"" x 40"" Tow Rope Dark Grey",ea,16,0,0,0,16,0,0,0
 166-5217,DISPLAY Bison Front Bumper for Honda Foreman/Rubicon 500 TRAIL 2015-2019,ea,1,0,0,0,1,0,0,0
@@ -1217,7 +1213,7 @@ Order",Committed,Short
 25-1037,All Balls Wheel Bearing Kit - Rear Honda,ea,1,0,0,0,1,0,0,0
 25-1143,Moose Racing Wheel Bearing Kit,ea,1,0,0,0,1,0,0,0
 25-1424,All Balls Wheel Bearing Kit,ea,3,0,0,0,3,0,0,0
-25-1496,All Balls Wheel Bearing Kit,ea,4,0,0,0,4,0,0,0
+25-1496,All Balls Wheel Bearing Kit,ea,4,4,0,0,0,0,4,0
 25-1510,All Balls Wheel Bearing Kit Front Honda BRP,ea,2,0,0,0,2,0,0,0
 25-1516,All Balls Wheel Bearing Kit FR/RR BRP,ea,6,3,0,0,3,0,3,0
 25-1628,All Balls Wheel Bearing Kit,ea,4,0,0,0,4,0,0,0
@@ -1226,7 +1222,7 @@ Order",Committed,Short
 25-1788,All Balls Wheel Bearing Kit,ea,3,0,0,0,3,0,0,0
 25-2033,All Balls Diff Bearing and Seal Kit,ea,1,0,0,0,1,0,0,0
 25-2069,All Balls Front Diff Repair Kit for Can-Am,ea,1,0,0,0,1,0,0,0
-25-2069-5,All Balls Diff Bearing & Seal Kit for Can-Am,ea,3,0,0,0,3,0,0,0
+25-2069-5,All Balls Diff Bearing & Seal Kit for Can-Am,ea,3,1,0,0,2,0,1,0
 25-2079,All Balls Diff Bearing and Seal Kit,ea,1,0,0,0,1,0,0,0
 25-2080,All Balls Diff Bearing and Seal Kit Rear for POL,ea,1,0,0,0,1,0,0,0
 25-2080-5,All Balls Diff Seal Kit,ea,2,0,0,0,2,0,0,0
@@ -2155,9 +2151,9 @@ Order",Committed,Short
 99-0621,Squirt Cleaner/Desgreaser K&N 32oz,ea,5,0,0,0,5,0,0,0
 99-5000,Recharger Filter Care Kit K&N,ea,4,0,0,0,4,0,0,0
 99-5050,Squeeze Bottle Recharger Filter Care Kit,ea,5,0,0,0,5,0,0,0
-9910,Segway Villain Enclosure - PREMIUM Hard Enclosure (with Full Glass Doors) - Heater & Wipers not included,ea,1,0,0,0,1,0,0,0
-9935,Segway Villain Heater ADD on for PREMIUM Hard Enclosure,ea,1,0,0,0,1,0,0,0
-9945,Segway Villain Wiper / Washer ADD on for PREMIUM Hard Enclosure,ea,1,0,0,0,1,0,0,0
+9910,Segway Villain Enclosure - PREMIUM Hard Enclosure (with Full Glass Doors) - Heater & Wipers not included,ea,1,1,0,0,0,0,1,0
+9935,Segway Villain Heater ADD on for PREMIUM Hard Enclosure,ea,1,1,0,0,0,0,1,0
+9945,Segway Villain Wiper / Washer ADD on for PREMIUM Hard Enclosure,ea,1,1,0,0,0,0,1,0
 A01A20020001,Segway CVT Exhaust Tube,ea,1,0,0,0,1,0,0,0
 A01A21007001,Segway Snarler Air Filter,ea,12,0,0,0,12,0,0,0
 A01A30001001,Segway Exhaust Gasket,ea,5,0,0,0,5,0,0,0
@@ -2326,7 +2322,7 @@ B16-E4456-00,Yamaha Intake Band,ea,2,0,0,0,2,0,0,0
 B16-E4457-00,Yamaha Intake Seal,ea,2,0,0,0,2,0,0,0
 BAR-G700-FDUAL-2014/15,Barker's Yamaha Grizzly 700 2014/2015 Full Dual Exhaust System - Black Tag,ea,1,0,0,0,1,0,0,0
 BAR-G700-FDUAL-2016+,Barker's Yamaha Grizzly/Kodiak 700 2016+ Full Dual Exhaust System - Black Tag,ea,1,0,0,0,1,0,0,0
-BAR-G700-SSON-2014+,Barker's Yamaha Grizzly 700 2014-2021 Single SlipOn Exhaust System - Black Tag,ea,2,0,0,0,2,0,0,0
+BAR-G700-SSON-2014+,Barker's Yamaha Grizzly 700 2014-2021 Single SlipOn Exhaust System - Black Tag,ea,1,0,0,0,1,0,0,0
 BAR-QC-1,"Barker's Exhaust Quiet Core - 1""",ea,1,0,0,0,1,0,0,0
 BATTEND,Battery Tender Ring Terminal Harness,ea,24,0,0,0,24,0,0,0
 BAU-952,Bogger 31x9.5-15,ea,4,0,0,0,4,0,0,0
@@ -3595,10 +3591,10 @@ Q02R00000004,Segway Axle Assy - Rear (SE),ea,0,0,0,0,0,0,0,0
 Q03F00000002,Segway Axle Assy - Front,ea,0,0,0,0,0,0,0,0
 Q03F50100001,Segway Axle Shift Motor Assembly - Front,ea,0,0,0,0,0,0,0,0
 QCT006211005,Segway Steel Belt Elastic Hose Clamp,ea,1,0,0,0,1,0,0,0
-QE-CANAM-OUT-XMR-10-MSRK,"Fard Offroad (Qualified Equipment) CanAm Outlander XMR 10"" Metal Snorkel Riser Kit",ea,0,0,0,0,0,0,0,0
-QE-CANAM-OUT-XMR-12-MSRK,"Fard Offroad (Qualified Equipment) CanAm Outlander XMR 12"" Metal Snorkel Riser Kit",ea,0,0,0,0,0,0,0,0
-QE-CANAM-OUT-XMR-8-MSRK,"Fard Offroad (Qualified Equipment) CanAm Outlander XMR 8"" Metal Snorkel Riser Kit",ea,2,2,0,0,0,0,2,0
-QE-CANAM-OUT-XMR-RSS,Fard Offroad (Qualified Equipment) CanAm Outlander XMR Radiator Supa Scoop,ea,0,0,0,0,0,0,0,0
+QE-CANAM-OUT-XMR-10-MSRK,"Fard Offroad (Qualified Equipment) CanAm Outlander XMR 10"" Metal Snorkel Riser Kit",ea,3,0,0,0,3,0,0,0
+QE-CANAM-OUT-XMR-12-MSRK,"Fard Offroad (Qualified Equipment) CanAm Outlander XMR 12"" Metal Snorkel Riser Kit",ea,2,0,0,0,2,0,0,0
+QE-CANAM-OUT-XMR-8-MSRK,"Fard Offroad (Qualified Equipment) CanAm Outlander XMR 8"" Metal Snorkel Riser Kit",ea,5,2,0,0,3,0,2,0
+QE-CANAM-OUT-XMR-RSS,Fard Offroad (Qualified Equipment) CanAm Outlander XMR Radiator Supa Scoop,ea,2,0,0,0,2,0,0,0
 QL4PODRGB,Quad Logic Universal 4Pod RGB Rock Lights,ea,0,0,0,0,0,0,0,0
 QU-SN,Quick Attach Piece for Segway,ea,12,0,0,0,12,0,0,0
 R2-30,Interforce2 30x9-14,ea,0,0,0,0,0,0,0,0
